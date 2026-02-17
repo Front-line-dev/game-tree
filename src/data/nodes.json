@@ -1,0 +1,1481 @@
+[
+  {
+    "displayTitle": "메가미 텐세이",
+    "titleOriginal": "Digital Devil Story: Megami Tensei",
+    "releaseYear": 1987,
+    "platforms": [
+      "Famicom"
+    ],
+    "summary": "악마 교섭과 합체 중심 구조를 제시한 초기 몬스터 동료화 RPG.",
+    "genreGroup": "rpg",
+    "id": "g001",
+    "imagePath": "images/nodes/g001.jpg"
+  },
+  {
+    "displayTitle": "진 여신전생",
+    "titleOriginal": "Shin Megami Tensei",
+    "releaseYear": 1992,
+    "platforms": [
+      "Super Famicom"
+    ],
+    "summary": "분기 서사와 협상형 전투 설계를 확장한 다크 RPG.",
+    "genreGroup": "rpg",
+    "id": "g002",
+    "imagePath": "images/nodes/g002.jpg"
+  },
+  {
+    "displayTitle": "페르소나 5 로열",
+    "titleOriginal": "Persona 5 Royal",
+    "releaseYear": 2019,
+    "platforms": [
+      "PlayStation 4",
+      "PC",
+      "Switch"
+    ],
+    "summary": "일상 시뮬레이션과 턴제 RPG를 결합한 현대형 JRPG.",
+    "genreGroup": "rpg",
+    "id": "g003",
+    "imagePath": "images/nodes/g003.jpg"
+  },
+  {
+    "displayTitle": "포켓몬스터 적·녹",
+    "titleOriginal": "Pokemon Red and Green",
+    "releaseYear": 1996,
+    "platforms": [
+      "Game Boy"
+    ],
+    "summary": "수집/교환/육성 루프를 대중화한 몬스터 RPG.",
+    "genreGroup": "rpg",
+    "id": "g004",
+    "imagePath": "images/fallback/rpg.svg"
+  },
+  {
+    "displayTitle": "크로노 트리거",
+    "titleOriginal": "Chrono Trigger",
+    "releaseYear": 1995,
+    "platforms": [
+      "Super Famicom"
+    ],
+    "summary": "시간축 분기와 파티 연계를 강화한 JRPG.",
+    "genreGroup": "rpg",
+    "id": "g005",
+    "imagePath": "images/nodes/g005.jpg"
+  },
+  {
+    "displayTitle": "파이널 판타지 VII",
+    "titleOriginal": "Final Fantasy VII",
+    "releaseYear": 1997,
+    "platforms": [
+      "PlayStation",
+      "PC"
+    ],
+    "summary": "시네마틱 연출과 대형 서사를 확장한 RPG.",
+    "genreGroup": "rpg",
+    "id": "g006",
+    "imagePath": "images/nodes/g006.jpg"
+  },
+  {
+    "displayTitle": "드래곤 퀘스트 V",
+    "titleOriginal": "Dragon Quest V",
+    "releaseYear": 1992,
+    "platforms": [
+      "Super Famicom"
+    ],
+    "summary": "세대 서사와 동료 몬스터 구성을 결합한 JRPG.",
+    "genreGroup": "rpg",
+    "id": "g007",
+    "imagePath": "images/nodes/g007.jpg"
+  },
+  {
+    "displayTitle": "발더스 게이트 II",
+    "titleOriginal": "Baldur's Gate II: Shadows of Amn",
+    "releaseYear": 2000,
+    "platforms": [
+      "PC"
+    ],
+    "summary": "동료 서사와 선택형 파티 RPG 설계의 고전.",
+    "genreGroup": "rpg",
+    "id": "g008",
+    "imagePath": "images/nodes/g008.jpg"
+  },
+  {
+    "displayTitle": "디비니티: 오리지널 신 2",
+    "titleOriginal": "Divinity: Original Sin II",
+    "releaseYear": 2017,
+    "platforms": [
+      "PC",
+      "PlayStation 4",
+      "Switch"
+    ],
+    "summary": "시스템 상호작용 중심의 현대 CRPG.",
+    "genreGroup": "rpg",
+    "id": "g009",
+    "imagePath": "images/nodes/g009.jpg"
+  },
+  {
+    "displayTitle": "필라스 오브 이터니티",
+    "titleOriginal": "Pillars of Eternity",
+    "releaseYear": 2015,
+    "platforms": [
+      "PC",
+      "PlayStation 4",
+      "Xbox One"
+    ],
+    "summary": "아이소메트릭 파티 전투를 현대적으로 복원한 CRPG.",
+    "genreGroup": "rpg",
+    "id": "g010",
+    "imagePath": "images/nodes/g010.jpg"
+  },
+  {
+    "displayTitle": "디스코 엘리시움",
+    "titleOriginal": "Disco Elysium",
+    "releaseYear": 2019,
+    "platforms": [
+      "PC",
+      "PlayStation 5",
+      "Switch"
+    ],
+    "summary": "대화/내면 독백 기반 탐정 RPG를 정교화한 작품.",
+    "genreGroup": "rpg",
+    "id": "g011",
+    "imagePath": "images/nodes/g011.jpg"
+  },
+  {
+    "displayTitle": "매스 이펙트 2",
+    "titleOriginal": "Mass Effect 2",
+    "releaseYear": 2010,
+    "platforms": [
+      "PC",
+      "PlayStation 3",
+      "Xbox 360"
+    ],
+    "summary": "분기 선택과 동료 중심 임무 설계를 확장한 SF RPG.",
+    "genreGroup": "rpg",
+    "id": "g012",
+    "imagePath": "images/nodes/g012.jpg"
+  },
+  {
+    "displayTitle": "드래곤 에이지: 오리진",
+    "titleOriginal": "Dragon Age: Origins",
+    "releaseYear": 2009,
+    "platforms": [
+      "PC",
+      "PlayStation 3",
+      "Xbox 360"
+    ],
+    "summary": "전술형 파티 전투와 분기형 서사를 결합한 RPG.",
+    "genreGroup": "rpg",
+    "id": "g013",
+    "imagePath": "images/nodes/g013.jpg"
+  },
+  {
+    "displayTitle": "폴아웃: 뉴 베가스",
+    "titleOriginal": "Fallout: New Vegas",
+    "releaseYear": 2010,
+    "platforms": [
+      "PC",
+      "PlayStation 3",
+      "Xbox 360"
+    ],
+    "summary": "퀘스트 선택의 결과를 촘촘히 반영한 오픈월드 RPG.",
+    "genreGroup": "rpg",
+    "id": "g014",
+    "imagePath": "images/nodes/g014.jpg"
+  },
+  {
+    "displayTitle": "엘더스크롤 V: 스카이림",
+    "titleOriginal": "The Elder Scrolls V: Skyrim",
+    "releaseYear": 2011,
+    "platforms": [
+      "PC",
+      "PlayStation 3",
+      "Xbox 360",
+      "Switch"
+    ],
+    "summary": "탐험 중심 오픈월드 RPG의 대중적 표준.",
+    "genreGroup": "rpg",
+    "id": "g015",
+    "imagePath": "images/nodes/g015.jpg"
+  },
+  {
+    "displayTitle": "위쳐 3: 와일드 헌트",
+    "titleOriginal": "The Witcher 3: Wild Hunt",
+    "releaseYear": 2015,
+    "platforms": [
+      "PC",
+      "PlayStation 4",
+      "Xbox One",
+      "Switch"
+    ],
+    "summary": "퀘스트 연출과 서사 밀도를 강화한 오픈월드 RPG.",
+    "genreGroup": "rpg",
+    "id": "g016",
+    "imagePath": "images/nodes/g016.jpg"
+  },
+  {
+    "displayTitle": "데몬즈 소울",
+    "titleOriginal": "Demon's Souls",
+    "releaseYear": 2009,
+    "platforms": [
+      "PlayStation 3"
+    ],
+    "summary": "고난도 전투와 위험 회수 구조를 정립한 액션 RPG.",
+    "genreGroup": "rpg",
+    "id": "g017",
+    "imagePath": "images/fallback/rpg.svg"
+  },
+  {
+    "displayTitle": "다크 소울",
+    "titleOriginal": "Dark Souls",
+    "releaseYear": 2011,
+    "platforms": [
+      "PC",
+      "PlayStation 3",
+      "Xbox 360"
+    ],
+    "summary": "연결형 레벨과 간접 서사를 확장한 소울라이크.",
+    "genreGroup": "rpg",
+    "id": "g018",
+    "imagePath": "images/fallback/rpg.svg"
+  },
+  {
+    "displayTitle": "블러드본",
+    "titleOriginal": "Bloodborne",
+    "releaseYear": 2015,
+    "platforms": [
+      "PlayStation 4"
+    ],
+    "summary": "공격적 리듬 전투를 강조한 고딕 액션 RPG.",
+    "genreGroup": "rpg",
+    "id": "g019",
+    "imagePath": "images/nodes/g019.jpg"
+  },
+  {
+    "displayTitle": "엘든 링",
+    "titleOriginal": "Elden Ring",
+    "releaseYear": 2022,
+    "platforms": [
+      "PC",
+      "PlayStation 5",
+      "Xbox Series X/S"
+    ],
+    "summary": "소울라이크 전투를 대형 오픈필드로 확장한 RPG.",
+    "genreGroup": "rpg",
+    "id": "g020",
+    "imagePath": "images/nodes/g020.jpg"
+  },
+  {
+    "displayTitle": "디아블로 II",
+    "titleOriginal": "Diablo II",
+    "releaseYear": 2000,
+    "platforms": [
+      "PC"
+    ],
+    "summary": "전리품 파밍과 빌드 메타를 정착시킨 액션 RPG.",
+    "genreGroup": "rpg",
+    "id": "g021",
+    "imagePath": "images/fallback/rpg.svg"
+  },
+  {
+    "displayTitle": "패스 오브 엑자일",
+    "titleOriginal": "Path of Exile",
+    "releaseYear": 2013,
+    "platforms": [
+      "PC",
+      "PlayStation 4",
+      "Xbox One"
+    ],
+    "summary": "심화 패시브 트리와 시즌형 운영을 결합한 ARPG.",
+    "genreGroup": "rpg",
+    "id": "g022",
+    "imagePath": "images/fallback/rpg.svg"
+  },
+  {
+    "displayTitle": "몬스터 헌터: 월드",
+    "titleOriginal": "Monster Hunter: World",
+    "releaseYear": 2018,
+    "platforms": [
+      "PC",
+      "PlayStation 4",
+      "Xbox One"
+    ],
+    "summary": "사냥-제작 루프를 대중적으로 확장한 액션 RPG.",
+    "genreGroup": "rpg",
+    "id": "g023",
+    "imagePath": "images/fallback/rpg.svg"
+  },
+  {
+    "displayTitle": "제노블레이드 크로니클스",
+    "titleOriginal": "Xenoblade Chronicles",
+    "releaseYear": 2010,
+    "platforms": [
+      "Wii",
+      "Switch"
+    ],
+    "summary": "대형 필드 탐험과 실시간 파티 전투를 결합한 JRPG.",
+    "genreGroup": "rpg",
+    "id": "g024",
+    "imagePath": "images/nodes/g024.jpg"
+  },
+  {
+    "displayTitle": "니어: 오토마타",
+    "titleOriginal": "NieR: Automata",
+    "releaseYear": 2017,
+    "platforms": [
+      "PC",
+      "PlayStation 4",
+      "Xbox One"
+    ],
+    "summary": "액션 전투와 다중 엔딩 서사를 결합한 RPG.",
+    "genreGroup": "rpg",
+    "id": "g025",
+    "imagePath": "images/nodes/g025.jpg"
+  },
+  {
+    "displayTitle": "언더테일",
+    "titleOriginal": "Undertale",
+    "releaseYear": 2015,
+    "platforms": [
+      "PC",
+      "Switch",
+      "PlayStation 4"
+    ],
+    "summary": "전투 회피와 메타 내러티브를 결합한 인디 RPG.",
+    "genreGroup": "rpg",
+    "id": "g026",
+    "imagePath": "images/fallback/rpg.svg"
+  },
+  {
+    "displayTitle": "용과 같이 7",
+    "titleOriginal": "Yakuza: Like a Dragon",
+    "releaseYear": 2020,
+    "platforms": [
+      "PC",
+      "PlayStation 5",
+      "Xbox Series X/S"
+    ],
+    "summary": "현대 도시 배경의 직업형 턴제 RPG.",
+    "genreGroup": "rpg",
+    "id": "g027",
+    "imagePath": "images/nodes/g027.jpg"
+  },
+  {
+    "displayTitle": "킹덤 하츠",
+    "titleOriginal": "Kingdom Hearts",
+    "releaseYear": 2002,
+    "platforms": [
+      "PlayStation 2"
+    ],
+    "summary": "실시간 액션과 크로스오버 세계관을 결합한 RPG.",
+    "genreGroup": "rpg",
+    "id": "g028",
+    "imagePath": "images/nodes/g028.jpg"
+  },
+  {
+    "displayTitle": "MOTHER 2",
+    "titleOriginal": "EarthBound",
+    "releaseYear": 1994,
+    "platforms": [
+      "Super Famicom"
+    ],
+    "summary": "현대풍 코미디 감성의 고전 JRPG.",
+    "genreGroup": "rpg",
+    "id": "g029",
+    "imagePath": "images/nodes/g029.jpg"
+  },
+  {
+    "displayTitle": "MOTHER 3",
+    "titleOriginal": "Mother 3",
+    "releaseYear": 2006,
+    "platforms": [
+      "Game Boy Advance"
+    ],
+    "summary": "리듬 전투와 감성 서사를 강화한 JRPG.",
+    "genreGroup": "rpg",
+    "id": "g030",
+    "imagePath": "images/nodes/g030.jpg"
+  },
+  {
+    "displayTitle": "슈퍼 마리오 브라더스",
+    "titleOriginal": "Super Mario Bros.",
+    "releaseYear": 1985,
+    "platforms": [
+      "NES"
+    ],
+    "summary": "2D 플랫폼 액션의 조작 표준을 만든 작품.",
+    "genreGroup": "platformer",
+    "id": "g031",
+    "imagePath": "images/fallback/platformer.svg"
+  },
+  {
+    "displayTitle": "슈퍼 마리오 64",
+    "titleOriginal": "Super Mario 64",
+    "releaseYear": 1996,
+    "platforms": [
+      "Nintendo 64"
+    ],
+    "summary": "3D 플랫폼 카메라/이동 설계를 정립한 작품.",
+    "genreGroup": "platformer",
+    "id": "g032",
+    "imagePath": "images/fallback/platformer.svg"
+  },
+  {
+    "displayTitle": "슈퍼 마리오 오디세이",
+    "titleOriginal": "Super Mario Odyssey",
+    "releaseYear": 2017,
+    "platforms": [
+      "Nintendo Switch"
+    ],
+    "summary": "샌드박스형 3D 플랫폼 설계를 현대화한 작품.",
+    "genreGroup": "platformer",
+    "id": "g033",
+    "imagePath": "images/nodes/g033.jpg"
+  },
+  {
+    "displayTitle": "젤다의 전설: 시간의 오카리나",
+    "titleOriginal": "The Legend of Zelda: Ocarina of Time",
+    "releaseYear": 1998,
+    "platforms": [
+      "Nintendo 64"
+    ],
+    "summary": "3D 액션 어드벤처 구조를 정립한 고전.",
+    "genreGroup": "adventure",
+    "id": "g034",
+    "imagePath": "images/nodes/g034.jpg"
+  },
+  {
+    "displayTitle": "젤다의 전설: 브레스 오브 더 와일드",
+    "titleOriginal": "The Legend of Zelda: Breath of the Wild",
+    "releaseYear": 2017,
+    "platforms": [
+      "Nintendo Switch",
+      "Wii U"
+    ],
+    "summary": "물리 기반 오픈월드 탐험 설계를 강화한 작품.",
+    "genreGroup": "adventure",
+    "id": "g035",
+    "imagePath": "images/nodes/g035.jpg"
+  },
+  {
+    "displayTitle": "메트로이드",
+    "titleOriginal": "Metroid",
+    "releaseYear": 1986,
+    "platforms": [
+      "NES"
+    ],
+    "summary": "탐색형 맵 해금 루프의 원형을 제시한 작품.",
+    "genreGroup": "action",
+    "id": "g036",
+    "imagePath": "images/nodes/g036.jpg"
+  },
+  {
+    "displayTitle": "슈퍼 메트로이드",
+    "titleOriginal": "Super Metroid",
+    "releaseYear": 1994,
+    "platforms": [
+      "Super Nintendo"
+    ],
+    "summary": "환경 탐색형 액션 구조를 정교화한 고전.",
+    "genreGroup": "action",
+    "id": "g037",
+    "imagePath": "images/nodes/g037.jpg"
+  },
+  {
+    "displayTitle": "악마성 드라큘라 X: 월하의 야상곡",
+    "titleOriginal": "Castlevania: Symphony of the Night",
+    "releaseYear": 1997,
+    "platforms": [
+      "PlayStation"
+    ],
+    "summary": "레벨 탐색과 성장 루프를 결합한 메트로배니아 대표작.",
+    "genreGroup": "action",
+    "id": "g038",
+    "imagePath": "images/nodes/g038.jpg"
+  },
+  {
+    "displayTitle": "할로우 나이트",
+    "titleOriginal": "Hollow Knight",
+    "releaseYear": 2017,
+    "platforms": [
+      "PC",
+      "Switch",
+      "PlayStation 4"
+    ],
+    "summary": "메트로배니아 탐험과 보스전을 현대화한 인디 명작.",
+    "genreGroup": "action",
+    "id": "g039",
+    "imagePath": "images/nodes/g039.jpg"
+  },
+  {
+    "displayTitle": "데드 셀",
+    "titleOriginal": "Dead Cells",
+    "releaseYear": 2018,
+    "platforms": [
+      "PC",
+      "Switch",
+      "PlayStation 4",
+      "Mobile"
+    ],
+    "summary": "로그라이크 반복과 액션 플랫폼을 결합한 작품.",
+    "genreGroup": "action",
+    "id": "g040",
+    "imagePath": "images/fallback/action.svg"
+  },
+  {
+    "displayTitle": "셀레스트",
+    "titleOriginal": "Celeste",
+    "releaseYear": 2018,
+    "platforms": [
+      "PC",
+      "Switch",
+      "PlayStation 4"
+    ],
+    "summary": "정밀 점프 조작과 실패-재시도 설계를 강화한 플랫폼 게임.",
+    "genreGroup": "platformer",
+    "id": "g041",
+    "imagePath": "images/nodes/g041.jpg"
+  },
+  {
+    "displayTitle": "록맨 2",
+    "titleOriginal": "Mega Man 2",
+    "releaseYear": 1988,
+    "platforms": [
+      "NES"
+    ],
+    "summary": "보스 공략 순서와 무기 상성 구조를 강화한 액션 게임.",
+    "genreGroup": "action",
+    "id": "g042",
+    "imagePath": "images/nodes/g042.jpg"
+  },
+  {
+    "displayTitle": "록맨 X",
+    "titleOriginal": "Mega Man X",
+    "releaseYear": 1993,
+    "platforms": [
+      "Super Nintendo"
+    ],
+    "summary": "대시/벽타기 기반의 고속 액션을 정립한 작품.",
+    "genreGroup": "action",
+    "id": "g043",
+    "imagePath": "images/nodes/g043.jpg"
+  },
+  {
+    "displayTitle": "페르시아의 왕자: 시간의 모래",
+    "titleOriginal": "Prince of Persia: The Sands of Time",
+    "releaseYear": 2003,
+    "platforms": [
+      "PC",
+      "PlayStation 2",
+      "Xbox"
+    ],
+    "summary": "파쿠르 이동과 시간 되감기 구조를 결합한 액션 어드벤처.",
+    "genreGroup": "adventure",
+    "id": "g044",
+    "imagePath": "images/fallback/adventure.svg"
+  },
+  {
+    "displayTitle": "어쌔신 크리드 II",
+    "titleOriginal": "Assassin's Creed II",
+    "releaseYear": 2009,
+    "platforms": [
+      "PC",
+      "PlayStation 3",
+      "Xbox 360"
+    ],
+    "summary": "도시 잠입/파쿠르 루프를 확장한 오픈월드 액션.",
+    "genreGroup": "adventure",
+    "id": "g045",
+    "imagePath": "images/nodes/g045.jpg"
+  },
+  {
+    "displayTitle": "고스트 오브 쓰시마",
+    "titleOriginal": "Ghost of Tsushima",
+    "releaseYear": 2020,
+    "platforms": [
+      "PlayStation 4",
+      "PlayStation 5",
+      "PC"
+    ],
+    "summary": "오픈월드 검술 전투와 영화적 연출을 결합한 액션.",
+    "genreGroup": "action",
+    "id": "g046",
+    "imagePath": "images/nodes/g046.jpg"
+  },
+  {
+    "displayTitle": "데빌 메이 크라이 3",
+    "titleOriginal": "Devil May Cry 3",
+    "releaseYear": 2005,
+    "platforms": [
+      "PlayStation 2",
+      "PC"
+    ],
+    "summary": "스타일 전환형 콤보 액션의 기준을 세운 작품.",
+    "genreGroup": "action",
+    "id": "g047",
+    "imagePath": "images/fallback/action.svg"
+  },
+  {
+    "displayTitle": "베요네타",
+    "titleOriginal": "Bayonetta",
+    "releaseYear": 2009,
+    "platforms": [
+      "PC",
+      "PlayStation 3",
+      "Xbox 360",
+      "Switch"
+    ],
+    "summary": "고속 콤보와 회피 타이밍 전투를 정교화한 액션 게임.",
+    "genreGroup": "action",
+    "id": "g048",
+    "imagePath": "images/fallback/action.svg"
+  },
+  {
+    "displayTitle": "갓 오브 워",
+    "titleOriginal": "God of War",
+    "releaseYear": 2018,
+    "platforms": [
+      "PlayStation 4",
+      "PC"
+    ],
+    "summary": "근접 액션과 서사 연출을 결합한 시네마틱 액션.",
+    "genreGroup": "action",
+    "id": "g049",
+    "imagePath": "images/nodes/g049.jpg"
+  },
+  {
+    "displayTitle": "닌자 가이덴",
+    "titleOriginal": "Ninja Gaiden",
+    "releaseYear": 1988,
+    "platforms": [
+      "NES"
+    ],
+    "summary": "고난도 반응형 액션 설계를 강화한 고전.",
+    "genreGroup": "action",
+    "id": "g050",
+    "imagePath": "images/nodes/g050.jpg"
+  },
+  {
+    "displayTitle": "둠",
+    "titleOriginal": "Doom",
+    "releaseYear": 1993,
+    "platforms": [
+      "PC"
+    ],
+    "summary": "고속 이동 FPS의 핵심 감각을 정립한 작품.",
+    "genreGroup": "shooter",
+    "id": "g051",
+    "imagePath": "images/nodes/g051.jpg"
+  },
+  {
+    "displayTitle": "퀘이크",
+    "titleOriginal": "Quake",
+    "releaseYear": 1996,
+    "platforms": [
+      "PC"
+    ],
+    "summary": "3D 맵 구조와 멀티 중심 FPS 문화를 확장한 작품.",
+    "genreGroup": "shooter",
+    "id": "g052",
+    "imagePath": "images/fallback/shooter.svg"
+  },
+  {
+    "displayTitle": "하프라이프",
+    "titleOriginal": "Half-Life",
+    "releaseYear": 1998,
+    "platforms": [
+      "PC"
+    ],
+    "summary": "스크립트 연출과 몰입형 FPS 진행을 정립한 작품.",
+    "genreGroup": "shooter",
+    "id": "g053",
+    "imagePath": "images/fallback/shooter.svg"
+  },
+  {
+    "displayTitle": "하프라이프 2",
+    "titleOriginal": "Half-Life 2",
+    "releaseYear": 2004,
+    "platforms": [
+      "PC",
+      "Xbox"
+    ],
+    "summary": "물리 상호작용 중심의 레벨 설계를 확장한 FPS.",
+    "genreGroup": "shooter",
+    "id": "g054",
+    "imagePath": "images/fallback/shooter.svg"
+  },
+  {
+    "displayTitle": "카운터-스트라이크",
+    "titleOriginal": "Counter-Strike",
+    "releaseYear": 2000,
+    "platforms": [
+      "PC"
+    ],
+    "summary": "라운드 기반 팀 FPS의 경쟁 구조를 정착시킨 작품.",
+    "genreGroup": "shooter",
+    "id": "g055",
+    "imagePath": "images/fallback/shooter.svg"
+  },
+  {
+    "displayTitle": "헤일로: 컴뱃 이볼브드",
+    "titleOriginal": "Halo: Combat Evolved",
+    "releaseYear": 2001,
+    "platforms": [
+      "Xbox",
+      "PC"
+    ],
+    "summary": "콘솔 FPS 조작 표준과 전장 템포를 확립한 작품.",
+    "genreGroup": "shooter",
+    "id": "g056",
+    "imagePath": "images/fallback/shooter.svg"
+  },
+  {
+    "displayTitle": "콜 오브 듀티 4: 모던 워페어",
+    "titleOriginal": "Call of Duty 4: Modern Warfare",
+    "releaseYear": 2007,
+    "platforms": [
+      "PC",
+      "PlayStation 3",
+      "Xbox 360"
+    ],
+    "summary": "현대전 연출과 진행형 성장 메타를 결합한 FPS.",
+    "genreGroup": "shooter",
+    "id": "g057",
+    "imagePath": "images/nodes/g057.jpg"
+  },
+  {
+    "displayTitle": "타이탄폴 2",
+    "titleOriginal": "Titanfall 2",
+    "releaseYear": 2016,
+    "platforms": [
+      "PC",
+      "PlayStation 4",
+      "Xbox One"
+    ],
+    "summary": "고속 이동과 파일럿/타이탄 전환 루프를 정교화한 FPS.",
+    "genreGroup": "shooter",
+    "id": "g058",
+    "imagePath": "images/fallback/shooter.svg"
+  },
+  {
+    "displayTitle": "데스티니 2",
+    "titleOriginal": "Destiny 2",
+    "releaseYear": 2017,
+    "platforms": [
+      "PC",
+      "PlayStation 5",
+      "Xbox Series X/S"
+    ],
+    "summary": "슈터 조작과 MMO형 파밍 메타를 결합한 라이브 게임.",
+    "genreGroup": "shooter",
+    "id": "g059",
+    "imagePath": "images/nodes/g059.jpg"
+  },
+  {
+    "displayTitle": "보더랜드 2",
+    "titleOriginal": "Borderlands 2",
+    "releaseYear": 2012,
+    "platforms": [
+      "PC",
+      "PlayStation 3",
+      "Xbox 360"
+    ],
+    "summary": "전리품 중심 루터슈터 루프를 대중화한 작품.",
+    "genreGroup": "shooter",
+    "id": "g060",
+    "imagePath": "images/fallback/shooter.svg"
+  },
+  {
+    "displayTitle": "시스템 쇼크 2",
+    "titleOriginal": "System Shock 2",
+    "releaseYear": 1999,
+    "platforms": [
+      "PC"
+    ],
+    "summary": "RPG 성장과 FPS 탐험을 결합한 몰입형 시뮬레이션.",
+    "genreGroup": "shooter",
+    "id": "g061",
+    "imagePath": "images/fallback/shooter.svg"
+  },
+  {
+    "displayTitle": "데이어스 엑스",
+    "titleOriginal": "Deus Ex",
+    "releaseYear": 2000,
+    "platforms": [
+      "PC",
+      "PlayStation 2"
+    ],
+    "summary": "잠입/대화/전투 경로를 통합한 몰입형 RPG FPS.",
+    "genreGroup": "shooter",
+    "id": "g062",
+    "imagePath": "images/nodes/g062.jpg"
+  },
+  {
+    "displayTitle": "바이오쇼크",
+    "titleOriginal": "BioShock",
+    "releaseYear": 2007,
+    "platforms": [
+      "PC",
+      "PlayStation 3",
+      "Xbox 360"
+    ],
+    "summary": "환경 서사와 능력 기반 전투를 결합한 FPS.",
+    "genreGroup": "shooter",
+    "id": "g063",
+    "imagePath": "images/nodes/g063.jpg"
+  },
+  {
+    "displayTitle": "디스아너드",
+    "titleOriginal": "Dishonored",
+    "releaseYear": 2012,
+    "platforms": [
+      "PC",
+      "PlayStation 3",
+      "Xbox 360"
+    ],
+    "summary": "잠입과 능력 조합 중심의 경로 선택형 액션.",
+    "genreGroup": "shooter",
+    "id": "g064",
+    "imagePath": "images/nodes/g064.jpg"
+  },
+  {
+    "displayTitle": "프레이 (2017)",
+    "titleOriginal": "Prey (2017 video game)",
+    "releaseYear": 2017,
+    "platforms": [
+      "PC",
+      "PlayStation 4",
+      "Xbox One"
+    ],
+    "summary": "공간 상호작용과 생존 탐색을 강화한 몰입형 게임.",
+    "genreGroup": "shooter",
+    "id": "g065",
+    "imagePath": "images/nodes/g065.jpg"
+  },
+  {
+    "displayTitle": "메트로 2033",
+    "titleOriginal": "Metro 2033",
+    "releaseYear": 2010,
+    "platforms": [
+      "PC",
+      "Xbox 360"
+    ],
+    "summary": "서사 밀도 높은 생존형 FPS 연출을 강화한 작품.",
+    "genreGroup": "shooter",
+    "id": "g066",
+    "imagePath": "images/nodes/g066.jpg"
+  },
+  {
+    "displayTitle": "포탈",
+    "titleOriginal": "Portal",
+    "releaseYear": 2007,
+    "platforms": [
+      "PC",
+      "PlayStation 3",
+      "Xbox 360"
+    ],
+    "summary": "물리 퍼즐과 1인칭 공간 인지를 결합한 작품.",
+    "genreGroup": "puzzle",
+    "id": "g067",
+    "imagePath": "images/fallback/puzzle.svg"
+  },
+  {
+    "displayTitle": "포탈 2",
+    "titleOriginal": "Portal 2",
+    "releaseYear": 2011,
+    "platforms": [
+      "PC",
+      "PlayStation 3",
+      "Xbox 360"
+    ],
+    "summary": "퍼즐 전달 밀도와 협동 설계를 확장한 작품.",
+    "genreGroup": "puzzle",
+    "id": "g068",
+    "imagePath": "images/fallback/puzzle.svg"
+  },
+  {
+    "displayTitle": "문명 IV",
+    "titleOriginal": "Sid Meier's Civilization IV",
+    "releaseYear": 2005,
+    "platforms": [
+      "PC"
+    ],
+    "summary": "4X 턴제 전략의 밸런스 구조를 정교화한 작품.",
+    "genreGroup": "strategy",
+    "id": "g069",
+    "imagePath": "images/nodes/g069.jpg"
+  },
+  {
+    "displayTitle": "문명 VI",
+    "titleOriginal": "Sid Meier's Civilization VI",
+    "releaseYear": 2016,
+    "platforms": [
+      "PC",
+      "Switch",
+      "PlayStation 4"
+    ],
+    "summary": "지구타일 확장과 도시 특화 운영을 강화한 전략 게임.",
+    "genreGroup": "strategy",
+    "id": "g070",
+    "imagePath": "images/nodes/g070.jpg"
+  },
+  {
+    "displayTitle": "에이지 오브 엠파이어 II",
+    "titleOriginal": "Age of Empires II",
+    "releaseYear": 1999,
+    "platforms": [
+      "PC"
+    ],
+    "summary": "실시간 자원 운영과 문명 대칭성 밸런스를 정립한 RTS.",
+    "genreGroup": "strategy",
+    "id": "g071",
+    "imagePath": "images/nodes/g071.jpg"
+  },
+  {
+    "displayTitle": "스타크래프트",
+    "titleOriginal": "StarCraft",
+    "releaseYear": 1998,
+    "platforms": [
+      "PC"
+    ],
+    "summary": "비대칭 종족 설계를 완성한 경쟁형 RTS.",
+    "genreGroup": "strategy",
+    "id": "g072",
+    "imagePath": "images/fallback/strategy.svg"
+  },
+  {
+    "displayTitle": "워크래프트 III",
+    "titleOriginal": "Warcraft III: Reign of Chaos",
+    "releaseYear": 2002,
+    "platforms": [
+      "PC"
+    ],
+    "summary": "영웅 유닛 중심 RTS 운영과 커스텀 맵 생태계를 확장한 작품.",
+    "genreGroup": "strategy",
+    "id": "g073",
+    "imagePath": "images/fallback/strategy.svg"
+  },
+  {
+    "displayTitle": "도타 2",
+    "titleOriginal": "Dota 2",
+    "releaseYear": 2013,
+    "platforms": [
+      "PC"
+    ],
+    "summary": "라인전 기반 팀 MOBA 구조를 현대화한 게임.",
+    "genreGroup": "strategy",
+    "id": "g074",
+    "imagePath": "images/nodes/g074.jpg"
+  },
+  {
+    "displayTitle": "리그 오브 레전드",
+    "titleOriginal": "League of Legends",
+    "releaseYear": 2009,
+    "platforms": [
+      "PC"
+    ],
+    "summary": "챔피언 기반 팀 전략과 서비스 운영을 결합한 MOBA.",
+    "genreGroup": "strategy",
+    "id": "g075",
+    "imagePath": "images/nodes/g075.jpg"
+  },
+  {
+    "displayTitle": "엑스컴: 에너미 언노운",
+    "titleOriginal": "XCOM: Enemy Unknown",
+    "releaseYear": 2012,
+    "platforms": [
+      "PC",
+      "PlayStation 3",
+      "Xbox 360"
+    ],
+    "summary": "턴제 전술과 기지 운영 루프를 현대화한 작품.",
+    "genreGroup": "strategy",
+    "id": "g076",
+    "imagePath": "images/fallback/strategy.svg"
+  },
+  {
+    "displayTitle": "인투 더 브리치",
+    "titleOriginal": "Into the Breach",
+    "releaseYear": 2018,
+    "platforms": [
+      "PC",
+      "Switch",
+      "Mobile"
+    ],
+    "summary": "정보 완전 공개형 턴제 전술 퍼즐을 정립한 작품.",
+    "genreGroup": "strategy",
+    "id": "g077",
+    "imagePath": "images/fallback/strategy.svg"
+  },
+  {
+    "displayTitle": "파이어 엠블렘 각성",
+    "titleOriginal": "Fire Emblem Awakening",
+    "releaseYear": 2012,
+    "platforms": [
+      "Nintendo 3DS"
+    ],
+    "summary": "관계 성장과 전술 맵 운영을 결합한 SRPG.",
+    "genreGroup": "strategy",
+    "id": "g078",
+    "imagePath": "images/fallback/strategy.svg"
+  },
+  {
+    "displayTitle": "어드밴스드 워즈",
+    "titleOriginal": "Advance Wars",
+    "releaseYear": 2001,
+    "platforms": [
+      "Game Boy Advance"
+    ],
+    "summary": "가시성 높은 턴제 전술 인터페이스를 정립한 작품.",
+    "genreGroup": "strategy",
+    "id": "g079",
+    "imagePath": "images/fallback/strategy.svg"
+  },
+  {
+    "displayTitle": "토탈 워: 쇼군 2",
+    "titleOriginal": "Total War: Shogun 2",
+    "releaseYear": 2011,
+    "platforms": [
+      "PC"
+    ],
+    "summary": "거시 전략과 실시간 전투를 정교하게 통합한 작품.",
+    "genreGroup": "strategy",
+    "id": "g080",
+    "imagePath": "images/fallback/strategy.svg"
+  },
+  {
+    "displayTitle": "크루세이더 킹즈 III",
+    "titleOriginal": "Crusader Kings III",
+    "releaseYear": 2020,
+    "platforms": [
+      "PC",
+      "PlayStation 5",
+      "Xbox Series X/S"
+    ],
+    "summary": "인물 관계 중심 대전략 시스템을 대중화한 작품.",
+    "genreGroup": "strategy",
+    "id": "g081",
+    "imagePath": "images/nodes/g081.jpg"
+  },
+  {
+    "displayTitle": "유로파 유니버설리스 IV",
+    "titleOriginal": "Europa Universalis IV",
+    "releaseYear": 2013,
+    "platforms": [
+      "PC"
+    ],
+    "summary": "국가 운영 중심 장기 전략의 시스템 밀도를 강화한 작품.",
+    "genreGroup": "strategy",
+    "id": "g082",
+    "imagePath": "images/fallback/strategy.svg"
+  },
+  {
+    "displayTitle": "심시티 2000",
+    "titleOriginal": "SimCity 2000",
+    "releaseYear": 1993,
+    "platforms": [
+      "PC",
+      "Mac"
+    ],
+    "summary": "도시 경영 시뮬레이션 인터페이스를 정립한 고전.",
+    "genreGroup": "simulation",
+    "id": "g083",
+    "imagePath": "images/nodes/g083.jpg"
+  },
+  {
+    "displayTitle": "시티즈: 스카이라인",
+    "titleOriginal": "Cities: Skylines",
+    "releaseYear": 2015,
+    "platforms": [
+      "PC",
+      "PlayStation 4",
+      "Xbox One"
+    ],
+    "summary": "교통 중심 도시 운영 모델을 현대적으로 확장한 게임.",
+    "genreGroup": "simulation",
+    "id": "g084",
+    "imagePath": "images/nodes/g084.jpg"
+  },
+  {
+    "displayTitle": "롤러코스터 타이쿤 2",
+    "titleOriginal": "RollerCoaster Tycoon 2",
+    "releaseYear": 2002,
+    "platforms": [
+      "PC"
+    ],
+    "summary": "테마파크 경영의 미시 운영 설계를 강화한 작품.",
+    "genreGroup": "simulation",
+    "id": "g085",
+    "imagePath": "images/nodes/g085.jpg"
+  },
+  {
+    "displayTitle": "팩토리오",
+    "titleOriginal": "Factorio",
+    "releaseYear": 2020,
+    "platforms": [
+      "PC",
+      "Switch"
+    ],
+    "summary": "자동화 라인 최적화 중심의 공장 시뮬레이션.",
+    "genreGroup": "simulation",
+    "id": "g086",
+    "imagePath": "images/nodes/g086.jpg"
+  },
+  {
+    "displayTitle": "림월드",
+    "titleOriginal": "RimWorld",
+    "releaseYear": 2018,
+    "platforms": [
+      "PC",
+      "PlayStation 4",
+      "Xbox One"
+    ],
+    "summary": "스토리 생성형 식민지 운영 시뮬레이션.",
+    "genreGroup": "simulation",
+    "id": "g087",
+    "imagePath": "images/nodes/g087.jpg"
+  },
+  {
+    "displayTitle": "프로스트펑크",
+    "titleOriginal": "Frostpunk",
+    "releaseYear": 2018,
+    "platforms": [
+      "PC",
+      "PlayStation 4",
+      "Xbox One"
+    ],
+    "summary": "극한 생존 조건의 도시 운영 의사결정 게임.",
+    "genreGroup": "simulation",
+    "id": "g088",
+    "imagePath": "images/nodes/g088.jpg"
+  },
+  {
+    "displayTitle": "심즈 2",
+    "titleOriginal": "The Sims 2",
+    "releaseYear": 2004,
+    "platforms": [
+      "PC"
+    ],
+    "summary": "생활 시뮬레이션 루틴 설계를 정교화한 작품.",
+    "genreGroup": "simulation",
+    "id": "g089",
+    "imagePath": "images/nodes/g089.jpg"
+  },
+  {
+    "displayTitle": "심즈 4",
+    "titleOriginal": "The Sims 4",
+    "releaseYear": 2014,
+    "platforms": [
+      "PC",
+      "PlayStation 4",
+      "Xbox One"
+    ],
+    "summary": "커스텀/감정 시스템을 강화한 생활 시뮬레이션.",
+    "genreGroup": "simulation",
+    "id": "g090",
+    "imagePath": "images/fallback/simulation.svg"
+  },
+  {
+    "displayTitle": "마인크래프트",
+    "titleOriginal": "Minecraft",
+    "releaseYear": 2011,
+    "platforms": [
+      "PC",
+      "Switch",
+      "Mobile",
+      "PlayStation"
+    ],
+    "summary": "블록 기반 샌드박스 제작/생존 루프를 대중화한 작품.",
+    "genreGroup": "sandbox",
+    "id": "g091",
+    "imagePath": "images/nodes/g091.jpg"
+  },
+  {
+    "displayTitle": "테라리아",
+    "titleOriginal": "Terraria",
+    "releaseYear": 2011,
+    "platforms": [
+      "PC",
+      "Switch",
+      "Mobile",
+      "PlayStation"
+    ],
+    "summary": "2D 탐험/제작/보스 루프를 정교화한 샌드박스 게임.",
+    "genreGroup": "sandbox",
+    "id": "g092",
+    "imagePath": "images/nodes/g092.jpg"
+  },
+  {
+    "displayTitle": "발하임",
+    "titleOriginal": "Valheim",
+    "releaseYear": 2021,
+    "platforms": [
+      "PC",
+      "Xbox Series X/S"
+    ],
+    "summary": "협동 생존과 건축 루프를 결합한 북유럽 샌드박스.",
+    "genreGroup": "survival",
+    "id": "g093",
+    "imagePath": "images/nodes/g093.jpg"
+  },
+  {
+    "displayTitle": "돈스타브",
+    "titleOriginal": "Don't Starve",
+    "releaseYear": 2013,
+    "platforms": [
+      "PC",
+      "Switch",
+      "PlayStation 4"
+    ],
+    "summary": "자원 순환 압박 기반 생존 루프를 정교화한 작품.",
+    "genreGroup": "survival",
+    "id": "g094",
+    "imagePath": "images/fallback/survival.svg"
+  },
+  {
+    "displayTitle": "더 포레스트",
+    "titleOriginal": "The Forest",
+    "releaseYear": 2018,
+    "platforms": [
+      "PC",
+      "PlayStation 4"
+    ],
+    "summary": "오픈필드 공포 생존과 거점 건설을 결합한 작품.",
+    "genreGroup": "survival",
+    "id": "g095",
+    "imagePath": "images/fallback/survival.svg"
+  },
+  {
+    "displayTitle": "노 맨즈 스카이",
+    "titleOriginal": "No Man's Sky",
+    "releaseYear": 2016,
+    "platforms": [
+      "PC",
+      "PlayStation 5",
+      "Xbox Series X/S"
+    ],
+    "summary": "절차 생성 행성 탐험과 생존 제작을 결합한 게임.",
+    "genreGroup": "sandbox",
+    "id": "g096",
+    "imagePath": "images/nodes/g096.jpg"
+  },
+  {
+    "displayTitle": "스타듀 밸리",
+    "titleOriginal": "Stardew Valley",
+    "releaseYear": 2016,
+    "platforms": [
+      "PC",
+      "Switch",
+      "Mobile",
+      "PlayStation 4"
+    ],
+    "summary": "농장 경영과 커뮤니티 서사를 결합한 생활 게임.",
+    "genreGroup": "simulation",
+    "id": "g097",
+    "imagePath": "images/nodes/g097.jpg"
+  },
+  {
+    "displayTitle": "스토리 오브 시즌즈",
+    "titleOriginal": "Story of Seasons",
+    "releaseYear": 2014,
+    "platforms": [
+      "Nintendo 3DS"
+    ],
+    "summary": "농장 생활 시뮬레이션의 시리즈 원형 계보.",
+    "genreGroup": "simulation",
+    "id": "g098",
+    "imagePath": "images/fallback/simulation.svg"
+  },
+  {
+    "displayTitle": "룬 팩토리 4",
+    "titleOriginal": "Rune Factory 4",
+    "releaseYear": 2012,
+    "platforms": [
+      "Nintendo 3DS",
+      "Switch",
+      "PC"
+    ],
+    "summary": "농장 운영과 액션 RPG를 결합한 하이브리드 작품.",
+    "genreGroup": "rpg",
+    "id": "g099",
+    "imagePath": "images/fallback/rpg.svg"
+  },
+  {
+    "displayTitle": "모여봐요 동물의 숲",
+    "titleOriginal": "Animal Crossing: New Horizons",
+    "releaseYear": 2020,
+    "platforms": [
+      "Nintendo Switch"
+    ],
+    "summary": "생활 루프와 꾸미기 중심 플레이를 확장한 작품.",
+    "genreGroup": "simulation",
+    "id": "g100",
+    "imagePath": "images/nodes/g100.jpg"
+  },
+  {
+    "displayTitle": "더 위트니스",
+    "titleOriginal": "The Witness",
+    "releaseYear": 2016,
+    "platforms": [
+      "PC",
+      "PlayStation 4",
+      "iOS"
+    ],
+    "summary": "환경 탐색과 규칙 학습형 퍼즐을 결합한 작품.",
+    "genreGroup": "puzzle",
+    "id": "g101",
+    "imagePath": "images/nodes/g101.jpg"
+  },
+  {
+    "displayTitle": "브레이드",
+    "titleOriginal": "Braid",
+    "releaseYear": 2008,
+    "platforms": [
+      "PC",
+      "Xbox 360"
+    ],
+    "summary": "시간 조작 퍼즐 플랫폼 구조를 정교화한 인디 게임.",
+    "genreGroup": "puzzle",
+    "id": "g102",
+    "imagePath": "images/nodes/g102.jpg"
+  },
+  {
+    "displayTitle": "림보",
+    "titleOriginal": "Limbo",
+    "releaseYear": 2010,
+    "platforms": [
+      "PC",
+      "PlayStation 3",
+      "Xbox 360"
+    ],
+    "summary": "실루엣 미장센과 환경 퍼즐 연출을 결합한 작품.",
+    "genreGroup": "puzzle",
+    "id": "g103",
+    "imagePath": "images/fallback/puzzle.svg"
+  },
+  {
+    "displayTitle": "인사이드",
+    "titleOriginal": "Inside",
+    "releaseYear": 2016,
+    "platforms": [
+      "PC",
+      "PlayStation 4",
+      "Xbox One"
+    ],
+    "summary": "연출 중심 퍼즐 플랫폼의 흐름을 확장한 작품.",
+    "genreGroup": "puzzle",
+    "id": "g104",
+    "imagePath": "images/fallback/puzzle.svg"
+  },
+  {
+    "displayTitle": "저니",
+    "titleOriginal": "Journey",
+    "releaseYear": 2012,
+    "platforms": [
+      "PlayStation 3",
+      "PC"
+    ],
+    "summary": "비언어적 협동 경험과 감성 연출을 결합한 작품.",
+    "genreGroup": "indie",
+    "id": "g105",
+    "imagePath": "images/fallback/indie.svg"
+  },
+  {
+    "displayTitle": "왓 리메인즈 오브 에디스 핀치",
+    "titleOriginal": "What Remains of Edith Finch",
+    "releaseYear": 2017,
+    "platforms": [
+      "PC",
+      "PlayStation 4",
+      "Xbox One"
+    ],
+    "summary": "단편 연출형 인터랙티브 내러티브를 고도화한 작품.",
+    "genreGroup": "indie",
+    "id": "g106",
+    "imagePath": "images/nodes/g106.jpg"
+  },
+  {
+    "displayTitle": "아우터 와일즈",
+    "titleOriginal": "Outer Wilds",
+    "releaseYear": 2019,
+    "platforms": [
+      "PC",
+      "PlayStation 4",
+      "Xbox One",
+      "Switch"
+    ],
+    "summary": "지식 기반 진행 구조의 우주 탐사 어드벤처.",
+    "genreGroup": "adventure",
+    "id": "g107",
+    "imagePath": "images/fallback/adventure.svg"
+  },
+  {
+    "displayTitle": "리턴 오브 디 오브라 딘",
+    "titleOriginal": "Return of the Obra Dinn",
+    "releaseYear": 2018,
+    "platforms": [
+      "PC",
+      "Switch",
+      "PlayStation 4"
+    ],
+    "summary": "추론형 인터페이스와 사건 재구성 구조를 정립한 작품.",
+    "genreGroup": "puzzle",
+    "id": "g108",
+    "imagePath": "images/nodes/g108.jpg"
+  },
+  {
+    "displayTitle": "슬레이 더 스파이어",
+    "titleOriginal": "Slay the Spire",
+    "releaseYear": 2019,
+    "platforms": [
+      "PC",
+      "Switch",
+      "PlayStation 4",
+      "Mobile"
+    ],
+    "summary": "덱빌딩과 로그라이크 런 구조를 결합한 작품.",
+    "genreGroup": "indie",
+    "id": "g109",
+    "imagePath": "images/nodes/g109.jpg"
+  },
+  {
+    "displayTitle": "인스크립션",
+    "titleOriginal": "Inscryption",
+    "releaseYear": 2021,
+    "platforms": [
+      "PC",
+      "PlayStation 5",
+      "Switch"
+    ],
+    "summary": "카드 전투와 메타 내러티브를 결합한 실험작.",
+    "genreGroup": "indie",
+    "id": "g110",
+    "imagePath": "images/nodes/g110.jpg"
+  },
+  {
+    "displayTitle": "FTL",
+    "titleOriginal": "FTL: Faster Than Light",
+    "releaseYear": 2012,
+    "platforms": [
+      "PC",
+      "iPad"
+    ],
+    "summary": "런 단위 의사결정형 우주 로그라이크를 정립한 작품.",
+    "genreGroup": "indie",
+    "id": "g111",
+    "imagePath": "images/nodes/g111.jpg"
+  },
+  {
+    "displayTitle": "뱀파이어 서바이버즈",
+    "titleOriginal": "Vampire Survivors",
+    "releaseYear": 2022,
+    "platforms": [
+      "PC",
+      "Xbox Series X/S",
+      "Mobile"
+    ],
+    "summary": "초단기 성장/빌드 폭발 루프를 대중화한 로그라이크 게임.",
+    "genreGroup": "indie",
+    "id": "g112",
+    "imagePath": "images/fallback/indie.svg"
+  }
+]
