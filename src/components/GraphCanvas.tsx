@@ -31,6 +31,19 @@ const FADED_LINK_COLOR = 'rgba(148, 163, 184, 0.24)'
 const BASE_ARROW_COLOR = 'rgba(248, 250, 252, 0.95)'
 const FADED_ARROW_COLOR = 'rgba(148, 163, 184, 0.42)'
 
+function clamp(min: number, value: number, max: number): number {
+  return Math.max(min, Math.min(value, max))
+}
+
+function stableHash(text: string): number {
+  let hash = 2166136261
+  for (let index = 0; index < text.length; index += 1) {
+    hash ^= text.charCodeAt(index)
+    hash = Math.imul(hash, 16777619)
+  }
+  return Math.abs(hash >>> 0)
+}
+
 function readNodeId(value: string | ForceNode): string {
   return typeof value === 'string' ? value : value.id
 }
@@ -142,6 +155,113 @@ export default function GraphCanvas({
     }),
     [nodes, edges],
   )
+
+  const { edgeCurvatureById, edgeArrowRelPosById } = useMemo(() => {
+    const outgoingMap = new Map<string, GameEdge[]>()
+    const incomingMap = new Map<string, GameEdge[]>()
+    const pairMap = new Map<string, GameEdge[]>()
+
+    for (const edge of edges) {
+      if (!outgoingMap.has(edge.source)) {
+        outgoingMap.set(edge.source, [])
+      }
+      if (!incomingMap.has(edge.target)) {
+        incomingMap.set(edge.target, [])
+      }
+
+      const pairKey =
+        edge.source < edge.target
+          ? `${edge.source}__${edge.target}`
+          : `${edge.target}__${edge.source}`
+
+      if (!pairMap.has(pairKey)) {
+        pairMap.set(pairKey, [])
+      }
+
+      outgoingMap.get(edge.source)?.push(edge)
+      incomingMap.get(edge.target)?.push(edge)
+      pairMap.get(pairKey)?.push(edge)
+    }
+
+    const sourceRankByEdgeId = new Map<string, number>()
+    const targetRankByEdgeId = new Map<string, number>()
+    const pairRankByEdgeId = new Map<string, number>()
+
+    for (const edgeGroup of outgoingMap.values()) {
+      const sorted = [...edgeGroup].sort((a, b) =>
+        `${a.target}:${a.id}`.localeCompare(`${b.target}:${b.id}`),
+      )
+      const centerIndex = (sorted.length - 1) / 2
+
+      sorted.forEach((edge, index) => {
+        sourceRankByEdgeId.set(edge.id, index - centerIndex)
+      })
+    }
+
+    for (const edgeGroup of incomingMap.values()) {
+      const sorted = [...edgeGroup].sort((a, b) =>
+        `${a.source}:${a.id}`.localeCompare(`${b.source}:${b.id}`),
+      )
+      const centerIndex = (sorted.length - 1) / 2
+
+      sorted.forEach((edge, index) => {
+        targetRankByEdgeId.set(edge.id, index - centerIndex)
+      })
+    }
+
+    for (const edgeGroup of pairMap.values()) {
+      const sorted = [...edgeGroup].sort((a, b) => a.id.localeCompare(b.id))
+      const centerIndex = (sorted.length - 1) / 2
+
+      sorted.forEach((edge, index) => {
+        pairRankByEdgeId.set(edge.id, index - centerIndex)
+      })
+    }
+
+    const curvatureById = new Map<string, number>()
+    const arrowRelPosById = new Map<string, number>()
+
+    for (const edge of edges) {
+      const sourceRank = sourceRankByEdgeId.get(edge.id) ?? 0
+      const targetRank = targetRankByEdgeId.get(edge.id) ?? 0
+      const pairRank = pairRankByEdgeId.get(edge.id) ?? 0
+      const sourceDegree = Math.max(0, (outgoingMap.get(edge.source)?.length ?? 1) - 1)
+      const targetDegree = Math.max(0, (incomingMap.get(edge.target)?.length ?? 1) - 1)
+      const crowdingDegree = Math.max(sourceDegree, targetDegree)
+      const rankDirection =
+        Math.sign(sourceRank || targetRank || pairRank) || (stableHash(edge.id) % 2 === 0 ? 1 : -1)
+      const jitter = ((stableHash(edge.id) % 1000) / 1000 - 0.5) * 0.028
+
+      const antiCancelBoost = (Math.abs(sourceRank) + Math.abs(targetRank)) * 0.12 * rankDirection
+      const crowdingBoost = Math.min(0.16, crowdingDegree * 0.038) * rankDirection
+
+      let curvature =
+        sourceRank * 0.24 + targetRank * 0.2 + pairRank * 0.2 + antiCancelBoost + crowdingBoost + jitter
+      curvature = clamp(-0.58, curvature, 0.58)
+
+      if (Math.abs(curvature) < 0.05) {
+        curvature = 0.05 * rankDirection
+      }
+
+      curvatureById.set(edge.id, curvature)
+
+      const incomingSpread = Math.min(2, targetDegree) * 0.07
+      const outgoingSpread = Math.min(2, sourceDegree) * 0.028
+      let arrowRelPos = 0.9 - targetRank * incomingSpread - sourceRank * outgoingSpread
+
+      if (crowdingDegree >= 2) {
+        arrowRelPos -= rankDirection * 0.018
+      }
+
+      arrowRelPos = clamp(0.76, arrowRelPos, 0.96)
+      arrowRelPosById.set(edge.id, arrowRelPos)
+    }
+
+    return {
+      edgeCurvatureById: curvatureById,
+      edgeArrowRelPosById: arrowRelPosById,
+    }
+  }, [edges])
 
   const trySelectNearestNode = (event: MouseEvent): boolean => {
     if (!isMobile) {
@@ -260,8 +380,14 @@ export default function GraphCanvas({
           }
           return isFocused ? 30 : 26
         }}
-        linkDirectionalArrowRelPos={0.9}
-        linkCurvature={0.08}
+        linkDirectionalArrowRelPos={(link) => {
+          const typed = link as ForceLink
+          return edgeArrowRelPosById.get(typed.id) ?? 0.9
+        }}
+        linkCurvature={(link) => {
+          const typed = link as ForceLink
+          return edgeCurvatureById.get(typed.id) ?? 0.08
+        }}
         nodeRelSize={8}
         cooldownTicks={190}
         onEngineStop={() => {
@@ -489,6 +615,8 @@ export default function GraphCanvas({
           const targetId = typed.target.id
           const isFocused =
             selectedNodeId !== null && (sourceId === selectedNodeId || targetId === selectedNodeId)
+          const curvature = edgeCurvatureById.get(typed.id) ?? 0.08
+          const curveSign = curvature >= 0 ? 1 : -1
 
           const dx = endX - startX
           const dy = endY - startY
@@ -496,8 +624,9 @@ export default function GraphCanvas({
           const nx = -dy / distance
           const ny = dx / distance
 
-          let labelX = startX + dx * 0.5 + nx * (12 / globalScale)
-          let labelY = startY + dy * 0.5 + ny * (12 / globalScale)
+          const curveOffset = (12 + Math.abs(curvature) * 58) / globalScale
+          let labelX = startX + dx * 0.5 + nx * curveOffset * curveSign
+          let labelY = startY + dy * 0.5 + ny * curveOffset * curveSign
 
           const sourceRadius = getNodeRadius(sourceId, selectedNodeId, isMobile)
           const targetRadius = getNodeRadius(targetId, selectedNodeId, isMobile)
@@ -512,8 +641,8 @@ export default function GraphCanvas({
               break
             }
 
-            labelX += nx * (8 / globalScale)
-            labelY += ny * (8 / globalScale)
+            labelX += nx * (8 / globalScale) * curveSign
+            labelY += ny * (8 / globalScale) * curveSign
           }
 
           const fontSize = Math.max(4, Math.min(11, 10 / globalScale))
