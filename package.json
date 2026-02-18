@@ -19,7 +19,9 @@
     "sync:images:refresh": "node scripts/sync-wikimedia-images.mjs --refresh-all",
     "sync:images:dry:refresh": "node scripts/sync-wikimedia-images.mjs --dry-run --refresh-all",
     "verify:research": "node scripts/verify-research-integrity.mjs",
-    "layout:apply": "node scripts/apply-graph-layout.mjs"
+    "layout:apply": "node scripts/apply-graph-layout.mjs",
+    "prepare:build:nodes": "node scripts/prepare-build-nodes.mjs",
+    "build:pages": "npm run prepare:build:nodes && npm run build"
   },
   "dependencies": {
     "react": "^19.2.0",

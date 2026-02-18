@@ -75,6 +75,19 @@ body.modal-open {
   font-size: 0.94rem;
 }
 
+.demo-notice {
+  margin: 0 0 0.48rem;
+  display: inline-block;
+  padding: 0.42rem 0.62rem;
+  border-radius: 10px;
+  border: 1px solid rgba(248, 113, 113, 0.7);
+  background: rgba(127, 29, 29, 0.55);
+  color: #fee2e2;
+  font-size: 0.88rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
 .stat-chip-wrap {
   display: flex;
   flex-wrap: wrap;

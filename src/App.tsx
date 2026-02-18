@@ -158,6 +158,9 @@ export default function App() {
         <div>
           <p className="eyebrow">Interactive Game Lineage</p>
           <h1>게임 계보 인터랙티브 그래프 V2</h1>
+          <p className="demo-notice" role="note">
+            이 페이지는 AI로 자동생성된 페이지이며 실제 데이터가 아닌 데모 페이지입니다.
+          </p>
           <p className="subtitle">
             핵심 게임 노드와 영향 요소를 중심으로 계보를 탐색하세요.
           </p>

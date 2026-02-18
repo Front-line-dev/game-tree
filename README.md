@@ -86,6 +86,17 @@ npm run build
 
 `vite.config.ts`의 `base: './'` 설정으로 `dist/index.html` 자산 경로는 상대 경로로 생성됩니다.
 
+## GitHub Pages 자동 배포
+- `main` 브랜치에 push(머지 포함)되면 GitHub Actions가 자동으로 빌드 후 Pages에 배포합니다.
+- 배포 빌드 전 `npm run prepare:build:nodes`를 실행해 사용자 제공 노드 파일을 우선 적용합니다.
+- 사용자 노드 파일 탐색 순서:
+  - 저장소 변수 `USER_NODES_FILE` 경로
+  - `input/nodes.user.json`
+  - `input/nodes.json`
+  - `src/data/nodes.user.json`
+- 위 파일이 없으면 기존 `src/data/nodes.json`으로 일반 빌드를 수행합니다.
+- 로컬에서 동일 흐름을 재현하려면 `npm run build:pages`를 실행하면 됩니다.
+
 ## 데이터/문서
 - 노드: `src/data/nodes.json`
 - 엣지: `src/data/edges.json`

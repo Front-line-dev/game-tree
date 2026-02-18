@@ -43,6 +43,8 @@
 | ST-022 | short_term_task | User request | 내보낸 레이아웃 파일을 빌드 입력(`src/data/graph-layout.json`)으로 적용할 수 있어야 한다. | completed | 2026-02-18 |
 | ST-023 | short_term_task | User request | 현재 파일 + 커밋 히스토리를 분석해 GitHub 공개 가능 여부를 점검한다(다운로드 이미지는 적합하다고 가정). | completed | 2026-02-18 |
 | ST-024 | short_term_task | User request | 공개 전 산출물 정리: `.playwright-cli`/`output` 추적 파일 제거 + `.gitignore` 재유입 방지 규칙 추가. | completed | 2026-02-18 |
+| ST-025 | short_term_task | User request | `main` push/merge 시 GitHub Pages 자동 배포를 구성하고, 사용자 제공 노드 파일이 있으면 우선 적용 후 빌드한다. | completed | 2026-02-18 |
+| ST-026 | short_term_task | User request | 페이지 타이틀 영역에 “AI 자동생성 데모 페이지” 안내 문구를 눈에 띄게 추가한다. | completed | 2026-02-18 |
 
 ## Outcome Snapshot
 
@@ -71,4 +73,6 @@
 - quality_checks: verify(0 warning/0 error), lint(pass), test(19 pass), build(pass), layout:apply(pass)
 - leak_checks: .DS_Store(0), personal_path_matches(0), history_last50(.DS_Store=0, personal_path=0)
 - public_release_audit: tracked_files/commit_history scanned, secret_patterns(0), author_email_exposure(commits=6), generated_playwright_artifacts(removed=20, remaining_tracked=0)
+- pages_deploy_automation: `.github/workflows/deploy-pages.yml` (trigger=push main + manual), user_nodes_prebuild=`prepare-build-nodes`
+- header_notice: `src/App.tsx` 타이틀 하단에 AI 자동생성 데모 안내 문구 추가(강조 스타일 적용)
 - reconciled_at: 2026-02-18
