@@ -41,6 +41,8 @@
 | ST-020 | short_term_task | User request | 디자인 모드에서 노드를 드래그해 위치를 조정할 수 있어야 한다. | completed | 2026-02-18 |
 | ST-021 | short_term_task | User request | 노드 좌표 + viewport 상태를 JSON 파일로 내보낼 수 있어야 한다. | completed | 2026-02-18 |
 | ST-022 | short_term_task | User request | 내보낸 레이아웃 파일을 빌드 입력(`src/data/graph-layout.json`)으로 적용할 수 있어야 한다. | completed | 2026-02-18 |
+| ST-023 | short_term_task | User request | 현재 파일 + 커밋 히스토리를 분석해 GitHub 공개 가능 여부를 점검한다(다운로드 이미지는 적합하다고 가정). | completed | 2026-02-18 |
+| ST-024 | short_term_task | User request | 공개 전 산출물 정리: `.playwright-cli`/`output` 추적 파일 제거 + `.gitignore` 재유입 방지 규칙 추가. | completed | 2026-02-18 |
 
 ## Outcome Snapshot
 
@@ -68,4 +70,5 @@
 - layout_apply_workflow: `npm run layout:apply -- <exported-layout.json>`
 - quality_checks: verify(0 warning/0 error), lint(pass), test(19 pass), build(pass), layout:apply(pass)
 - leak_checks: .DS_Store(0), personal_path_matches(0), history_last50(.DS_Store=0, personal_path=0)
+- public_release_audit: tracked_files/commit_history scanned, secret_patterns(0), author_email_exposure(commits=6), generated_playwright_artifacts(removed=20, remaining_tracked=0)
 - reconciled_at: 2026-02-18
