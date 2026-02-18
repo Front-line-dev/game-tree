@@ -74,6 +74,10 @@ async function fileExists(filePath) {
   }
 }
 
+function isValidatedAuditStatus(status) {
+  return status === 'selected' || status === 'kept'
+}
+
 async function fetchWithTimeout(url, init = {}, timeoutMs = REQUEST_TIMEOUT_MS) {
   const controller = new AbortController()
   const timer = setTimeout(() => controller.abort(), timeoutMs)
@@ -936,16 +940,15 @@ async function main() {
   for (const [index, node] of nodes.entries()) {
     if (!refreshAll) {
       const previous = previousEntryByNodeId.get(node.id)
-      const currentImagePath = node.imagePath
       if (
         previous &&
-        previous.status === 'selected' &&
+        isValidatedAuditStatus(previous.status) &&
         typeof previous.imagePath === 'string' &&
-        previous.imagePath === currentImagePath &&
-        currentImagePath.startsWith('images/nodes/')
+        previous.imagePath.startsWith('images/nodes/')
       ) {
-        const currentAbsolute = path.join(ROOT, 'public', currentImagePath)
-        if (await fileExists(currentAbsolute)) {
+        const previousAbsolute = path.join(ROOT, 'public', previous.imagePath)
+        if (await fileExists(previousAbsolute)) {
+          node.imagePath = previous.imagePath
           kept += 1
           auditEntries.push({
             nodeId: node.id,
@@ -953,7 +956,7 @@ async function main() {
             status: 'kept',
             score: previous.score ?? null,
             reason: 'reuse_validated_asset',
-            imagePath: currentImagePath,
+            imagePath: previous.imagePath,
             imageUrl: previous.imageUrl ?? null,
           })
           if ((index + 1) % PROGRESS_EVERY === 0 || index + 1 === nodes.length) {

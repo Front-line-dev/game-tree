@@ -2,16 +2,19 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import { forceCollide } from 'd3-force-3d'
 import ForceGraph2D, { type ForceGraphMethods } from 'react-force-graph-2d'
 
-import type { GameEdge, GameNode } from '../types/graph'
+import type { GameEdge, GameNode, GraphLayout } from '../types/graph'
 
 interface GraphCanvasProps {
   nodes: GameNode[]
   edges: GameEdge[]
   isMobile: boolean
+  designModeEnabled: boolean
+  layout: GraphLayout
   selectedNodeId: string | null
   highlightedNodeIds: Set<string>
   onNodeSelect: (nodeId: string) => void
   onBackgroundClick: () => void
+  onLayoutChange: (nextLayout: GraphLayout) => void
 }
 
 interface ForceNode extends GameNode {
@@ -19,6 +22,8 @@ interface ForceNode extends GameNode {
   y?: number
   vx?: number
   vy?: number
+  fx?: number
+  fy?: number
 }
 
 type ForceLink = Omit<GameEdge, 'source' | 'target'> & {
@@ -30,6 +35,53 @@ const BASE_LINK_COLOR = 'rgba(148, 163, 184, 0.82)'
 const FADED_LINK_COLOR = 'rgba(148, 163, 184, 0.24)'
 const BASE_ARROW_COLOR = 'rgba(248, 250, 252, 0.95)'
 const FADED_ARROW_COLOR = 'rgba(148, 163, 184, 0.42)'
+const MIN_ZOOM = 0.5
+const MAX_ZOOM = 3
+const LAYOUT_CHANGE_EPSILON = 0.0001
+
+function isSameNumber(a: number, b: number): boolean {
+  return Math.abs(a - b) <= LAYOUT_CHANGE_EPSILON
+}
+
+function updateLayoutNodePosition(
+  layout: GraphLayout,
+  nodeId: string,
+  x: number,
+  y: number,
+): GraphLayout {
+  const current = layout.nodes[nodeId]
+  if (current && isSameNumber(current.x, x) && isSameNumber(current.y, y)) {
+    return layout
+  }
+
+  return {
+    ...layout,
+    nodes: {
+      ...layout.nodes,
+      [nodeId]: { x, y },
+    },
+  }
+}
+
+function updateLayoutViewport(
+  layout: GraphLayout,
+  x: number,
+  y: number,
+  k: number,
+): GraphLayout {
+  if (
+    isSameNumber(layout.viewport.x, x) &&
+    isSameNumber(layout.viewport.y, y) &&
+    isSameNumber(layout.viewport.k, k)
+  ) {
+    return layout
+  }
+
+  return {
+    ...layout,
+    viewport: { x, y, k },
+  }
+}
 
 function clamp(min: number, value: number, max: number): number {
   return Math.max(min, Math.min(value, max))
@@ -177,16 +229,25 @@ export default function GraphCanvas({
   nodes,
   edges,
   isMobile,
+  designModeEnabled,
+  layout,
   selectedNodeId,
   highlightedNodeIds,
   onNodeSelect,
   onBackgroundClick,
+  onLayoutChange,
 }: GraphCanvasProps) {
   const wrapperRef = useRef<HTMLDivElement | null>(null)
   const graphRef = useRef<ForceGraphMethods<ForceNode, ForceLink> | undefined>(undefined)
+  const layoutRef = useRef<GraphLayout>(layout)
+  const hasRestoredInitialViewportRef = useRef(false)
   const imageCacheRef = useRef<Map<string, HTMLImageElement>>(new Map())
   const failedImagePathSetRef = useRef<Set<string>>(new Set())
   const [size, setSize] = useState({ width: 960, height: 680 })
+
+  useEffect(() => {
+    layoutRef.current = layout
+  }, [layout])
 
   useEffect(() => {
     const element = wrapperRef.current
@@ -216,11 +277,35 @@ export default function GraphCanvas({
 
   const graphData = useMemo(
     () => ({
-      nodes: nodes.map((node) => ({ ...node })),
+      nodes: nodes.map((node) => {
+        const positioned = layout.nodes[node.id]
+        if (!positioned) {
+          return { ...node }
+        }
+
+        return {
+          ...node,
+          x: positioned.x,
+          y: positioned.y,
+          fx: positioned.x,
+          fy: positioned.y,
+        }
+      }),
       links: edges.map((edge) => ({ ...edge })),
     }),
-    [nodes, edges],
+    [nodes, edges, layout.nodes],
   )
+
+  const emitLayoutChange = (updater: (current: GraphLayout) => GraphLayout): void => {
+    const current = layoutRef.current
+    const next = updater(current)
+    if (next === current) {
+      return
+    }
+
+    layoutRef.current = next
+    onLayoutChange(next)
+  }
 
   const { edgeCurvatureById, edgeArrowRelPosById } = useMemo(() => {
     const outgoingMap = new Map<string, GameEdge[]>()
@@ -386,6 +471,18 @@ export default function GraphCanvas({
 
   useEffect(() => {
     const graph = graphRef.current
+    if (!graph || graphData.nodes.length === 0 || hasRestoredInitialViewportRef.current) {
+      return
+    }
+
+    const { x, y, k } = layoutRef.current.viewport
+    graph.centerAt(x, y, 0)
+    graph.zoom(k, 0)
+    hasRestoredInitialViewportRef.current = true
+  }, [graphData.nodes.length])
+
+  useEffect(() => {
+    const graph = graphRef.current
     if (!graph || graphData.nodes.length === 0) {
       return
     }
@@ -413,16 +510,7 @@ export default function GraphCanvas({
     linkForce?.distance?.(isMobile ? 215 : 190)
     linkForce?.strength?.(0.58)
     graph.d3ReheatSimulation()
-
-    const timer = window.setTimeout(() => {
-      graph.zoomToFit(420, isMobile ? 56 : 100)
-      if (isMobile) {
-        graph.zoom(Math.max(graph.zoom(), 0.86), 240)
-      }
-    }, 120)
-
-    return () => window.clearTimeout(timer)
-  }, [graphData.nodes.length, graphData.links.length, isMobile, size.width, size.height])
+  }, [graphData.nodes.length, graphData.links.length, isMobile])
 
   return (
     <div ref={wrapperRef} className="graph-canvas-wrapper">
@@ -431,9 +519,9 @@ export default function GraphCanvas({
         width={size.width}
         height={size.height}
         graphData={graphData}
-        enableNodeDrag={false}
-        minZoom={isMobile ? 0.52 : 0.38}
-        maxZoom={7.5}
+        enableNodeDrag={designModeEnabled}
+        minZoom={MIN_ZOOM}
+        maxZoom={MAX_ZOOM}
         backgroundColor="rgba(0,0,0,0)"
         linkDirectionalArrowLength={(link) => {
           const typed = link as ForceLink
@@ -456,30 +544,43 @@ export default function GraphCanvas({
         }}
         nodeRelSize={8}
         cooldownTicks={190}
-        onEngineStop={() => {
-          const graph = graphRef.current
-          if (!graph || selectedNodeId) {
-            return
-          }
-
-          graph.zoomToFit(260, isMobile ? 56 : 92)
-          if (isMobile) {
-            graph.zoom(Math.max(graph.zoom(), 0.9), 220)
-          }
-        }}
         onNodeClick={(node) => {
           const typedNode = node as ForceNode
           onNodeSelect(typedNode.id)
-
-          if (typeof typedNode.x === 'number' && typeof typedNode.y === 'number') {
-            const graph = graphRef.current
-            if (!graph) {
-              return
-            }
-
-            graph.centerAt(typedNode.x, typedNode.y, 280)
-            graph.zoom(Math.max(graph.zoom(), isMobile ? 1.05 : 1.3), 280)
+        }}
+        onNodeDragEnd={(node) => {
+          const typedNode = node as ForceNode
+          const nextX = typedNode.x
+          const nextY = typedNode.y
+          if (typeof nextX !== 'number' || typeof nextY !== 'number') {
+            return
           }
+
+          emitLayoutChange((current) =>
+            updateLayoutNodePosition(current, typedNode.id, nextX, nextY),
+          )
+        }}
+        onZoomEnd={() => {
+          const graph = graphRef.current
+          if (!graph) {
+            return
+          }
+
+          const center = graph.centerAt()
+          const zoomLevel = graph.zoom()
+
+          if (
+            !Number.isFinite(center.x) ||
+            !Number.isFinite(center.y) ||
+            !Number.isFinite(zoomLevel) ||
+            zoomLevel <= 0
+          ) {
+            return
+          }
+
+          emitLayoutChange((current) =>
+            updateLayoutViewport(current, center.x, center.y, zoomLevel),
+          )
         }}
         onBackgroundClick={(event) => {
           if (trySelectNearestNode(event)) {

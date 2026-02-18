@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-02-18T04:21:31.757Z",
+  "generatedAt": "2026-02-18T08:03:23.329Z",
   "dryRun": false,
   "refreshAll": false,
-  "nodes": 112,
-  "downloaded": 7,
-  "kept": 89,
-  "fallback": 16,
+  "nodes": 132,
+  "downloaded": 3,
+  "kept": 114,
+  "fallback": 15,
   "entries": [
     {
       "nodeId": "g001",
@@ -89,9 +89,9 @@
     {
       "nodeId": "g010",
       "title": "필라스 오브 이터니티",
-      "status": "selected",
+      "status": "kept",
       "score": 20,
-      "reason": "dimension_ok,game_context,title_match,title_overlap:1.00,year_match,asset_name_positive,original_image",
+      "reason": "reuse_validated_asset",
       "imagePath": "images/nodes/g010.png",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/en/9/94/Pillars_of_Eternity_The_White_March_Part_1_Cover.png"
     },
@@ -107,9 +107,9 @@
     {
       "nodeId": "g012",
       "title": "매스 이펙트 2",
-      "status": "selected",
+      "status": "kept",
       "score": 21,
-      "reason": "dimension_ok,game_context,title_match,title_overlap:1.00,year_match,asset_name_positive,original_image",
+      "reason": "reuse_validated_asset",
       "imagePath": "images/nodes/g012.png",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/en/0/05/MassEffect2_cover.PNG"
     },
@@ -134,9 +134,9 @@
     {
       "nodeId": "g015",
       "title": "엘더스크롤 V: 스카이림",
-      "status": "selected",
+      "status": "kept",
       "score": 21,
-      "reason": "dimension_ok,game_context,title_match,title_overlap:1.00,year_match,asset_name_positive,original_image",
+      "reason": "reuse_validated_asset",
       "imagePath": "images/nodes/g015.png",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/en/1/15/The_Elder_Scrolls_V_Skyrim_cover.png"
     },
@@ -161,9 +161,9 @@
     {
       "nodeId": "g018",
       "title": "다크 소울",
-      "status": "selected",
+      "status": "kept",
       "score": 24,
-      "reason": "dimension_ok,game_context,title_match,title_overlap:1.00,year_match,asset_name_positive,original_image,video_game_title",
+      "reason": "reuse_validated_asset",
       "imagePath": "images/nodes/g018.jpg",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/en/8/8d/Dark_Souls_Cover_Art.jpg"
     },
@@ -179,9 +179,9 @@
     {
       "nodeId": "g020",
       "title": "엘든 링",
-      "status": "selected",
+      "status": "kept",
       "score": 18,
-      "reason": "dimension_ok,game_context,title_match,title_overlap:1.00,year_near,asset_name_positive,original_image",
+      "reason": "reuse_validated_asset",
       "imagePath": "images/nodes/g020.png",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/en/f/f0/Elden_Ring_Nightreign_cover_art.png"
     },
@@ -231,9 +231,11 @@
     {
       "nodeId": "g026",
       "title": "언더테일",
-      "status": "fallback",
-      "score": null,
-      "reason": "no_valid_candidate"
+      "status": "kept",
+      "score": 13,
+      "reason": "reuse_validated_asset",
+      "imagePath": "images/nodes/g026.png",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Undertale_Soundtrack_2015.svg/960px-Undertale_Soundtrack_2015.svg.png"
     },
     {
       "nodeId": "g027",
@@ -265,9 +267,11 @@
     {
       "nodeId": "g030",
       "title": "MOTHER 3",
-      "status": "fallback",
-      "score": null,
-      "reason": "no_valid_candidate"
+      "status": "kept",
+      "score": 13,
+      "reason": "reuse_validated_asset",
+      "imagePath": "images/nodes/g030.png",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/5/52/Lucas_Smash_Bros.png"
     },
     {
       "nodeId": "g031",
@@ -300,19 +304,19 @@
       "nodeId": "g034",
       "title": "젤다의 전설: 시간의 오카리나",
       "status": "kept",
-      "score": 16,
+      "score": 20,
       "reason": "reuse_validated_asset",
-      "imagePath": "images/nodes/g034.jpg",
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/5/57/The_Legend_of_Zelda_Ocarina_of_Time.jpg"
+      "imagePath": "images/nodes/g034.png",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/d/d1/Majora%27s_Mask_3D_cover.png"
     },
     {
       "nodeId": "g035",
       "title": "젤다의 전설: 브레스 오브 더 와일드",
       "status": "kept",
-      "score": 16,
+      "score": 22,
       "reason": "reuse_validated_asset",
       "imagePath": "images/nodes/g035.jpg",
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/c/c6/The_Legend_of_Zelda_Breath_of_the_Wild.jpg"
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/8/88/Tloz_breath_of_the_wild_creating_a_champion_standard_english_cover.jpg"
     },
     {
       "nodeId": "g036",
@@ -389,9 +393,9 @@
     {
       "nodeId": "g044",
       "title": "페르시아의 왕자: 시간의 모래",
-      "status": "selected",
+      "status": "kept",
       "score": 23,
-      "reason": "dimension_ok,game_context,title_match,title_overlap:1.00,year_match,asset_name_positive,original_image",
+      "reason": "reuse_validated_asset",
       "imagePath": "images/nodes/g044.jpg",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/en/8/86/Sands_of_time_cover.jpg"
     },
@@ -494,10 +498,10 @@
       "nodeId": "g056",
       "title": "헤일로: 컴뱃 이볼브드",
       "status": "kept",
-      "score": 20,
+      "score": 16,
       "reason": "reuse_validated_asset",
-      "imagePath": "images/nodes/g056.png",
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/9/9c/HaloCEA_boxart.png"
+      "imagePath": "images/nodes/g056.jpg",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/8/80/Halo_-_Combat_Evolved_%28XBox_version_-_box_art%29.jpg"
     },
     {
       "nodeId": "g057",
@@ -592,9 +596,11 @@
     {
       "nodeId": "g067",
       "title": "포탈",
-      "status": "fallback",
-      "score": null,
-      "reason": "no_valid_candidate"
+      "status": "kept",
+      "score": 17,
+      "reason": "reuse_validated_asset",
+      "imagePath": "images/nodes/g067.jpg",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/9/9f/Portal_standalonebox.jpg"
     },
     {
       "nodeId": "g068",
@@ -686,19 +692,19 @@
       "nodeId": "g078",
       "title": "파이어 엠블렘 각성",
       "status": "kept",
-      "score": 10,
+      "score": 18,
       "reason": "reuse_validated_asset",
       "imagePath": "images/nodes/g078.png",
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/f/f9/Robin_Smash_4.png"
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/9/98/Fire_Emblem_Echoes_cover.png"
     },
     {
       "nodeId": "g079",
       "title": "어드밴스드 워즈",
       "status": "kept",
-      "score": 14,
+      "score": 15,
       "reason": "reuse_validated_asset",
-      "imagePath": "images/nodes/g079.jpg",
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Nintendo-Game-Boy-Advance-Purple-FL.jpg"
+      "imagePath": "images/nodes/g079.png",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Nintendo-Game-Boy-Advance-Purple-FL.png"
     },
     {
       "nodeId": "g080",
@@ -782,9 +788,9 @@
     {
       "nodeId": "g089",
       "title": "심즈 2",
-      "status": "selected",
+      "status": "kept",
       "score": 20,
-      "reason": "dimension_ok,game_context,title_match,title_overlap:1.00,year_match,asset_name_positive,original_image",
+      "reason": "reuse_validated_asset",
       "imagePath": "images/nodes/g089.png",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/en/6/69/TS2P_cover_art.png"
     },
@@ -852,9 +858,9 @@
     {
       "nodeId": "g097",
       "title": "스타듀 밸리",
-      "status": "kept",
+      "status": "selected",
       "score": 13,
-      "reason": "reuse_validated_asset",
+      "reason": "dimension_ok,game_context,title_match,title_overlap:1.00,year_match,original_image",
       "imagePath": "images/nodes/g097.jpg",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/en/4/48/Stardew_Valley_Original_Soundtrack.jpg"
     },
@@ -982,6 +988,182 @@
       "reason": "reuse_validated_asset",
       "imagePath": "images/nodes/g112.jpg",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/en/e/e6/Vampire_Survivors_key_art.jpg"
+    },
+    {
+      "nodeId": "g113",
+      "title": "발더스 게이트 3",
+      "status": "kept",
+      "score": 23,
+      "reason": "reuse_validated_asset",
+      "imagePath": "images/nodes/g113.jpg",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/1/12/Baldur%27s_Gate_3_cover_art.jpg"
+    },
+    {
+      "nodeId": "g114",
+      "title": "옥토패스 트래블러 II",
+      "status": "selected",
+      "score": 23,
+      "reason": "dimension_ok,game_context,title_match,title_overlap:1.00,year_match,asset_name_positive,original_image",
+      "imagePath": "images/nodes/g114.jpg",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/4/46/Octopath_Traveler_II_cover_art.jpg"
+    },
+    {
+      "nodeId": "g115",
+      "title": "엘더스크롤 IV: 오블리비언",
+      "status": "kept",
+      "score": 21,
+      "reason": "reuse_validated_asset",
+      "imagePath": "images/nodes/g115.png",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/4/4b/The_Elder_Scrolls_IV_Oblivion_cover.png"
+    },
+    {
+      "nodeId": "g116",
+      "title": "폴아웃 3",
+      "status": "kept",
+      "score": 21,
+      "reason": "reuse_validated_asset",
+      "imagePath": "images/nodes/g116.png",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/8/83/Fallout_3_cover_art.PNG"
+    },
+    {
+      "nodeId": "g117",
+      "title": "세키로: 섀도우 다이 트와이스",
+      "status": "kept",
+      "score": 16,
+      "reason": "reuse_validated_asset",
+      "imagePath": "images/nodes/g117.jpg",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/6/6e/Sekiro_art.jpg"
+    },
+    {
+      "nodeId": "g118",
+      "title": "인왕 2",
+      "status": "kept",
+      "score": 23,
+      "reason": "reuse_validated_asset",
+      "imagePath": "images/nodes/g118.jpg",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/9/91/Nioh_2_cover_art.jpg"
+    },
+    {
+      "nodeId": "g119",
+      "title": "메트로이드 드레드",
+      "status": "kept",
+      "score": 13,
+      "reason": "reuse_validated_asset",
+      "imagePath": "images/nodes/g119.jpg",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/1/16/Metroid_Samus_Returns.jpg"
+    },
+    {
+      "nodeId": "g120",
+      "title": "오리 앤 더 블라인드 포레스트",
+      "status": "fallback",
+      "score": null,
+      "reason": "no_valid_candidate"
+    },
+    {
+      "nodeId": "g121",
+      "title": "오리 앤 더 윌 오브 더 위습스",
+      "status": "kept",
+      "score": 16,
+      "reason": "reuse_validated_asset",
+      "imagePath": "images/nodes/g121.jpg",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/9/94/Ori_and_the_Will_of_the_Wisps.jpg"
+    },
+    {
+      "nodeId": "g122",
+      "title": "둠 이터널",
+      "status": "kept",
+      "score": 21,
+      "reason": "reuse_validated_asset",
+      "imagePath": "images/nodes/g122.png",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/9/9d/Cover_Art_of_Doom_Eternal.png"
+    },
+    {
+      "nodeId": "g123",
+      "title": "레프트 4 데드 2",
+      "status": "kept",
+      "score": 16,
+      "reason": "reuse_validated_asset",
+      "imagePath": "images/nodes/g123.jpg",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/b/ba/Left4Dead2.jpg"
+    },
+    {
+      "nodeId": "g124",
+      "title": "에이펙스 레전드",
+      "status": "kept",
+      "score": 23,
+      "reason": "reuse_validated_asset",
+      "imagePath": "images/nodes/g124.jpg",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/d/db/Apex_legends_cover.jpg"
+    },
+    {
+      "nodeId": "g125",
+      "title": "레인보우 식스 시즈",
+      "status": "kept",
+      "score": 23,
+      "reason": "reuse_validated_asset",
+      "imagePath": "images/nodes/g125.jpg",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/4/47/Tom_Clancy%27s_Rainbow_Six_Siege_cover_art.jpg"
+    },
+    {
+      "nodeId": "g126",
+      "title": "스타크래프트 II",
+      "status": "kept",
+      "score": 20,
+      "reason": "reuse_validated_asset",
+      "imagePath": "images/nodes/g126.jpg",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/7/77/StarCraft_II_-_Legacy_of_the_Void_cover.jpg"
+    },
+    {
+      "nodeId": "g127",
+      "title": "히어로즈 오브 더 스톰",
+      "status": "fallback",
+      "score": null,
+      "reason": "no_valid_candidate"
+    },
+    {
+      "nodeId": "g128",
+      "title": "시티즈: 스카이라인 II",
+      "status": "selected",
+      "score": 21,
+      "reason": "dimension_ok,game_context,title_match,title_overlap:1.00,year_match,asset_name_positive,original_image",
+      "imagePath": "images/nodes/g128.png",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/3/35/Cities_Skylines_II_Cover_Art.png"
+    },
+    {
+      "nodeId": "g129",
+      "title": "플래닛 코스터",
+      "status": "kept",
+      "score": 14,
+      "reason": "reuse_validated_asset",
+      "imagePath": "images/nodes/g129.png",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/6/60/Planet_coaster_box.png"
+    },
+    {
+      "nodeId": "g130",
+      "title": "러스트",
+      "status": "kept",
+      "score": 11,
+      "reason": "reuse_validated_asset",
+      "imagePath": "images/nodes/g130.jpg",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Rust_on_iron.jpg"
+    },
+    {
+      "nodeId": "g131",
+      "title": "아크: 서바이벌 이볼브드",
+      "status": "kept",
+      "score": 14,
+      "reason": "reuse_validated_asset",
+      "imagePath": "images/nodes/g131.png",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/2/2b/ArkSurvivalEvolved.png"
+    },
+    {
+      "nodeId": "g132",
+      "title": "발라트로",
+      "status": "kept",
+      "score": 23,
+      "reason": "reuse_validated_asset",
+      "imagePath": "images/nodes/g132.jpg",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/8/89/Balatro_cover.jpg"
     }
   ]
 }

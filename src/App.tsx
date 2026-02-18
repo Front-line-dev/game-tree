@@ -4,12 +4,14 @@ import ControlBar from './components/ControlBar'
 import DetailPanel from './components/DetailPanel'
 import GraphCanvas from './components/GraphCanvas'
 import edgesRaw from './data/edges.json'
+import graphLayoutRaw from './data/graph-layout.json'
 import nodesRaw from './data/nodes.json'
 import { buildVisibleGraph } from './lib/buildVisibleGraph'
 import { filterGraph } from './lib/filterGraph'
+import { validateGraphLayout } from './lib/validateGraphLayout'
 import { assertValidGraphData } from './lib/validateGraphData'
 import './styles/app.css'
-import type { GameEdge, GameNode, GraphData } from './types/graph'
+import type { GameEdge, GameNode, GraphData, GraphLayout } from './types/graph'
 
 const MOBILE_BREAKPOINT = 860
 
@@ -17,12 +19,21 @@ const graphData: GraphData = {
   nodes: nodesRaw as GameNode[],
   edges: edgesRaw as GameEdge[],
 }
+const graphNodeIdSet = new Set(graphData.nodes.map((node) => node.id))
 
 assertValidGraphData(graphData)
 
 export default function App() {
   const [query, setQuery] = useState('')
   const [selectedNodeId, setSelectedNodeId] = useState<string | null>(null)
+  const [designModeEnabled, setDesignModeEnabled] = useState(false)
+  const [layout, setLayout] = useState<GraphLayout>(() => {
+    const result = validateGraphLayout(graphLayoutRaw, graphNodeIdSet)
+    if (!result.isValid) {
+      console.warn(`[graph-layout] invalid layout data, normalization applied:\n${result.errors.join('\n')}`)
+    }
+    return result.layout
+  })
   const [viewportWidth, setViewportWidth] = useState<number>(() => window.innerWidth)
 
   const isMobile = viewportWidth <= MOBILE_BREAKPOINT
@@ -117,6 +128,30 @@ export default function App() {
     setSelectedNodeId(null)
   }
 
+  const exportLayout = (): void => {
+    const payload: GraphLayout = {
+      version: 1,
+      nodes: layout.nodes,
+      viewport: layout.viewport,
+      meta: {
+        exportedAt: new Date().toISOString(),
+        nodeCount: Object.keys(layout.nodes).length,
+      },
+    }
+
+    const fileContent = `${JSON.stringify(payload, null, 2)}\n`
+    const blob = new Blob([fileContent], { type: 'application/json' })
+    const url = URL.createObjectURL(blob)
+    const anchor = document.createElement('a')
+    const timestamp = new Date().toISOString().replace(/[:.]/g, '-')
+    anchor.href = url
+    anchor.download = `graph-layout-${timestamp}.json`
+    document.body.append(anchor)
+    anchor.click()
+    anchor.remove()
+    URL.revokeObjectURL(url)
+  }
+
   return (
     <div className="app-shell">
       <header className="app-header">
@@ -136,12 +171,21 @@ export default function App() {
         </div>
       </header>
 
-      <ControlBar query={query} onQueryChange={setQuery} onReset={resetFilter} />
+      <ControlBar
+        query={query}
+        onQueryChange={setQuery}
+        onReset={resetFilter}
+        designModeEnabled={designModeEnabled}
+        onDesignModeToggle={() => setDesignModeEnabled((prev) => !prev)}
+        onExportLayout={exportLayout}
+      />
 
       <main className="app-main">
         <section className="graph-panel" aria-label="게임 계보 그래프">
           <div className="graph-help">
-            드래그 이동, 휠 확대/축소, 배경 클릭 선택 해제
+            {designModeEnabled
+              ? '디자인 모드: 노드 드래그 배치 + 내보내기'
+              : '드래그 이동, 휠 확대/축소, 배경 클릭 선택 해제'}
           </div>
           {filteredGraph.nodes.length === 0 ? (
             <div className="empty-state">
@@ -153,10 +197,13 @@ export default function App() {
               nodes={filteredGraph.nodes}
               edges={filteredGraph.edges}
               isMobile={isMobile}
+              designModeEnabled={designModeEnabled}
+              layout={layout}
               selectedNodeId={effectiveSelectedNodeId}
               highlightedNodeIds={highlightedNodeIds}
               onNodeSelect={(nodeId) => setSelectedNodeId((prev) => (prev === nodeId ? null : nodeId))}
               onBackgroundClick={() => setSelectedNodeId(null)}
+              onLayoutChange={(nextLayout) => setLayout(nextLayout)}
             />
           )}
         </section>

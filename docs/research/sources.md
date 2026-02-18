@@ -3,14 +3,24 @@
 본 문서는 현재 채택된 엣지(`src/data/edges.json`)에서 실제 사용 중인 근거 출처만 기록한다.
 
 ## 채택 엣지 근거 출처
+- Square Enix: Octopath Traveler II
+  - https://www.square-enix-games.com/en_US/games/octopath-traveler-ii
+- Steam: Baldur's Gate 3
+  - https://store.steampowered.com/app/1086940/Baldurs_Gate_3/
 - Wikipedia: Advance Wars
   - https://en.wikipedia.org/wiki/Advance_Wars
 - Wikipedia: Age of Empires II
   - https://en.wikipedia.org/wiki/Age_of_Empires_II
 - Wikipedia: Animal Crossing: New Horizons
   - https://en.wikipedia.org/wiki/Animal_Crossing%3A_New_Horizons
+- Wikipedia: Apex Legends
+  - https://en.wikipedia.org/wiki/Apex_Legends
+- Wikipedia: Ark: Survival Evolved
+  - https://en.wikipedia.org/wiki/Ark%3A_Survival_Evolved
 - Wikipedia: Assassin's Creed II
   - https://en.wikipedia.org/wiki/Assassin's_Creed_II
+- Wikipedia: Balatro
+  - https://en.wikipedia.org/wiki/Balatro
 - Wikipedia: Baldur's Gate II: Shadows of Amn
   - https://en.wikipedia.org/wiki/Baldur's_Gate_II%3A_Shadows_of_Amn
 - Wikipedia: Bayonetta
@@ -33,6 +43,8 @@
   - https://en.wikipedia.org/wiki/Chrono_Trigger
 - Wikipedia: Cities: Skylines
   - https://en.wikipedia.org/wiki/Cities%3A_Skylines
+- Wikipedia: Cities: Skylines II
+  - https://en.wikipedia.org/wiki/Cities%3A_Skylines_II
 - Wikipedia: Counter-Strike
   - https://en.wikipedia.org/wiki/Counter-Strike
 - Wikipedia: Dark Souls
@@ -53,6 +65,8 @@
   - https://en.wikipedia.org/wiki/Don't_Starve
 - Wikipedia: Doom
   - https://en.wikipedia.org/wiki/Doom
+- Wikipedia: Doom Eternal
+  - https://en.wikipedia.org/wiki/Doom_Eternal
 - Wikipedia: Dota 2
   - https://en.wikipedia.org/wiki/Dota_2
 - Wikipedia: Dragon Quest V
@@ -77,12 +91,16 @@
   - https://en.wikipedia.org/wiki/Half-Life_2
 - Wikipedia: Halo: Combat Evolved
   - https://en.wikipedia.org/wiki/Halo%3A_Combat_Evolved
+- Wikipedia: Heroes of the Storm
+  - https://en.wikipedia.org/wiki/Heroes_of_the_Storm
 - Wikipedia: Inside
   - https://en.wikipedia.org/wiki/Inside
 - Wikipedia: Journey
   - https://en.wikipedia.org/wiki/Journey
 - Wikipedia: Kingdom Hearts
   - https://en.wikipedia.org/wiki/Kingdom_Hearts
+- Wikipedia: Left 4 Dead 2
+  - https://en.wikipedia.org/wiki/Left_4_Dead_2
 - Wikipedia: Limbo
   - https://en.wikipedia.org/wiki/Limbo
 - Wikipedia: Mass Effect 2
@@ -91,18 +109,28 @@
   - https://en.wikipedia.org/wiki/Mega_Man_X
 - Wikipedia: Metro 2033
   - https://en.wikipedia.org/wiki/Metro_2033
+- Wikipedia: Metroid Dread
+  - https://en.wikipedia.org/wiki/Metroid_Dread
 - Wikipedia: Minecraft
   - https://en.wikipedia.org/wiki/Minecraft
 - Wikipedia: Monster Hunter: World
   - https://en.wikipedia.org/wiki/Monster_Hunter%3A_World
 - Wikipedia: Mother 3
   - https://en.wikipedia.org/wiki/Mother_3
+- Wikipedia: Nioh 2
+  - https://en.wikipedia.org/wiki/Nioh_2
 - Wikipedia: No Man's Sky
   - https://en.wikipedia.org/wiki/No_Man's_Sky
+- Wikipedia: Ori and the Blind Forest
+  - https://en.wikipedia.org/wiki/Ori_and_the_Blind_Forest
+- Wikipedia: Ori and the Will of the Wisps
+  - https://en.wikipedia.org/wiki/Ori_and_the_Will_of_the_Wisps
 - Wikipedia: Outer Wilds
   - https://en.wikipedia.org/wiki/Outer_Wilds
 - Wikipedia: Path of Exile
   - https://en.wikipedia.org/wiki/Path_of_Exile
+- Wikipedia: Planet Coaster
+  - https://en.wikipedia.org/wiki/Planet_Coaster
 - Wikipedia: Portal
   - https://en.wikipedia.org/wiki/Portal
 - Wikipedia: Portal 2
@@ -117,6 +145,10 @@
   - https://en.wikipedia.org/wiki/RollerCoaster_Tycoon_2
 - Wikipedia: Rune Factory 4
   - https://en.wikipedia.org/wiki/Rune_Factory_4
+- Wikipedia: Rust (video game)
+  - https://en.wikipedia.org/wiki/Rust_%28video_game%29
+- Wikipedia: Sekiro: Shadows Die Twice
+  - https://en.wikipedia.org/wiki/Sekiro%3A_Shadows_Die_Twice
 - Wikipedia: Shin Megami Tensei
   - https://en.wikipedia.org/wiki/Shin_Megami_Tensei
 - Wikipedia: Sid Meier's Civilization IV
@@ -127,6 +159,8 @@
   - https://en.wikipedia.org/wiki/Slay_the_Spire
 - Wikipedia: StarCraft
   - https://en.wikipedia.org/wiki/StarCraft
+- Wikipedia: StarCraft II: Wings of Liberty
+  - https://en.wikipedia.org/wiki/StarCraft_II%3A_Wings_of_Liberty
 - Wikipedia: Stardew Valley
   - https://en.wikipedia.org/wiki/Stardew_Valley
 - Wikipedia: Story of Seasons
@@ -147,6 +181,8 @@
   - https://en.wikipedia.org/wiki/The_Sims_4
 - Wikipedia: The Witness
   - https://en.wikipedia.org/wiki/The_Witness
+- Wikipedia: Tom Clancy's Rainbow Six Siege
+  - https://en.wikipedia.org/wiki/Tom_Clancy%27s_Rainbow_Six_Siege
 - Wikipedia: Total War: Shogun 2
   - https://en.wikipedia.org/wiki/Total_War%3A_Shogun_2
 - Wikipedia: Undertale

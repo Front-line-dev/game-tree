@@ -7,13 +7,19 @@ import App from './App'
 vi.mock('./components/GraphCanvas', () => ({
   default: ({
     nodes,
+    designModeEnabled,
+    layout,
     onNodeSelect,
   }: {
     nodes: Array<{ id: string; displayTitle: string }>
+    designModeEnabled: boolean
+    layout: { version: number }
     onNodeSelect: (id: string) => void
   }) => (
     <div>
       <p data-testid="mock-node-count">nodes:{nodes.length}</p>
+      <p data-testid="mock-design-mode">{designModeEnabled ? 'design:on' : 'design:off'}</p>
+      <p data-testid="mock-layout-version">layout-version:{layout.version}</p>
       {nodes.map((node) => (
         <button key={node.id} type="button" onClick={() => onNodeSelect(node.id)}>
           {node.displayTitle}
@@ -99,5 +105,23 @@ describe('App component integration', () => {
     const link = screen.getAllByRole('link')[0]
     expect(link).toHaveAttribute('href')
     expect(link).toHaveAttribute('href', expect.stringMatching(/^https?:\/\//))
+  })
+
+  it('디자인 모드 토글 시 내보내기 버튼 활성 상태와 GraphCanvas 전달 props가 변경된다', async () => {
+    const user = userEvent.setup()
+    render(<App />)
+
+    const toggleButton = screen.getByRole('button', { name: '디자인 모드 켜기' })
+    const exportButton = screen.getByRole('button', { name: '레이아웃 내보내기' })
+
+    expect(exportButton).toBeDisabled()
+    expect(screen.getByTestId('mock-design-mode')).toHaveTextContent('design:off')
+    expect(screen.getByTestId('mock-layout-version')).toHaveTextContent('layout-version:1')
+
+    await user.click(toggleButton)
+
+    expect(screen.getByRole('button', { name: '디자인 모드 끄기' })).toBeInTheDocument()
+    expect(exportButton).toBeEnabled()
+    expect(screen.getByTestId('mock-design-mode')).toHaveTextContent('design:on')
   })
 })

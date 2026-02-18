@@ -1,13 +1,13 @@
 # 이미지 감사 로그
 
 ## 실행 정보
-- 실행 시각: 2026-02-18T04:21:31.757Z
+- 실행 시각: 2026-02-18T08:03:23.329Z
 - dry-run: false
 - refresh-all: false
-- 전체 노드: 112
-- 이미지 반영: 7
-- 재사용(검증 통과): 89
-- fallback: 16
+- 전체 노드: 132
+- 이미지 반영: 3
+- 재사용(검증 통과): 114
+- fallback: 15
 
 ## 판정 규칙
 - 채택: 게임 식별 가능(커버/키아트/대표 스크린샷) + 규격/형식 검증 통과.
@@ -16,7 +16,7 @@
 ## fallback 사유 집계
 | reason | count |
 | --- | ---: |
-| no_valid_candidate | 16 |
+| no_valid_candidate | 15 |
 
 ## 노드별 결과
 | nodeId | title | status | score | reason | imagePath | imageUrl |
@@ -30,32 +30,32 @@
 | g007 | 드래곤 퀘스트 V | kept | 14 | reuse_validated_asset | images/nodes/g007.png | https://upload.wikimedia.org/wikipedia/en/b/b7/Dragon_Quest_V_Box_Art.png |
 | g008 | 발더스 게이트 II | kept | 21 | reuse_validated_asset | images/nodes/g008.png | https://upload.wikimedia.org/wikipedia/en/1/17/Baldur%27s_Gate_II_-_Shadows_of_Amn_Coverart.png |
 | g009 | 디비니티: 오리지널 신 2 | kept | 23 | reuse_validated_asset | images/nodes/g009.jpg | https://upload.wikimedia.org/wikipedia/en/4/48/Divinity_Original_Sin_2_cover_art.jpg |
-| g010 | 필라스 오브 이터니티 | selected | 20 | dimension_ok,game_context,title_match,title_overlap:1.00,year_match,asset_name_positive,original_image | images/nodes/g010.png | https://upload.wikimedia.org/wikipedia/en/9/94/Pillars_of_Eternity_The_White_March_Part_1_Cover.png |
+| g010 | 필라스 오브 이터니티 | kept | 20 | reuse_validated_asset | images/nodes/g010.png | https://upload.wikimedia.org/wikipedia/en/9/94/Pillars_of_Eternity_The_White_March_Part_1_Cover.png |
 | g011 | 디스코 엘리시움 | kept | 21 | reuse_validated_asset | images/nodes/g011.jpg | https://upload.wikimedia.org/wikipedia/en/0/0d/Disco_Elysium_Poster.jpeg |
-| g012 | 매스 이펙트 2 | selected | 21 | dimension_ok,game_context,title_match,title_overlap:1.00,year_match,asset_name_positive,original_image | images/nodes/g012.png | https://upload.wikimedia.org/wikipedia/en/0/05/MassEffect2_cover.PNG |
+| g012 | 매스 이펙트 2 | kept | 21 | reuse_validated_asset | images/nodes/g012.png | https://upload.wikimedia.org/wikipedia/en/0/05/MassEffect2_cover.PNG |
 | g013 | 드래곤 에이지: 오리진 | kept | 21 | reuse_validated_asset | images/nodes/g013.png | https://upload.wikimedia.org/wikipedia/en/8/89/Dragon_Age_Origins_cover.png |
 | g014 | 폴아웃: 뉴 베가스 | kept | 16 | reuse_validated_asset | images/nodes/g014.jpg | https://upload.wikimedia.org/wikipedia/en/3/34/Fallout_New_Vegas.jpg |
-| g015 | 엘더스크롤 V: 스카이림 | selected | 21 | dimension_ok,game_context,title_match,title_overlap:1.00,year_match,asset_name_positive,original_image | images/nodes/g015.png | https://upload.wikimedia.org/wikipedia/en/1/15/The_Elder_Scrolls_V_Skyrim_cover.png |
+| g015 | 엘더스크롤 V: 스카이림 | kept | 21 | reuse_validated_asset | images/nodes/g015.png | https://upload.wikimedia.org/wikipedia/en/1/15/The_Elder_Scrolls_V_Skyrim_cover.png |
 | g016 | 위쳐 3: 와일드 헌트 | kept | 21 | reuse_validated_asset | images/nodes/g016.jpg | https://upload.wikimedia.org/wikipedia/en/0/0c/Witcher_3_cover_art.jpg |
 | g017 | 데몬즈 소울 | kept | 23 | reuse_validated_asset | images/nodes/g017.jpg | https://upload.wikimedia.org/wikipedia/en/9/91/Demon%27s_Souls_Cover.jpg |
-| g018 | 다크 소울 | selected | 24 | dimension_ok,game_context,title_match,title_overlap:1.00,year_match,asset_name_positive,original_image,video_game_title | images/nodes/g018.jpg | https://upload.wikimedia.org/wikipedia/en/8/8d/Dark_Souls_Cover_Art.jpg |
+| g018 | 다크 소울 | kept | 24 | reuse_validated_asset | images/nodes/g018.jpg | https://upload.wikimedia.org/wikipedia/en/8/8d/Dark_Souls_Cover_Art.jpg |
 | g019 | 블러드본 | kept | 25 | reuse_validated_asset | images/nodes/g019.jpg | https://upload.wikimedia.org/wikipedia/en/6/68/Bloodborne_Cover_Wallpaper.jpg |
-| g020 | 엘든 링 | selected | 18 | dimension_ok,game_context,title_match,title_overlap:1.00,year_near,asset_name_positive,original_image | images/nodes/g020.png | https://upload.wikimedia.org/wikipedia/en/f/f0/Elden_Ring_Nightreign_cover_art.png |
+| g020 | 엘든 링 | kept | 18 | reuse_validated_asset | images/nodes/g020.png | https://upload.wikimedia.org/wikipedia/en/f/f0/Elden_Ring_Nightreign_cover_art.png |
 | g021 | 디아블로 II | kept | 21 | reuse_validated_asset | images/nodes/g021.png | https://upload.wikimedia.org/wikipedia/en/d/d5/Diablo_II_Coverart.png |
 | g022 | 패스 오브 엑자일 | fallback |  | no_valid_candidate |  |  |
 | g023 | 몬스터 헌터: 월드 | kept | 23 | reuse_validated_asset | images/nodes/g023.jpg | https://upload.wikimedia.org/wikipedia/en/1/1b/Monster_Hunter_World_cover_art.jpg |
 | g024 | 제노블레이드 크로니클스 | kept | 15 | reuse_validated_asset | images/nodes/g024.png | https://upload.wikimedia.org/wikipedia/en/d/d9/Xenoblade_box_artwork.png |
 | g025 | 니어: 오토마타 | kept | 23 | reuse_validated_asset | images/nodes/g025.jpg | https://upload.wikimedia.org/wikipedia/en/2/21/Nier_Automata_cover_art.jpg |
-| g026 | 언더테일 | fallback |  | no_valid_candidate |  |  |
+| g026 | 언더테일 | kept | 13 | reuse_validated_asset | images/nodes/g026.png | https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Undertale_Soundtrack_2015.svg/960px-Undertale_Soundtrack_2015.svg.png |
 | g027 | 용과 같이 7 | kept | 25 | reuse_validated_asset | images/nodes/g027.jpg | https://upload.wikimedia.org/wikipedia/en/2/2f/Yakuza_like_a_dragon_cover_art.jpg |
 | g028 | 킹덤 하츠 | kept | 17 | reuse_validated_asset | images/nodes/g028.jpg | https://upload.wikimedia.org/wikipedia/en/8/85/Kingdom_Hearts.jpg |
 | g029 | MOTHER 2 | kept | 18 | reuse_validated_asset | images/nodes/g029.png | https://upload.wikimedia.org/wikipedia/en/c/c4/EarthBound_Beginnings_cover_art.png |
-| g030 | MOTHER 3 | fallback |  | no_valid_candidate |  |  |
+| g030 | MOTHER 3 | kept | 13 | reuse_validated_asset | images/nodes/g030.png | https://upload.wikimedia.org/wikipedia/en/5/52/Lucas_Smash_Bros.png |
 | g031 | 슈퍼 마리오 브라더스 | kept | 16 | reuse_validated_asset | images/nodes/g031.png | https://upload.wikimedia.org/wikipedia/en/0/03/Super_Mario_Bros._box.png |
 | g032 | 슈퍼 마리오 64 | kept | 12 | reuse_validated_asset | images/nodes/g032.png | https://upload.wikimedia.org/wikipedia/en/e/e9/Super_Mario_64.png |
 | g033 | 슈퍼 마리오 오디세이 | kept | 16 | reuse_validated_asset | images/nodes/g033.jpg | https://upload.wikimedia.org/wikipedia/en/8/8d/Super_Mario_Odyssey.jpg |
-| g034 | 젤다의 전설: 시간의 오카리나 | kept | 16 | reuse_validated_asset | images/nodes/g034.jpg | https://upload.wikimedia.org/wikipedia/en/5/57/The_Legend_of_Zelda_Ocarina_of_Time.jpg |
-| g035 | 젤다의 전설: 브레스 오브 더 와일드 | kept | 16 | reuse_validated_asset | images/nodes/g035.jpg | https://upload.wikimedia.org/wikipedia/en/c/c6/The_Legend_of_Zelda_Breath_of_the_Wild.jpg |
+| g034 | 젤다의 전설: 시간의 오카리나 | kept | 20 | reuse_validated_asset | images/nodes/g034.png | https://upload.wikimedia.org/wikipedia/en/d/d1/Majora%27s_Mask_3D_cover.png |
+| g035 | 젤다의 전설: 브레스 오브 더 와일드 | kept | 22 | reuse_validated_asset | images/nodes/g035.jpg | https://upload.wikimedia.org/wikipedia/en/8/88/Tloz_breath_of_the_wild_creating_a_champion_standard_english_cover.jpg |
 | g036 | 메트로이드 | kept | 24 | reuse_validated_asset | images/nodes/g036.jpg | https://upload.wikimedia.org/wikipedia/en/5/5d/Metroid_boxart.jpg |
 | g037 | 슈퍼 메트로이드 | kept | 16 | reuse_validated_asset | images/nodes/g037.jpg | https://upload.wikimedia.org/wikipedia/en/e/e4/Smetroidbox.jpg |
 | g038 | 악마성 드라큘라 X: 월하의 야상곡 | kept | 16 | reuse_validated_asset | images/nodes/g038.jpg | https://upload.wikimedia.org/wikipedia/en/c/cf/Castlevania_SOTN_PAL.jpg |
@@ -64,7 +64,7 @@
 | g041 | 셀레스트 | kept | 15 | reuse_validated_asset | images/nodes/g041.png | https://upload.wikimedia.org/wikipedia/commons/4/42/Celeste_character_Madeline.png |
 | g042 | 록맨 2 | kept | 16 | reuse_validated_asset | images/nodes/g042.jpg | https://upload.wikimedia.org/wikipedia/en/b/be/Megaman2_box.jpg |
 | g043 | 록맨 X | kept | 22 | reuse_validated_asset | images/nodes/g043.png | https://upload.wikimedia.org/wikipedia/en/f/f1/Mega_Man_X_Coverart.png |
-| g044 | 페르시아의 왕자: 시간의 모래 | selected | 23 | dimension_ok,game_context,title_match,title_overlap:1.00,year_match,asset_name_positive,original_image | images/nodes/g044.jpg | https://upload.wikimedia.org/wikipedia/en/8/86/Sands_of_time_cover.jpg |
+| g044 | 페르시아의 왕자: 시간의 모래 | kept | 23 | reuse_validated_asset | images/nodes/g044.jpg | https://upload.wikimedia.org/wikipedia/en/8/86/Sands_of_time_cover.jpg |
 | g045 | 어쌔신 크리드 II | kept | 18 | reuse_validated_asset | images/nodes/g045.jpg | https://upload.wikimedia.org/wikipedia/en/7/77/Assassins_Creed_2_Box_Art.JPG |
 | g046 | 고스트 오브 쓰시마 | kept | 16 | reuse_validated_asset | images/nodes/g046.jpg | https://upload.wikimedia.org/wikipedia/en/b/b6/Ghost_of_Tsushima.jpg |
 | g047 | 데빌 메이 크라이 3 | kept | 15 | reuse_validated_asset | images/nodes/g047.jpg | https://upload.wikimedia.org/wikipedia/en/7/76/Devil_May_Cry_3_boxshot.jpg |
@@ -76,7 +76,7 @@
 | g053 | 하프라이프 | kept | 24 | reuse_validated_asset | images/nodes/g053.jpg | https://upload.wikimedia.org/wikipedia/en/f/fa/Half-Life_Cover_Art.jpg |
 | g054 | 하프라이프 2 | kept | 23 | reuse_validated_asset | images/nodes/g054.jpg | https://upload.wikimedia.org/wikipedia/en/2/25/Half-Life_2_cover.jpg |
 | g055 | 카운터-스트라이크 | kept | 17 | reuse_validated_asset | images/nodes/g055.jpg | https://upload.wikimedia.org/wikipedia/en/6/67/Counter-Strike_Box.jpg |
-| g056 | 헤일로: 컴뱃 이볼브드 | kept | 20 | reuse_validated_asset | images/nodes/g056.png | https://upload.wikimedia.org/wikipedia/en/9/9c/HaloCEA_boxart.png |
+| g056 | 헤일로: 컴뱃 이볼브드 | kept | 16 | reuse_validated_asset | images/nodes/g056.jpg | https://upload.wikimedia.org/wikipedia/en/8/80/Halo_-_Combat_Evolved_%28XBox_version_-_box_art%29.jpg |
 | g057 | 콜 오브 듀티 4: 모던 워페어 | kept | 16 | reuse_validated_asset | images/nodes/g057.jpg | https://upload.wikimedia.org/wikipedia/en/5/5f/Call_of_Duty_4_Modern_Warfare.jpg |
 | g058 | 타이탄폴 2 | kept | 16 | reuse_validated_asset | images/nodes/g058.jpg | https://upload.wikimedia.org/wikipedia/en/1/13/Titanfall_2.jpg |
 | g059 | 데스티니 2 | kept | 16 | reuse_validated_asset | images/nodes/g059.jpg | https://upload.wikimedia.org/wikipedia/en/0/05/Destiny_2_%28artwork%29.jpg |
@@ -87,7 +87,7 @@
 | g064 | 디스아너드 | kept | 18 | reuse_validated_asset | images/nodes/g064.jpg | https://upload.wikimedia.org/wikipedia/en/6/65/Dishonored_box_art_Bethesda.jpg |
 | g065 | 프레이 (2017) | kept | 23 | reuse_validated_asset | images/nodes/g065.jpg | https://upload.wikimedia.org/wikipedia/en/2/29/Prey_cover_art.jpg |
 | g066 | 메트로 2033 | kept | 22 | reuse_validated_asset | images/nodes/g066.jpg | https://upload.wikimedia.org/wikipedia/en/0/07/Metro_2033_Game_Cover.jpg |
-| g067 | 포탈 | fallback |  | no_valid_candidate |  |  |
+| g067 | 포탈 | kept | 17 | reuse_validated_asset | images/nodes/g067.jpg | https://upload.wikimedia.org/wikipedia/en/9/9f/Portal_standalonebox.jpg |
 | g068 | 포탈 2 | kept | 23 | reuse_validated_asset | images/nodes/g068.jpg | https://upload.wikimedia.org/wikipedia/en/f/f9/Portal2cover.jpg |
 | g069 | 문명 IV | fallback |  | no_valid_candidate |  |  |
 | g070 | 문명 VI | fallback |  | no_valid_candidate |  |  |
@@ -98,8 +98,8 @@
 | g075 | 리그 오브 레전드 | kept | 13 | reuse_validated_asset | images/nodes/g075.png | https://upload.wikimedia.org/wikipedia/en/a/ad/Jinx-artwork-lol.png |
 | g076 | 엑스컴: 에너미 언노운 | kept | 23 | reuse_validated_asset | images/nodes/g076.jpg | https://upload.wikimedia.org/wikipedia/en/f/fd/XCOM_Enemy_Unknown_Game_Cover.jpg |
 | g077 | 인투 더 브리치 | kept | 21 | reuse_validated_asset | images/nodes/g077.png | https://upload.wikimedia.org/wikipedia/en/e/e5/Into_the_breach_cover.png |
-| g078 | 파이어 엠블렘 각성 | kept | 10 | reuse_validated_asset | images/nodes/g078.png | https://upload.wikimedia.org/wikipedia/en/f/f9/Robin_Smash_4.png |
-| g079 | 어드밴스드 워즈 | kept | 14 | reuse_validated_asset | images/nodes/g079.jpg | https://upload.wikimedia.org/wikipedia/commons/7/7d/Nintendo-Game-Boy-Advance-Purple-FL.jpg |
+| g078 | 파이어 엠블렘 각성 | kept | 18 | reuse_validated_asset | images/nodes/g078.png | https://upload.wikimedia.org/wikipedia/en/9/98/Fire_Emblem_Echoes_cover.png |
+| g079 | 어드밴스드 워즈 | kept | 15 | reuse_validated_asset | images/nodes/g079.png | https://upload.wikimedia.org/wikipedia/commons/0/0b/Nintendo-Game-Boy-Advance-Purple-FL.png |
 | g080 | 토탈 워: 쇼군 2 | kept | 16 | reuse_validated_asset | images/nodes/g080.jpg | https://upload.wikimedia.org/wikipedia/en/e/e3/Shogun_2_Total_War_box_art.jpg |
 | g081 | 크루세이더 킹즈 III | kept | 16 | reuse_validated_asset | images/nodes/g081.jpg | https://upload.wikimedia.org/wikipedia/en/a/a3/Crusader_Kings_III.jpg |
 | g082 | 유로파 유니버설리스 IV | kept | 17 | reuse_validated_asset | images/nodes/g082.png | https://upload.wikimedia.org/wikipedia/en/c/c5/EuropaUniversalisIV_Packshot_edited.png |
@@ -109,7 +109,7 @@
 | g086 | 팩토리오 | kept | 21 | reuse_validated_asset | images/nodes/g086.png | https://upload.wikimedia.org/wikipedia/en/0/08/Factorio_cover.png |
 | g087 | 림월드 | fallback |  | no_valid_candidate |  |  |
 | g088 | 프로스트펑크 | kept | 23 | reuse_validated_asset | images/nodes/g088.jpg | https://upload.wikimedia.org/wikipedia/en/a/a3/Frostpunk_cover_art.jpg |
-| g089 | 심즈 2 | selected | 20 | dimension_ok,game_context,title_match,title_overlap:1.00,year_match,asset_name_positive,original_image | images/nodes/g089.png | https://upload.wikimedia.org/wikipedia/en/6/69/TS2P_cover_art.png |
+| g089 | 심즈 2 | kept | 20 | reuse_validated_asset | images/nodes/g089.png | https://upload.wikimedia.org/wikipedia/en/6/69/TS2P_cover_art.png |
 | g090 | 심즈 4 | kept | 14 | reuse_validated_asset | images/nodes/g090.png | https://upload.wikimedia.org/wikipedia/en/7/7f/Sims4_Rebrand.png |
 | g091 | 마인크래프트 | kept | 23 | reuse_validated_asset | images/nodes/g091.png | https://upload.wikimedia.org/wikipedia/en/b/b6/Minecraft_2024_cover_art.png |
 | g092 | 테라리아 | kept | 16 | reuse_validated_asset | images/nodes/g092.jpg | https://upload.wikimedia.org/wikipedia/en/1/1a/Terraria_Steam_artwork.jpg |
@@ -117,7 +117,7 @@
 | g094 | 돈스타브 | kept | 23 | reuse_validated_asset | images/nodes/g094.jpg | https://upload.wikimedia.org/wikipedia/en/d/d2/Don%27t_Starve_cover.jpg |
 | g095 | 더 포레스트 | kept | 17 | reuse_validated_asset | images/nodes/g095.jpg | https://upload.wikimedia.org/wikipedia/en/4/46/TheForest_Game.jpg |
 | g096 | 노 맨즈 스카이 | kept | 16 | reuse_validated_asset | images/nodes/g096.jpg | https://upload.wikimedia.org/wikipedia/en/6/67/No_Man%27s_Sky.jpg |
-| g097 | 스타듀 밸리 | kept | 13 | reuse_validated_asset | images/nodes/g097.jpg | https://upload.wikimedia.org/wikipedia/en/4/48/Stardew_Valley_Original_Soundtrack.jpg |
+| g097 | 스타듀 밸리 | selected | 13 | dimension_ok,game_context,title_match,title_overlap:1.00,year_match,original_image | images/nodes/g097.jpg | https://upload.wikimedia.org/wikipedia/en/4/48/Stardew_Valley_Original_Soundtrack.jpg |
 | g098 | 스토리 오브 시즌즈 | kept | 22 | reuse_validated_asset | images/nodes/g098.png | https://upload.wikimedia.org/wikipedia/en/0/05/StoryofSeasonWWBoxart.png |
 | g099 | 룬 팩토리 4 | kept | 16 | reuse_validated_asset | images/nodes/g099.jpg | https://upload.wikimedia.org/wikipedia/en/3/30/Rune_Factory_4_Box_Art.jpg |
 | g100 | 모여봐요 동물의 숲 | kept | 16 | reuse_validated_asset | images/nodes/g100.jpg | https://upload.wikimedia.org/wikipedia/en/1/1f/Animal_Crossing_New_Horizons.jpg |
@@ -133,3 +133,23 @@
 | g110 | 인스크립션 | kept | 23 | reuse_validated_asset | images/nodes/g110.jpg | https://upload.wikimedia.org/wikipedia/en/4/48/Inscryption_Cover_Art.jpg |
 | g111 | FTL | fallback |  | no_valid_candidate |  |  |
 | g112 | 뱀파이어 서바이버즈 | kept | 19 | reuse_validated_asset | images/nodes/g112.jpg | https://upload.wikimedia.org/wikipedia/en/e/e6/Vampire_Survivors_key_art.jpg |
+| g113 | 발더스 게이트 3 | kept | 23 | reuse_validated_asset | images/nodes/g113.jpg | https://upload.wikimedia.org/wikipedia/en/1/12/Baldur%27s_Gate_3_cover_art.jpg |
+| g114 | 옥토패스 트래블러 II | selected | 23 | dimension_ok,game_context,title_match,title_overlap:1.00,year_match,asset_name_positive,original_image | images/nodes/g114.jpg | https://upload.wikimedia.org/wikipedia/en/4/46/Octopath_Traveler_II_cover_art.jpg |
+| g115 | 엘더스크롤 IV: 오블리비언 | kept | 21 | reuse_validated_asset | images/nodes/g115.png | https://upload.wikimedia.org/wikipedia/en/4/4b/The_Elder_Scrolls_IV_Oblivion_cover.png |
+| g116 | 폴아웃 3 | kept | 21 | reuse_validated_asset | images/nodes/g116.png | https://upload.wikimedia.org/wikipedia/en/8/83/Fallout_3_cover_art.PNG |
+| g117 | 세키로: 섀도우 다이 트와이스 | kept | 16 | reuse_validated_asset | images/nodes/g117.jpg | https://upload.wikimedia.org/wikipedia/en/6/6e/Sekiro_art.jpg |
+| g118 | 인왕 2 | kept | 23 | reuse_validated_asset | images/nodes/g118.jpg | https://upload.wikimedia.org/wikipedia/en/9/91/Nioh_2_cover_art.jpg |
+| g119 | 메트로이드 드레드 | kept | 13 | reuse_validated_asset | images/nodes/g119.jpg | https://upload.wikimedia.org/wikipedia/en/1/16/Metroid_Samus_Returns.jpg |
+| g120 | 오리 앤 더 블라인드 포레스트 | fallback |  | no_valid_candidate |  |  |
+| g121 | 오리 앤 더 윌 오브 더 위습스 | kept | 16 | reuse_validated_asset | images/nodes/g121.jpg | https://upload.wikimedia.org/wikipedia/en/9/94/Ori_and_the_Will_of_the_Wisps.jpg |
+| g122 | 둠 이터널 | kept | 21 | reuse_validated_asset | images/nodes/g122.png | https://upload.wikimedia.org/wikipedia/en/9/9d/Cover_Art_of_Doom_Eternal.png |
+| g123 | 레프트 4 데드 2 | kept | 16 | reuse_validated_asset | images/nodes/g123.jpg | https://upload.wikimedia.org/wikipedia/en/b/ba/Left4Dead2.jpg |
+| g124 | 에이펙스 레전드 | kept | 23 | reuse_validated_asset | images/nodes/g124.jpg | https://upload.wikimedia.org/wikipedia/en/d/db/Apex_legends_cover.jpg |
+| g125 | 레인보우 식스 시즈 | kept | 23 | reuse_validated_asset | images/nodes/g125.jpg | https://upload.wikimedia.org/wikipedia/en/4/47/Tom_Clancy%27s_Rainbow_Six_Siege_cover_art.jpg |
+| g126 | 스타크래프트 II | kept | 20 | reuse_validated_asset | images/nodes/g126.jpg | https://upload.wikimedia.org/wikipedia/en/7/77/StarCraft_II_-_Legacy_of_the_Void_cover.jpg |
+| g127 | 히어로즈 오브 더 스톰 | fallback |  | no_valid_candidate |  |  |
+| g128 | 시티즈: 스카이라인 II | selected | 21 | dimension_ok,game_context,title_match,title_overlap:1.00,year_match,asset_name_positive,original_image | images/nodes/g128.png | https://upload.wikimedia.org/wikipedia/en/3/35/Cities_Skylines_II_Cover_Art.png |
+| g129 | 플래닛 코스터 | kept | 14 | reuse_validated_asset | images/nodes/g129.png | https://upload.wikimedia.org/wikipedia/en/6/60/Planet_coaster_box.png |
+| g130 | 러스트 | kept | 11 | reuse_validated_asset | images/nodes/g130.jpg | https://upload.wikimedia.org/wikipedia/commons/a/a4/Rust_on_iron.jpg |
+| g131 | 아크: 서바이벌 이볼브드 | kept | 14 | reuse_validated_asset | images/nodes/g131.png | https://upload.wikimedia.org/wikipedia/en/2/2b/ArkSurvivalEvolved.png |
+| g132 | 발라트로 | kept | 23 | reuse_validated_asset | images/nodes/g132.jpg | https://upload.wikimedia.org/wikipedia/en/8/89/Balatro_cover.jpg |

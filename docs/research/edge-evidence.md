@@ -795,3 +795,143 @@
 - 요약: 느린 누적 목표와 관계 형성 루프가 생활형 게임 설계 전반에 피드백을 주었다.
 - 근거 출처: Wikipedia: Animal Crossing: New Horizons
 - URL: https://en.wikipedia.org/wiki/Animal_Crossing%3A_New_Horizons
+
+## e136
+
+- 경로: 발더스 게이트 II -> 발더스 게이트 3
+- 요약: 고전 파티 RPG의 동료/선택 중심 구조가 현대 CRPG 상호작용 설계로 확장되었다.
+- 근거 출처: Steam: Baldur's Gate 3
+- URL: https://store.steampowered.com/app/1086940/Baldurs_Gate_3/
+
+## e137
+
+- 경로: 크로노 트리거 -> 옥토패스 트래블러 II
+- 요약: 고전 JRPG의 파티 구성과 서사 분기 감각이 현대 2D-HD 구조로 재해석되었다.
+- 근거 출처: Square Enix: Octopath Traveler II
+- URL: https://www.square-enix-games.com/en_US/games/octopath-traveler-ii
+
+## e138
+
+- 경로: 엘더스크롤 IV: 오블리비언 -> 엘더스크롤 V: 스카이림
+- 요약: 오블리비언의 오픈월드 퀘스트 프레임이 스카이림의 대중적 탐험 루프로 이어졌다.
+- 근거 출처: Wikipedia: The Elder Scrolls V: Skyrim
+- URL: https://en.wikipedia.org/wiki/The_Elder_Scrolls_V%3A_Skyrim
+
+## e139
+
+- 경로: 폴아웃 3 -> 폴아웃: 뉴 베가스
+- 요약: 폴아웃 3에서 정립된 오픈월드 선택 프레임이 뉴 베가스의 파벌 구조로 심화되었다.
+- 근거 출처: Wikipedia: Fallout: New Vegas
+- URL: https://en.wikipedia.org/wiki/Fallout%3A_New_Vegas
+
+## e140
+
+- 경로: 다크 소울 -> 세키로: 섀도우 다이 트와이스
+- 요약: 다크 소울의 패턴 학습 전투 감각이 세키로의 패링 중심 보스 설계로 변환되었다.
+- 근거 출처: Wikipedia: Sekiro: Shadows Die Twice
+- URL: https://en.wikipedia.org/wiki/Sekiro%3A_Shadows_Die_Twice
+
+## e141
+
+- 경로: 다크 소울 -> 인왕 2
+- 요약: 소울라이크형 위험-보상 전투 문법이 인왕 2의 스탠스/기력 운영 전투에 반영되었다.
+- 근거 출처: Wikipedia: Nioh 2
+- URL: https://en.wikipedia.org/wiki/Nioh_2
+
+## e142
+
+- 경로: 슈퍼 메트로이드 -> 메트로이드 드레드
+- 요약: 슈퍼 메트로이드의 능력 해금-재탐색 구조가 최신 메트로이드 설계에 직접 계승되었다.
+- 근거 출처: Wikipedia: Metroid Dread
+- URL: https://en.wikipedia.org/wiki/Metroid_Dread
+
+## e143
+
+- 경로: 슈퍼 메트로이드 -> 오리 앤 더 블라인드 포레스트
+- 요약: 메트로이드식 구역 재진입 설계가 오리의 감정형 액션 플랫포머 동선으로 이어졌다.
+- 근거 출처: Wikipedia: Ori and the Blind Forest
+- URL: https://en.wikipedia.org/wiki/Ori_and_the_Blind_Forest
+
+## e144
+
+- 경로: 할로우 나이트 -> 오리 앤 더 윌 오브 더 위습스
+- 요약: 할로우 나이트의 정밀 이동/근접전 감각이 오리 후속작 전투 템포 개선과 맞닿아 있다.
+- 근거 출처: Wikipedia: Ori and the Will of the Wisps
+- URL: https://en.wikipedia.org/wiki/Ori_and_the_Will_of_the_Wisps
+
+## e145
+
+- 경로: 둠 -> 둠 이터널
+- 요약: 둠의 고속 슈팅 정체성이 이터널에서 자원 순환형 아레나 전투로 고도화되었다.
+- 근거 출처: Wikipedia: Doom Eternal
+- URL: https://en.wikipedia.org/wiki/Doom_Eternal
+
+## e146
+
+- 경로: 하프라이프 2 -> 레프트 4 데드 2
+- 요약: 하프라이프 2 기반 기술/연출 자산이 협동 압박 루프 중심 FPS 설계로 변환되었다.
+- 근거 출처: Wikipedia: Left 4 Dead 2
+- URL: https://en.wikipedia.org/wiki/Left_4_Dead_2
+
+## e147
+
+- 경로: 타이탄폴 2 -> 에이펙스 레전드
+- 요약: 타이탄폴 2의 고기동 총기 감각이 히어로형 배틀로얄 슈팅 문법으로 이어졌다.
+- 근거 출처: Wikipedia: Apex Legends
+- URL: https://en.wikipedia.org/wiki/Apex_Legends
+
+## e148
+
+- 경로: 카운터-스트라이크 -> 레인보우 식스 시즈
+- 요약: 카운터-스트라이크의 라운드형 팀 전술 감각이 파괴 가능한 전장 전술로 확장되었다.
+- 근거 출처: Wikipedia: Tom Clancy's Rainbow Six Siege
+- URL: https://en.wikipedia.org/wiki/Tom_Clancy%27s_Rainbow_Six_Siege
+
+## e149
+
+- 경로: 스타크래프트 -> 스타크래프트 II
+- 요약: 스타크래프트의 종족 비대칭 밸런싱 철학이 실시간 전략 경쟁 구도로 재정립되었다.
+- 근거 출처: Wikipedia: StarCraft II: Wings of Liberty
+- URL: https://en.wikipedia.org/wiki/StarCraft_II%3A_Wings_of_Liberty
+
+## e150
+
+- 경로: 도타 2 -> 히어로즈 오브 더 스톰
+- 요약: 도타 2의 라인-오브젝트 중심 교전 구조가 팀 목표 중심 설계로 단순화되었다.
+- 근거 출처: Wikipedia: Heroes of the Storm
+- URL: https://en.wikipedia.org/wiki/Heroes_of_the_Storm
+
+## e151
+
+- 경로: 시티즈: 스카이라인 -> 시티즈: 스카이라인 II
+- 요약: 시티즈: 스카이라인의 도시 관리 구조가 후속작의 규모 확장/시스템 심화로 이어졌다.
+- 근거 출처: Wikipedia: Cities: Skylines II
+- URL: https://en.wikipedia.org/wiki/Cities%3A_Skylines_II
+
+## e152
+
+- 경로: 롤러코스터 타이쿤 2 -> 플래닛 코스터
+- 요약: 롤러코스터 타이쿤 계열의 동선·수요 관리 감각이 현대 시뮬레이션 UI로 계승되었다.
+- 근거 출처: Wikipedia: Planet Coaster
+- URL: https://en.wikipedia.org/wiki/Planet_Coaster
+
+## e153
+
+- 경로: 마인크래프트 -> 러스트
+- 요약: 마인크래프트의 제작-생존 핵심 루프가 경쟁적 멀티 생존 환경으로 전환되었다.
+- 근거 출처: Wikipedia: Rust (video game)
+- URL: https://en.wikipedia.org/wiki/Rust_%28video_game%29
+
+## e154
+
+- 경로: 마인크래프트 -> 아크: 서바이벌 이볼브드
+- 요약: 마인크래프트식 제작/건축 감각이 생물 테이밍 결합형 생존 샌드박스로 확장되었다.
+- 근거 출처: Wikipedia: Ark: Survival Evolved
+- URL: https://en.wikipedia.org/wiki/Ark%3A_Survival_Evolved
+
+## e155
+
+- 경로: 슬레이 더 스파이어 -> 발라트로
+- 요약: 슬레이 더 스파이어의 런 중심 덱빌딩 구조가 포커 수학 결합 설계로 재해석되었다.
+- 근거 출처: Wikipedia: Balatro
+- URL: https://en.wikipedia.org/wiki/Balatro

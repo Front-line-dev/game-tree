@@ -1128,5 +1128,205 @@
     "evidenceUrl": "https://en.wikipedia.org/wiki/Animal_Crossing%3A_New_Horizons",
     "analysisRef": "docs/research/edge-evidence.md#e135",
     "reviewMode": "internal_reviewed"
+  },
+  {
+    "id": "e136",
+    "source": "g008",
+    "target": "g113",
+    "summaryShort": "파티 선택 대화",
+    "evidenceTitle": "Steam: Baldur's Gate 3",
+    "evidenceUrl": "https://store.steampowered.com/app/1086940/Baldurs_Gate_3/",
+    "analysisRef": "docs/research/edge-evidence.md#e136",
+    "reviewMode": "internal_reviewed"
+  },
+  {
+    "id": "e137",
+    "source": "g005",
+    "target": "g114",
+    "summaryShort": "클래식 JRPG 감성",
+    "evidenceTitle": "Square Enix: Octopath Traveler II",
+    "evidenceUrl": "https://www.square-enix-games.com/en_US/games/octopath-traveler-ii",
+    "analysisRef": "docs/research/edge-evidence.md#e137",
+    "reviewMode": "internal_reviewed"
+  },
+  {
+    "id": "e138",
+    "source": "g115",
+    "target": "g015",
+    "summaryShort": "오픈월드 퀘스트",
+    "evidenceTitle": "Wikipedia: The Elder Scrolls V: Skyrim",
+    "evidenceUrl": "https://en.wikipedia.org/wiki/The_Elder_Scrolls_V%3A_Skyrim",
+    "analysisRef": "docs/research/edge-evidence.md#e138",
+    "reviewMode": "internal_reviewed"
+  },
+  {
+    "id": "e139",
+    "source": "g116",
+    "target": "g014",
+    "summaryShort": "파벌 선택 구조",
+    "evidenceTitle": "Wikipedia: Fallout: New Vegas",
+    "evidenceUrl": "https://en.wikipedia.org/wiki/Fallout%3A_New_Vegas",
+    "analysisRef": "docs/research/edge-evidence.md#e139",
+    "reviewMode": "internal_reviewed"
+  },
+  {
+    "id": "e140",
+    "source": "g018",
+    "target": "g117",
+    "summaryShort": "보스 학습 전투",
+    "evidenceTitle": "Wikipedia: Sekiro: Shadows Die Twice",
+    "evidenceUrl": "https://en.wikipedia.org/wiki/Sekiro%3A_Shadows_Die_Twice",
+    "analysisRef": "docs/research/edge-evidence.md#e140",
+    "reviewMode": "internal_reviewed"
+  },
+  {
+    "id": "e141",
+    "source": "g018",
+    "target": "g118",
+    "summaryShort": "고난도 근접전",
+    "evidenceTitle": "Wikipedia: Nioh 2",
+    "evidenceUrl": "https://en.wikipedia.org/wiki/Nioh_2",
+    "analysisRef": "docs/research/edge-evidence.md#e141",
+    "reviewMode": "internal_reviewed"
+  },
+  {
+    "id": "e142",
+    "source": "g037",
+    "target": "g119",
+    "summaryShort": "탐색 해금 루프",
+    "evidenceTitle": "Wikipedia: Metroid Dread",
+    "evidenceUrl": "https://en.wikipedia.org/wiki/Metroid_Dread",
+    "analysisRef": "docs/research/edge-evidence.md#e142",
+    "reviewMode": "internal_reviewed"
+  },
+  {
+    "id": "e143",
+    "source": "g037",
+    "target": "g120",
+    "summaryShort": "메트로배니아 동선",
+    "evidenceTitle": "Wikipedia: Ori and the Blind Forest",
+    "evidenceUrl": "https://en.wikipedia.org/wiki/Ori_and_the_Blind_Forest",
+    "analysisRef": "docs/research/edge-evidence.md#e143",
+    "reviewMode": "internal_reviewed"
+  },
+  {
+    "id": "e144",
+    "source": "g039",
+    "target": "g121",
+    "summaryShort": "정밀 이동 전투",
+    "evidenceTitle": "Wikipedia: Ori and the Will of the Wisps",
+    "evidenceUrl": "https://en.wikipedia.org/wiki/Ori_and_the_Will_of_the_Wisps",
+    "analysisRef": "docs/research/edge-evidence.md#e144",
+    "reviewMode": "internal_reviewed"
+  },
+  {
+    "id": "e145",
+    "source": "g051",
+    "target": "g122",
+    "summaryShort": "고속 아레나 전투",
+    "evidenceTitle": "Wikipedia: Doom Eternal",
+    "evidenceUrl": "https://en.wikipedia.org/wiki/Doom_Eternal",
+    "analysisRef": "docs/research/edge-evidence.md#e145",
+    "reviewMode": "internal_reviewed"
+  },
+  {
+    "id": "e146",
+    "source": "g054",
+    "target": "g123",
+    "summaryShort": "협동 전장 압박",
+    "evidenceTitle": "Wikipedia: Left 4 Dead 2",
+    "evidenceUrl": "https://en.wikipedia.org/wiki/Left_4_Dead_2",
+    "analysisRef": "docs/research/edge-evidence.md#e146",
+    "reviewMode": "internal_reviewed"
+  },
+  {
+    "id": "e147",
+    "source": "g058",
+    "target": "g124",
+    "summaryShort": "기동성 슈팅",
+    "evidenceTitle": "Wikipedia: Apex Legends",
+    "evidenceUrl": "https://en.wikipedia.org/wiki/Apex_Legends",
+    "analysisRef": "docs/research/edge-evidence.md#e147",
+    "reviewMode": "internal_reviewed"
+  },
+  {
+    "id": "e148",
+    "source": "g055",
+    "target": "g125",
+    "summaryShort": "전술 팀 슈팅",
+    "evidenceTitle": "Wikipedia: Tom Clancy's Rainbow Six Siege",
+    "evidenceUrl": "https://en.wikipedia.org/wiki/Tom_Clancy%27s_Rainbow_Six_Siege",
+    "analysisRef": "docs/research/edge-evidence.md#e148",
+    "reviewMode": "internal_reviewed"
+  },
+  {
+    "id": "e149",
+    "source": "g072",
+    "target": "g126",
+    "summaryShort": "종족 비대칭 운영",
+    "evidenceTitle": "Wikipedia: StarCraft II: Wings of Liberty",
+    "evidenceUrl": "https://en.wikipedia.org/wiki/StarCraft_II%3A_Wings_of_Liberty",
+    "analysisRef": "docs/research/edge-evidence.md#e149",
+    "reviewMode": "internal_reviewed"
+  },
+  {
+    "id": "e150",
+    "source": "g074",
+    "target": "g127",
+    "summaryShort": "팀 교전 중심",
+    "evidenceTitle": "Wikipedia: Heroes of the Storm",
+    "evidenceUrl": "https://en.wikipedia.org/wiki/Heroes_of_the_Storm",
+    "analysisRef": "docs/research/edge-evidence.md#e150",
+    "reviewMode": "internal_reviewed"
+  },
+  {
+    "id": "e151",
+    "source": "g084",
+    "target": "g128",
+    "summaryShort": "도시 운영 시뮬",
+    "evidenceTitle": "Wikipedia: Cities: Skylines II",
+    "evidenceUrl": "https://en.wikipedia.org/wiki/Cities%3A_Skylines_II",
+    "analysisRef": "docs/research/edge-evidence.md#e151",
+    "reviewMode": "internal_reviewed"
+  },
+  {
+    "id": "e152",
+    "source": "g085",
+    "target": "g129",
+    "summaryShort": "테마파크 운영",
+    "evidenceTitle": "Wikipedia: Planet Coaster",
+    "evidenceUrl": "https://en.wikipedia.org/wiki/Planet_Coaster",
+    "analysisRef": "docs/research/edge-evidence.md#e152",
+    "reviewMode": "internal_reviewed"
+  },
+  {
+    "id": "e153",
+    "source": "g091",
+    "target": "g130",
+    "summaryShort": "생존 제작 루프",
+    "evidenceTitle": "Wikipedia: Rust (video game)",
+    "evidenceUrl": "https://en.wikipedia.org/wiki/Rust_%28video_game%29",
+    "analysisRef": "docs/research/edge-evidence.md#e153",
+    "reviewMode": "internal_reviewed"
+  },
+  {
+    "id": "e154",
+    "source": "g091",
+    "target": "g131",
+    "summaryShort": "샌드박스 제작",
+    "evidenceTitle": "Wikipedia: Ark: Survival Evolved",
+    "evidenceUrl": "https://en.wikipedia.org/wiki/Ark%3A_Survival_Evolved",
+    "analysisRef": "docs/research/edge-evidence.md#e154",
+    "reviewMode": "internal_reviewed"
+  },
+  {
+    "id": "e155",
+    "source": "g109",
+    "target": "g132",
+    "summaryShort": "런 기반 덱빌딩",
+    "evidenceTitle": "Wikipedia: Balatro",
+    "evidenceUrl": "https://en.wikipedia.org/wiki/Balatro",
+    "analysisRef": "docs/research/edge-evidence.md#e155",
+    "reviewMode": "internal_reviewed"
   }
 ]

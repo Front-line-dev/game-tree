@@ -177,7 +177,7 @@
       "PlayStation 3",
       "Xbox 360"
     ],
-    "summary": "캐릭터 성장과 역할 수행의 재미를 강조한 RPG. 후행 맥락에서 위쳐 3: 와일드 헌트의 퀘스트 분기 설계로 재해석되며 계보적 기준점을 남겼다.",
+    "summary": "캐릭터 성장과 역할 수행의 재미를 강조한 RPG. 선행 맥락으로 폴아웃 3의 파벌 선택 구조 영향이 확인되며, 후행 맥락에서는 위쳐 3: 와일드 헌트의 퀘스트 분기 설계로 이어진다.",
     "genreGroup": "rpg",
     "id": "g014",
     "imagePath": "images/nodes/g014.jpg"
@@ -192,7 +192,7 @@
       "Xbox 360",
       "Switch"
     ],
-    "summary": "캐릭터 성장과 역할 수행의 재미를 강조한 RPG. 후행 맥락에서 위쳐 3: 와일드 헌트의 오픈 탐험 설계로 재해석되며 계보적 기준점을 남겼다.",
+    "summary": "캐릭터 성장과 역할 수행의 재미를 강조한 RPG. 선행 맥락으로 엘더스크롤 IV: 오블리비언의 오픈월드 퀘스트 영향이 확인되며, 후행 맥락에서는 위쳐 3: 와일드 헌트의 오픈 탐험 설계로 이어진다.",
     "genreGroup": "rpg",
     "id": "g015",
     "imagePath": "images/nodes/g015.png"
@@ -343,7 +343,7 @@
     "summary": "캐릭터 성장과 역할 수행의 재미를 강조한 RPG. 선행 맥락으로 MOTHER 2의 유머 톤 영향이 확인되며, 후행 맥락에서는 인스크립션의 메타 장치 설계로 이어진다.",
     "genreGroup": "rpg",
     "id": "g026",
-    "imagePath": "images/fallback/rpg.svg"
+    "imagePath": "images/nodes/g026.png"
   },
   {
     "displayTitle": "용과 같이 7",
@@ -393,7 +393,7 @@
     "summary": "캐릭터 성장과 역할 수행의 재미를 강조한 RPG. 후행 맥락에서 언더테일의 감정 서사 설계로 재해석되며 계보적 기준점을 남겼다.",
     "genreGroup": "rpg",
     "id": "g030",
-    "imagePath": "images/fallback/rpg.svg"
+    "imagePath": "images/nodes/g030.png"
   },
   {
     "displayTitle": "슈퍼 마리오 브라더스",
@@ -441,7 +441,7 @@
     "summary": "탐험과 상호작용으로 서사를 전달하는 어드벤처 게임. 후행 맥락에서 다크 소울의 락온 전투 설계로 재해석되며 계보적 기준점을 남겼다.",
     "genreGroup": "adventure",
     "id": "g034",
-    "imagePath": "images/nodes/g034.jpg"
+    "imagePath": "images/nodes/g034.png"
   },
   {
     "displayTitle": "젤다의 전설: 브레스 오브 더 와일드",
@@ -501,7 +501,7 @@
       "Switch",
       "PlayStation 4"
     ],
-    "summary": "즉각적인 조작 반응과 전투 리듬이 핵심인 액션 게임. 선행 맥락으로 록맨 X의 정밀 전투 영향이 반영된 흐름이 뚜렷하다.",
+    "summary": "즉각적인 조작 반응과 전투 리듬이 핵심인 액션 게임. 선행 맥락으로 록맨 X의 정밀 전투 영향이 확인되며, 후행 맥락에서는 오리 앤 더 윌 오브 더 위습스의 정밀 이동 전투 설계로 이어진다.",
     "genreGroup": "action",
     "id": "g039",
     "imagePath": "images/nodes/g039.jpg"
@@ -726,7 +726,7 @@
     "summary": "조준 감각과 전장 템포의 균형이 중요한 슈팅 게임. 선행 맥락으로 둠의 무기 순환 영향이 확인되며, 후행 맥락에서는 데스티니 2의 전장 템포 설계로 이어진다.",
     "genreGroup": "shooter",
     "id": "g056",
-    "imagePath": "images/nodes/g056.png"
+    "imagePath": "images/nodes/g056.jpg"
   },
   {
     "displayTitle": "콜 오브 듀티 4: 모던 워페어",
@@ -751,7 +751,7 @@
       "PlayStation 4",
       "Xbox One"
     ],
-    "summary": "조준 감각과 전장 템포의 균형이 중요한 슈팅 게임. 선행 맥락으로 퀘이크의 이동 가속 영향이 반영된 흐름이 뚜렷하다.",
+    "summary": "조준 감각과 전장 템포의 균형이 중요한 슈팅 게임. 선행 맥락으로 퀘이크의 이동 가속 영향이 확인되며, 후행 맥락에서는 에이펙스 레전드의 기동성 슈팅 설계로 이어진다.",
     "genreGroup": "shooter",
     "id": "g058",
     "imagePath": "images/nodes/g058.jpg"
@@ -876,7 +876,7 @@
     "summary": "규칙 해석과 문제 해결 과정이 중심인 퍼즐 게임. 후행 맥락에서 더 위트니스의 규칙 학습 설계로 재해석되며 계보적 기준점을 남겼다.",
     "genreGroup": "puzzle",
     "id": "g067",
-    "imagePath": "images/fallback/puzzle.svg"
+    "imagePath": "images/nodes/g067.jpg"
   },
   {
     "displayTitle": "포탈 2",
@@ -1028,7 +1028,7 @@
     "summary": "의사결정과 운영 판단이 승패를 가르는 전략 게임. 후행 맥락에서 인투 더 브리치의 가시성 전략 설계로 재해석되며 계보적 기준점을 남겼다.",
     "genreGroup": "strategy",
     "id": "g079",
-    "imagePath": "images/nodes/g079.jpg"
+    "imagePath": "images/nodes/g079.png"
   },
   {
     "displayTitle": "토탈 워: 쇼군 2",
@@ -1477,5 +1477,245 @@
     "genreGroup": "indie",
     "id": "g112",
     "imagePath": "images/nodes/g112.jpg"
+  },
+  {
+    "displayTitle": "발더스 게이트 3",
+    "titleOriginal": "Baldur's Gate 3",
+    "releaseYear": 2023,
+    "platforms": [
+      "TBD"
+    ],
+    "summary": "캐릭터 성장과 역할 수행의 재미를 강조한 RPG. 선행 맥락으로 발더스 게이트 II의 파티 선택 대화 영향이 반영된 흐름이 뚜렷하다.",
+    "genreGroup": "rpg",
+    "id": "g113",
+    "imagePath": "images/nodes/g113.jpg"
+  },
+  {
+    "displayTitle": "옥토패스 트래블러 II",
+    "titleOriginal": "Octopath Traveler II",
+    "releaseYear": 2023,
+    "platforms": [
+      "TBD"
+    ],
+    "summary": "캐릭터 성장과 역할 수행의 재미를 강조한 RPG. 선행 맥락으로 크로노 트리거의 클래식 JRPG 감성 영향이 반영된 흐름이 뚜렷하다.",
+    "genreGroup": "rpg",
+    "id": "g114",
+    "imagePath": "images/nodes/g114.jpg"
+  },
+  {
+    "displayTitle": "엘더스크롤 IV: 오블리비언",
+    "titleOriginal": "The Elder Scrolls IV: Oblivion",
+    "releaseYear": 2006,
+    "platforms": [
+      "TBD"
+    ],
+    "summary": "캐릭터 성장과 역할 수행의 재미를 강조한 RPG. 후행 맥락에서 엘더스크롤 V: 스카이림의 오픈월드 퀘스트 설계로 재해석되며 계보적 기준점을 남겼다.",
+    "genreGroup": "rpg",
+    "id": "g115",
+    "imagePath": "images/nodes/g115.png"
+  },
+  {
+    "displayTitle": "폴아웃 3",
+    "titleOriginal": "Fallout 3",
+    "releaseYear": 2008,
+    "platforms": [
+      "TBD"
+    ],
+    "summary": "캐릭터 성장과 역할 수행의 재미를 강조한 RPG. 후행 맥락에서 폴아웃: 뉴 베가스의 파벌 선택 구조 설계로 재해석되며 계보적 기준점을 남겼다.",
+    "genreGroup": "rpg",
+    "id": "g116",
+    "imagePath": "images/nodes/g116.png"
+  },
+  {
+    "displayTitle": "세키로: 섀도우 다이 트와이스",
+    "titleOriginal": "Sekiro: Shadows Die Twice",
+    "releaseYear": 2019,
+    "platforms": [
+      "TBD"
+    ],
+    "summary": "즉각적인 조작 반응과 전투 리듬이 핵심인 액션 게임. 선행 맥락으로 다크 소울의 보스 학습 전투 영향이 반영된 흐름이 뚜렷하다.",
+    "genreGroup": "action",
+    "id": "g117",
+    "imagePath": "images/nodes/g117.jpg"
+  },
+  {
+    "displayTitle": "인왕 2",
+    "titleOriginal": "Nioh 2",
+    "releaseYear": 2020,
+    "platforms": [
+      "TBD"
+    ],
+    "summary": "즉각적인 조작 반응과 전투 리듬이 핵심인 액션 게임. 선행 맥락으로 다크 소울의 고난도 근접전 영향이 반영된 흐름이 뚜렷하다.",
+    "genreGroup": "action",
+    "id": "g118",
+    "imagePath": "images/nodes/g118.jpg"
+  },
+  {
+    "displayTitle": "메트로이드 드레드",
+    "titleOriginal": "Metroid Dread",
+    "releaseYear": 2021,
+    "platforms": [
+      "TBD"
+    ],
+    "summary": "이동 동선과 점프 판정의 완성도를 중시한 플랫폼 게임. 선행 맥락으로 슈퍼 메트로이드의 탐색 해금 루프 영향이 반영된 흐름이 뚜렷하다.",
+    "genreGroup": "platformer",
+    "id": "g119",
+    "imagePath": "images/nodes/g119.jpg"
+  },
+  {
+    "displayTitle": "오리 앤 더 블라인드 포레스트",
+    "titleOriginal": "Ori and the Blind Forest",
+    "releaseYear": 2015,
+    "platforms": [
+      "TBD"
+    ],
+    "summary": "이동 동선과 점프 판정의 완성도를 중시한 플랫폼 게임. 선행 맥락으로 슈퍼 메트로이드의 메트로배니아 동선 영향이 반영된 흐름이 뚜렷하다.",
+    "genreGroup": "platformer",
+    "id": "g120",
+    "imagePath": "images/fallback/platformer.svg"
+  },
+  {
+    "displayTitle": "오리 앤 더 윌 오브 더 위습스",
+    "titleOriginal": "Ori and the Will of the Wisps",
+    "releaseYear": 2020,
+    "platforms": [
+      "TBD"
+    ],
+    "summary": "이동 동선과 점프 판정의 완성도를 중시한 플랫폼 게임. 선행 맥락으로 할로우 나이트의 정밀 이동 전투 영향이 반영된 흐름이 뚜렷하다.",
+    "genreGroup": "platformer",
+    "id": "g121",
+    "imagePath": "images/nodes/g121.jpg"
+  },
+  {
+    "displayTitle": "둠 이터널",
+    "titleOriginal": "Doom Eternal",
+    "releaseYear": 2020,
+    "platforms": [
+      "TBD"
+    ],
+    "summary": "조준 감각과 전장 템포의 균형이 중요한 슈팅 게임. 선행 맥락으로 둠의 고속 아레나 전투 영향이 반영된 흐름이 뚜렷하다.",
+    "genreGroup": "shooter",
+    "id": "g122",
+    "imagePath": "images/nodes/g122.png"
+  },
+  {
+    "displayTitle": "레프트 4 데드 2",
+    "titleOriginal": "Left 4 Dead 2",
+    "releaseYear": 2009,
+    "platforms": [
+      "TBD"
+    ],
+    "summary": "조준 감각과 전장 템포의 균형이 중요한 슈팅 게임. 선행 맥락으로 하프라이프 2의 협동 전장 압박 영향이 반영된 흐름이 뚜렷하다.",
+    "genreGroup": "shooter",
+    "id": "g123",
+    "imagePath": "images/nodes/g123.jpg"
+  },
+  {
+    "displayTitle": "에이펙스 레전드",
+    "titleOriginal": "Apex Legends",
+    "releaseYear": 2019,
+    "platforms": [
+      "TBD"
+    ],
+    "summary": "조준 감각과 전장 템포의 균형이 중요한 슈팅 게임. 선행 맥락으로 타이탄폴 2의 기동성 슈팅 영향이 반영된 흐름이 뚜렷하다.",
+    "genreGroup": "shooter",
+    "id": "g124",
+    "imagePath": "images/nodes/g124.jpg"
+  },
+  {
+    "displayTitle": "레인보우 식스 시즈",
+    "titleOriginal": "Tom Clancy's Rainbow Six Siege",
+    "releaseYear": 2015,
+    "platforms": [
+      "TBD"
+    ],
+    "summary": "조준 감각과 전장 템포의 균형이 중요한 슈팅 게임. 선행 맥락으로 카운터-스트라이크의 전술 팀 슈팅 영향이 반영된 흐름이 뚜렷하다.",
+    "genreGroup": "shooter",
+    "id": "g125",
+    "imagePath": "images/nodes/g125.jpg"
+  },
+  {
+    "displayTitle": "스타크래프트 II",
+    "titleOriginal": "StarCraft II: Wings of Liberty",
+    "releaseYear": 2010,
+    "platforms": [
+      "TBD"
+    ],
+    "summary": "의사결정과 운영 판단이 승패를 가르는 전략 게임. 선행 맥락으로 스타크래프트의 종족 비대칭 운영 영향이 반영된 흐름이 뚜렷하다.",
+    "genreGroup": "strategy",
+    "id": "g126",
+    "imagePath": "images/nodes/g126.jpg"
+  },
+  {
+    "displayTitle": "히어로즈 오브 더 스톰",
+    "titleOriginal": "Heroes of the Storm",
+    "releaseYear": 2015,
+    "platforms": [
+      "TBD"
+    ],
+    "summary": "의사결정과 운영 판단이 승패를 가르는 전략 게임. 선행 맥락으로 도타 2의 팀 교전 중심 영향이 반영된 흐름이 뚜렷하다.",
+    "genreGroup": "strategy",
+    "id": "g127",
+    "imagePath": "images/fallback/strategy.svg"
+  },
+  {
+    "displayTitle": "시티즈: 스카이라인 II",
+    "titleOriginal": "Cities: Skylines II",
+    "releaseYear": 2023,
+    "platforms": [
+      "TBD"
+    ],
+    "summary": "시스템 운영과 상태 관리를 중심으로 설계한 시뮬레이션 게임. 선행 맥락으로 시티즈: 스카이라인의 도시 운영 시뮬 영향이 반영된 흐름이 뚜렷하다.",
+    "genreGroup": "simulation",
+    "id": "g128",
+    "imagePath": "images/nodes/g128.png"
+  },
+  {
+    "displayTitle": "플래닛 코스터",
+    "titleOriginal": "Planet Coaster",
+    "releaseYear": 2016,
+    "platforms": [
+      "TBD"
+    ],
+    "summary": "시스템 운영과 상태 관리를 중심으로 설계한 시뮬레이션 게임. 선행 맥락으로 롤러코스터 타이쿤 2의 테마파크 운영 영향이 반영된 흐름이 뚜렷하다.",
+    "genreGroup": "simulation",
+    "id": "g129",
+    "imagePath": "images/nodes/g129.png"
+  },
+  {
+    "displayTitle": "러스트",
+    "titleOriginal": "Rust",
+    "releaseYear": 2018,
+    "platforms": [
+      "TBD"
+    ],
+    "summary": "자원 압박과 생존 선택의 긴장을 다루는 생존 게임. 선행 맥락으로 마인크래프트의 생존 제작 루프 영향이 반영된 흐름이 뚜렷하다.",
+    "genreGroup": "survival",
+    "id": "g130",
+    "imagePath": "images/nodes/g130.jpg"
+  },
+  {
+    "displayTitle": "아크: 서바이벌 이볼브드",
+    "titleOriginal": "ARK: Survival Evolved",
+    "releaseYear": 2017,
+    "platforms": [
+      "TBD"
+    ],
+    "summary": "자원 압박과 생존 선택의 긴장을 다루는 생존 게임. 선행 맥락으로 마인크래프트의 샌드박스 제작 영향이 반영된 흐름이 뚜렷하다.",
+    "genreGroup": "survival",
+    "id": "g131",
+    "imagePath": "images/nodes/g131.png"
+  },
+  {
+    "displayTitle": "발라트로",
+    "titleOriginal": "Balatro",
+    "releaseYear": 2024,
+    "platforms": [
+      "TBD"
+    ],
+    "summary": "실험적 아이디어와 강한 개성을 전면에 둔 인디 게임. 선행 맥락으로 슬레이 더 스파이어의 런 기반 덱빌딩 영향이 반영된 흐름이 뚜렷하다.",
+    "genreGroup": "indie",
+    "id": "g132",
+    "imagePath": "images/nodes/g132.jpg"
   }
 ]

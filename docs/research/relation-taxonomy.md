@@ -16,6 +16,11 @@
 - `same_series_exception`은 운영하지 않는다.
 - `확장|진화|정교화|후속작` 근거는 비허용으로 제거한다.
 - 엣지 근거는 게임 플레이 또는 핵심 컨셉 영향으로만 유지한다.
+- 채택 노드/후보는 `pioneer | popularizer | end_node` 트랙으로 분류해 검토한다.
+  - `pioneer`: 시스템 정립 + 다중 후행 확산.
+  - `popularizer`: 선행 시스템의 대중화/표준화.
+  - `end_node`: 최근작, 후행 영향 미확정, 향후 영향 잠재.
+  - 판정은 출처 개수가 아니라 방향성/직접 인용/시스템 정의 가능성으로 수행한다.
 
 ## 관계 채택 규칙
 - 채택: 게임플레이 구조, 시스템 상호작용, 설계 철학, 또는 개발자/공식 문서의 직접 영향 언급으로 설명 가능한 경우.
@@ -26,5 +31,6 @@
 ## 관련 문서
 - 엣지 근거 모음: `docs/research/edge-evidence.md`
 - 관계 추출 정책: `docs/research/extraction-policy.md`
+- 저장 노드 3트랙 재검토 로그: `docs/research/stored-games-track-review.md`
 - 동일 시리즈 예외(아카이브): `docs/research/edge-review-log.md`
 - 제목 표기 기준: `docs/research/title-style-guide.md`
