@@ -89,6 +89,9 @@ npm run build
 ## GitHub Pages 자동 배포
 - `main` 브랜치에 push(머지 포함)되면 GitHub Actions가 자동으로 빌드 후 Pages에 배포합니다.
 - 배포 빌드 전 `npm run prepare:build:nodes`를 실행해 사용자 제공 노드 파일을 우선 적용합니다.
+- 사용자 제공 파일 포맷:
+  - 노드 데이터: `[{...}, ...]` 또는 `{ "nodes": [{...}, ...] }` -> `src/data/nodes.json`에 적용
+  - 레이아웃 데이터: `{ "version": 1, "nodes": { "g001": { "x": 0, "y": 0 } }, "viewport": { "x": 0, "y": 0, "k": 1 } }` -> `src/data/graph-layout.json`에 적용
 - 사용자 노드 파일 탐색 순서:
   - 저장소 변수 `USER_NODES_FILE` 경로
   - `input/nodes.user.json`
