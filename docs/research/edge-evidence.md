@@ -1,6 +1,9 @@
 # 엣지 근거 분석 로그
 
-내부 분석 기반으로 계보 연결을 검수한 기록이다. `analysisRef`와 1:1로 대응한다.
+본 문서는 현재 채택된 엣지 데이터의 근거 기록이다.
+- `src/data/edges.json`의 `analysisRef`와 1:1로 대응한다.
+- 보류/기각 후보는 본 문서에 포함하지 않는다.
+- 단순 연대기/후속작 사유가 아닌 플레이 구조/설계 영향 중심으로만 유지한다.
 
 ## e001
 
@@ -15,13 +18,6 @@
 - 요약: 악마 교섭과 합체 기반 루프가 후속 작품의 전투 정체성을 형성했다.
 - 근거 출처: Wikipedia: Digital Devil Story: Megami Tensei
 - URL: https://en.wikipedia.org/wiki/Digital_Devil_Story%3A_Megami_Tensei
-
-## e003
-
-- 경로: 진 여신전생 -> 페르소나 5 로열
-- 요약: 협상/약점 공략 구조가 현대 학원 RPG 전투 흐름으로 재구성되었다.
-- 근거 출처: Wikipedia: Shin Megami Tensei
-- URL: https://en.wikipedia.org/wiki/Shin_Megami_Tensei
 
 ## e004
 
@@ -72,13 +68,6 @@
 - 근거 출처: Wikipedia: Baldur's Gate II: Shadows of Amn
 - URL: https://en.wikipedia.org/wiki/Baldur's_Gate_II%3A_Shadows_of_Amn
 
-## e011
-
-- 경로: 발더스 게이트 II -> 디비니티: 오리지널 신 2
-- 요약: 파티 구성과 스킬 연계 중심 사고가 시스템 상호작용형 CRPG로 확장되었다.
-- 근거 출처: Wikipedia: Baldur's Gate II: Shadows of Amn
-- URL: https://en.wikipedia.org/wiki/Baldur's_Gate_II%3A_Shadows_of_Amn
-
 ## e012
 
 - 경로: 발더스 게이트 II -> 디스코 엘리시움
@@ -121,13 +110,6 @@
 - 근거 출처: Wikipedia: Final Fantasy VII
 - URL: https://en.wikipedia.org/wiki/Final_Fantasy_VII
 
-## e018
-
-- 경로: 파이널 판타지 VII -> 제노블레이드 크로니클스
-- 요약: 대형 세계관과 파티 중심 서사 전개가 현대 JRPG 규모 확장에 영향을 주었다.
-- 근거 출처: Wikipedia: Final Fantasy VII
-- URL: https://en.wikipedia.org/wiki/Final_Fantasy_VII
-
 ## e019
 
 - 경로: 킹덤 하츠 -> 니어: 오토마타
@@ -142,13 +124,6 @@
 - 근거 출처: Wikipedia: Shin Megami Tensei
 - URL: https://en.wikipedia.org/wiki/Shin_Megami_Tensei
 
-## e021
-
-- 경로: 페르소나 5 로열 -> 용과 같이 7
-- 요약: 현대 도시 배경 턴제 전개와 캐릭터 관계 설계가 장르 확장에 기여했다.
-- 근거 출처: Wikipedia: Persona 5 Royal
-- URL: https://en.wikipedia.org/wiki/Persona_5_Royal
-
 ## e022
 
 - 경로: 데몬즈 소울 -> 다크 소울
@@ -160,13 +135,6 @@
 
 - 경로: 다크 소울 -> 블러드본
 - 요약: 패턴 학습과 회피 타이밍 중심 보스 설계가 공격적 리듬 전투로 변형되었다.
-- 근거 출처: Wikipedia: Dark Souls
-- URL: https://en.wikipedia.org/wiki/Dark_Souls
-
-## e024
-
-- 경로: 다크 소울 -> 엘든 링
-- 요약: 소울식 전투 감각이 오픈필드 구조와 결합되며 장르 외연을 넓혔다.
 - 근거 출처: Wikipedia: Dark Souls
 - URL: https://en.wikipedia.org/wiki/Dark_Souls
 
@@ -254,13 +222,6 @@
 - 근거 출처: Wikipedia: Mega Man X
 - URL: https://en.wikipedia.org/wiki/Mega_Man_X
 
-## e041
-
-- 경로: 닌자 가이덴 -> 데빌 메이 크라이 3
-- 요약: 반응 속도 중심 액션 설계가 콤보형 하이액션 시스템으로 확장되었다.
-- 근거 출처: Wikipedia: Ninja Gaiden
-- URL: https://en.wikipedia.org/wiki/Ninja_Gaiden
-
 ## e042
 
 - 경로: 데빌 메이 크라이 3 -> 베요네타
@@ -274,13 +235,6 @@
 - 요약: 타이밍 회피 중심 리듬 전투가 액션 RPG 전투 설계에 반영되었다.
 - 근거 출처: Wikipedia: Bayonetta
 - URL: https://en.wikipedia.org/wiki/Bayonetta
-
-## e044
-
-- 경로: 페르시아의 왕자: 시간의 모래 -> 어쌔신 크리드 II
-- 요약: 연속 이동 파쿠르와 환경 활용 동선 설계가 오픈월드 잠입 액션으로 확장되었다.
-- 근거 출처: Wikipedia: Prince of Persia: The Sands of Time
-- URL: https://en.wikipedia.org/wiki/Prince_of_Persia%3A_The_Sands_of_Time
 
 ## e045
 
@@ -330,13 +284,6 @@
 - 요약: 짧은 실패-재도전 리듬이 빠른 런 반복 구조 설계에 영향을 주었다.
 - 근거 출처: Wikipedia: Celeste
 - URL: https://en.wikipedia.org/wiki/Celeste
-
-## e052
-
-- 경로: 둠 -> 퀘이크
-- 요약: 빠른 이동과 공간 인지 중심 FPS 감각이 3D 멀티 FPS 문법으로 확장되었다.
-- 근거 출처: Wikipedia: Doom
-- URL: https://en.wikipedia.org/wiki/Doom
 
 ## e053
 
@@ -401,13 +348,6 @@
 - 근거 출처: Wikipedia: Half-Life 2
 - URL: https://en.wikipedia.org/wiki/Half-Life_2
 
-## e063
-
-- 경로: 헤일로: 컴뱃 이볼브드 -> 콜 오브 듀티 4: 모던 워페어
-- 요약: 콘솔 FPS 조준/이동 감각 표준이 현대전 슈터 전개 리듬으로 확장되었다.
-- 근거 출처: Wikipedia: Halo: Combat Evolved
-- URL: https://en.wikipedia.org/wiki/Halo%3A_Combat_Evolved
-
 ## e064
 
 - 경로: 콜 오브 듀티 4: 모던 워페어 -> 데스티니 2
@@ -435,13 +375,6 @@
 - 요약: 멀티 중심 FPS 감각이 라운드형 팀 경쟁 구조 형성에 영향을 주었다.
 - 근거 출처: Wikipedia: Quake
 - URL: https://en.wikipedia.org/wiki/Quake
-
-## e068
-
-- 경로: 하프라이프 -> 카운터-스트라이크
-- 요약: 커뮤니티 모드 생태계 기반 확장이 경쟁형 FPS 장르 확대를 이끌었다.
-- 근거 출처: Wikipedia: Half-Life
-- URL: https://en.wikipedia.org/wiki/Half-Life
 
 ## e069
 
@@ -527,13 +460,6 @@
 - 근거 출처: Wikipedia: StarCraft
 - URL: https://en.wikipedia.org/wiki/StarCraft
 
-## e081
-
-- 경로: 에이지 오브 엠파이어 II -> 스타크래프트
-- 요약: 초중반 경제 운영과 확장 타이밍 감각이 경쟁 RTS 밸런싱에 반영되었다.
-- 근거 출처: Wikipedia: Age of Empires II
-- URL: https://en.wikipedia.org/wiki/Age_of_Empires_II
-
 ## e083
 
 - 경로: 문명 IV -> 크루세이더 킹즈 III
@@ -611,13 +537,6 @@
 - 근거 출처: Wikipedia: Fire Emblem Awakening
 - URL: https://en.wikipedia.org/wiki/Fire_Emblem_Awakening
 
-## e094
-
-- 경로: 스타크래프트 -> 리그 오브 레전드
-- 요약: 라인 푸시/시야 장악 중심 사고가 팀 기반 실시간 전략 장르로 확장되었다.
-- 근거 출처: Wikipedia: StarCraft
-- URL: https://en.wikipedia.org/wiki/StarCraft
-
 ## e095
 
 - 경로: 워크래프트 III -> 리그 오브 레전드
@@ -688,20 +607,6 @@
 - 근거 출처: Wikipedia: Minecraft
 - URL: https://en.wikipedia.org/wiki/Minecraft
 
-## e105
-
-- 경로: 마인크래프트 -> 노 맨즈 스카이
-- 요약: 자율 탐사와 제작 기반 자기목표 설정 감각이 우주 탐사 게임에 영향을 주었다.
-- 근거 출처: Wikipedia: Minecraft
-- URL: https://en.wikipedia.org/wiki/Minecraft
-
-## e106
-
-- 경로: 테라리아 -> 발하임
-- 요약: 탐험-제작-보스 순환 구조가 3D 생존 협동 루프로 확장되었다.
-- 근거 출처: Wikipedia: Terraria
-- URL: https://en.wikipedia.org/wiki/Terraria
-
 ## e107
 
 - 경로: 돈스타브 -> 발하임
@@ -715,13 +620,6 @@
 - 요약: 거점 구축과 야간 생존 긴장 구조가 공포 생존 게임 설계에 영향을 주었다.
 - 근거 출처: Wikipedia: Don't Starve
 - URL: https://en.wikipedia.org/wiki/Don't_Starve
-
-## e109
-
-- 경로: 더 포레스트 -> 발하임
-- 요약: 거점 중심 진행과 협동 생존 루프 감각이 후속 생존 샌드박스에 반영되었다.
-- 근거 출처: Wikipedia: The Forest
-- URL: https://en.wikipedia.org/wiki/The_Forest
 
 ## e110
 
@@ -897,4 +795,3 @@
 - 요약: 느린 누적 목표와 관계 형성 루프가 생활형 게임 설계 전반에 피드백을 주었다.
 - 근거 출처: Wikipedia: Animal Crossing: New Horizons
 - URL: https://en.wikipedia.org/wiki/Animal_Crossing%3A_New_Horizons
-

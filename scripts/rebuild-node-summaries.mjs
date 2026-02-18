@@ -48,20 +48,22 @@ function buildSummary(node, incomingEdge, outgoingEdge, nodeById) {
   const base = genreSummarySeed[node.genreGroup] ?? '장르 특성이 뚜렷한 게임'
   const incomingInfo = pickIncomingDescription(incomingEdge, nodeById)
   const outgoingText = pickOutgoingDescription(outgoingEdge)
+  const outgoingNode = outgoingEdge ? nodeById.get(outgoingEdge.target) : null
+  const outgoingName = outgoingNode?.displayTitle ?? outgoingEdge?.target ?? null
 
-  if (incomingInfo && outgoingText) {
-    return `${base}. ${incomingInfo.sourceName}의 ${incomingInfo.factor}에 영향을 받았고 ${outgoingText} 요소로 후속 흐름에 기준을 남긴 작품이다.`
+  if (incomingInfo && outgoingText && outgoingName) {
+    return `${base}. 선행 맥락으로 ${incomingInfo.sourceName}의 ${incomingInfo.factor} 영향이 확인되며, 후행 맥락에서는 ${outgoingName}의 ${outgoingText} 설계로 이어진다.`
   }
 
   if (incomingInfo) {
-    return `${base}. ${incomingInfo.sourceName}의 ${incomingInfo.factor}에 영향을 받아 고유한 플레이 감각을 만든 작품이다.`
+    return `${base}. 선행 맥락으로 ${incomingInfo.sourceName}의 ${incomingInfo.factor} 영향이 반영된 흐름이 뚜렷하다.`
   }
 
-  if (outgoingText) {
-    return `${base}. ${outgoingText} 요소를 대표적으로 보여 주며 이후 계보에 참고점을 남긴 작품이다.`
+  if (outgoingText && outgoingName) {
+    return `${base}. 후행 맥락에서 ${outgoingName}의 ${outgoingText} 설계로 재해석되며 계보적 기준점을 남겼다.`
   }
 
-  return `${base}. 현재 계보 데이터에서 직접 연결된 선행/후행 영향은 확인되지 않았다.`
+  return `${base}. 현재 채택된 근거 기준에서 직접 영향 관계는 보류 상태다.`
 }
 
 function pickIncomingEdge(incoming, nodeById) {

@@ -59,7 +59,7 @@ function hasDuplicate(values: string[]): string[] {
 export function validateGraphData(data: GraphData): ValidationResult {
   const errors: string[] = []
   const parseResult = graphDataSchema.safeParse(data)
-  const bannedReasonRegex = /(확장|진화|정교화|후속작)/
+  const bannedReasonRegex = /(확장|진화|정교화|후속작|연대기|출시\s*순|시리즈\s*순)/
 
   if (!parseResult.success) {
     const zodErrors = parseResult.error.issues.map(
@@ -105,7 +105,7 @@ export function validateGraphData(data: GraphData): ValidationResult {
 
     if (bannedReasonRegex.test(edge.summaryShort)) {
       errors.push(
-        `Edge ${edge.id} summaryShort contains banned reason keyword (확장|진화|정교화|후속작)`,
+        `Edge ${edge.id} summaryShort contains banned reason keyword (확장|진화|정교화|후속작|연대기|출시 순|시리즈 순)`,
       )
     }
   }

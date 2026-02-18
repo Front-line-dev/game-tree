@@ -1,0 +1,23 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - generic [ref=e5]:
+      - paragraph [ref=e6]: Interactive Game Lineage
+      - heading "게임 계보 인터랙티브 그래프 V2" [level=1] [ref=e7]
+      - paragraph [ref=e8]: 핵심 게임 노드와 영향 요소를 중심으로 계보를 탐색하세요.
+    - generic [ref=e9]:
+      - generic [ref=e10]: 노드 102
+      - generic [ref=e11]: 엣지 113
+      - generic [ref=e12]: 기본 표시 102 / 113
+      - generic [ref=e13]: 전체 데이터 112 / 113
+  - region "그래프 탐색 컨트롤" [ref=e14]:
+    - generic [ref=e15]:
+      - generic [ref=e16]: 게임 검색
+      - textbox "게임 검색" [ref=e17]:
+        - /placeholder: 게임명 검색 (통용명/원문)
+    - button "검색 초기화" [ref=e18] [cursor=pointer]
+  - main [ref=e19]:
+    - region "게임 계보 그래프" [ref=e20]:
+      - generic: 드래그 이동, 휠 확대/축소, 배경 클릭 선택 해제
+    - complementary [ref=e25]:
+      - heading "게임 상세" [level=2] [ref=e26]
+      - paragraph [ref=e27]: 노드를 클릭하면 연결된 영향 요소와 근거를 볼 수 있습니다.

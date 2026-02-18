@@ -1,79 +1,163 @@
 # 조사 출처 목록
 
-본 프로젝트의 연결 관계는 위키 문서/장르 문서 기반으로 1차 수집 후, 게임 플레이 구조와 기획 문맥을 기준으로 자체 분석해 정리했다.
+본 문서는 현재 채택된 엣지(`src/data/edges.json`)에서 실제 사용 중인 근거 출처만 기록한다.
 
-## 시리즈/개별 작품
-- https://en.wikipedia.org/wiki/Digital_Devil_Story:_Megami_Tensei
-- https://en.wikipedia.org/wiki/Shin_Megami_Tensei
-- https://en.wikipedia.org/wiki/Persona_(series)
-- https://en.wikipedia.org/wiki/Pok%C3%A9mon_Red_and_Blue
-- https://en.wikipedia.org/wiki/Pok%C3%A9mon_Gold_and_Silver
-- https://en.wikipedia.org/wiki/Digimon_World
-- https://en.wikipedia.org/wiki/Dragon_Quest_V
-- https://en.wikipedia.org/wiki/Chrono_Trigger
-- https://en.wikipedia.org/wiki/Final_Fantasy_IV
-- https://en.wikipedia.org/wiki/Final_Fantasy_VII
-- https://en.wikipedia.org/wiki/Kingdom_Hearts_(video_game)
-- https://en.wikipedia.org/wiki/Mass_Effect_(video_game)
-- https://en.wikipedia.org/wiki/Dragon_Age:_Origins
-- https://en.wikipedia.org/wiki/Baldur%27s_Gate_II:_Shadows_of_Amn
-- https://en.wikipedia.org/wiki/Fallout_(video_game)
-- https://en.wikipedia.org/wiki/The_Elder_Scrolls_III:_Morrowind
-- https://en.wikipedia.org/wiki/The_Elder_Scrolls_V:_Skyrim
-- https://en.wikipedia.org/wiki/Diablo_(video_game)
-- https://en.wikipedia.org/wiki/Diablo_II
-- https://en.wikipedia.org/wiki/Path_of_Exile
-- https://en.wikipedia.org/wiki/Demon%27s_Souls
-- https://en.wikipedia.org/wiki/Dark_Souls
-- https://en.wikipedia.org/wiki/Bloodborne
-- https://en.wikipedia.org/wiki/Sekiro:_Shadows_Die_Twice
-- https://en.wikipedia.org/wiki/Monster_Hunter
-- https://en.wikipedia.org/wiki/Monster_Hunter:_World
-- https://en.wikipedia.org/wiki/Phantasy_Star_Online
-- https://en.wikipedia.org/wiki/Warframe
-- https://en.wikipedia.org/wiki/Destiny_(video_game)
-- https://en.wikipedia.org/wiki/Borderlands_(video_game)
-- https://en.wikipedia.org/wiki/Half-Life_(video_game)
-- https://en.wikipedia.org/wiki/Half-Life_2
-- https://en.wikipedia.org/wiki/BioShock
-- https://en.wikipedia.org/wiki/Deus_Ex_(video_game)
-- https://en.wikipedia.org/wiki/Dishonored
-- https://en.wikipedia.org/wiki/Prey_(2017_video_game)
-- https://en.wikipedia.org/wiki/XCOM:_Enemy_Unknown
-- https://en.wikipedia.org/wiki/Mario_%2B_Rabbids_Kingdom_Battle
-- https://en.wikipedia.org/wiki/Fire_Emblem_Awakening
-- https://en.wikipedia.org/wiki/Valkyria_Chronicles
-- https://en.wikipedia.org/wiki/Total_War:_Shogun_2
-- https://en.wikipedia.org/wiki/Crusader_Kings_III
-- https://en.wikipedia.org/wiki/Civilization_IV
-- https://en.wikipedia.org/wiki/Civilization_VI
-- https://en.wikipedia.org/wiki/SimCity_2000
-- https://en.wikipedia.org/wiki/Cities:_Skylines
-- https://en.wikipedia.org/wiki/Stardew_Valley
-- https://en.wikipedia.org/wiki/Animal_Crossing:_New_Horizons
-- https://en.wikipedia.org/wiki/Story_of_Seasons
-- https://en.wikipedia.org/wiki/Rune_Factory_4
-- https://en.wikipedia.org/wiki/Slay_the_Spire
-- https://en.wikipedia.org/wiki/Inscryption
-- https://en.wikipedia.org/wiki/Hades_(video_game)
-- https://en.wikipedia.org/wiki/Dead_Cells
-- https://en.wikipedia.org/wiki/Rogue_Legacy
-- https://en.wikipedia.org/wiki/The_Binding_of_Isaac:_Rebirth
-
-## 장르/메커닉 기준 문서
-- https://en.wikipedia.org/wiki/Monster-collecting_game
-- https://en.wikipedia.org/wiki/Action_role-playing_game
-- https://en.wikipedia.org/wiki/Immersive_sim
-- https://en.wikipedia.org/wiki/4X
-- https://en.wikipedia.org/wiki/Deck-building_game
-- https://en.wikipedia.org/wiki/Games_as_a_service
-- https://en.wikipedia.org/wiki/Cooperative_gameplay
-- https://en.wikipedia.org/wiki/Roguelike
-- https://en.wikipedia.org/wiki/Open_world
-- https://en.wikipedia.org/wiki/Active_Time_Battle
-- https://en.wikipedia.org/wiki/Strategy_video_game
+## 채택 엣지 근거 출처
+- Wikipedia: Advance Wars
+  - https://en.wikipedia.org/wiki/Advance_Wars
+- Wikipedia: Age of Empires II
+  - https://en.wikipedia.org/wiki/Age_of_Empires_II
+- Wikipedia: Animal Crossing: New Horizons
+  - https://en.wikipedia.org/wiki/Animal_Crossing%3A_New_Horizons
+- Wikipedia: Assassin's Creed II
+  - https://en.wikipedia.org/wiki/Assassin's_Creed_II
+- Wikipedia: Baldur's Gate II: Shadows of Amn
+  - https://en.wikipedia.org/wiki/Baldur's_Gate_II%3A_Shadows_of_Amn
+- Wikipedia: Bayonetta
+  - https://en.wikipedia.org/wiki/Bayonetta
+- Wikipedia: BioShock
+  - https://en.wikipedia.org/wiki/BioShock
+- Wikipedia: Bloodborne
+  - https://en.wikipedia.org/wiki/Bloodborne
+- Wikipedia: Borderlands 2
+  - https://en.wikipedia.org/wiki/Borderlands_2
+- Wikipedia: Braid
+  - https://en.wikipedia.org/wiki/Braid
+- Wikipedia: Call of Duty 4: Modern Warfare
+  - https://en.wikipedia.org/wiki/Call_of_Duty_4%3A_Modern_Warfare
+- Wikipedia: Castlevania: Symphony of the Night
+  - https://en.wikipedia.org/wiki/Castlevania%3A_Symphony_of_the_Night
+- Wikipedia: Celeste
+  - https://en.wikipedia.org/wiki/Celeste
+- Wikipedia: Chrono Trigger
+  - https://en.wikipedia.org/wiki/Chrono_Trigger
+- Wikipedia: Cities: Skylines
+  - https://en.wikipedia.org/wiki/Cities%3A_Skylines
+- Wikipedia: Counter-Strike
+  - https://en.wikipedia.org/wiki/Counter-Strike
+- Wikipedia: Dark Souls
+  - https://en.wikipedia.org/wiki/Dark_Souls
+- Wikipedia: Dead Cells
+  - https://en.wikipedia.org/wiki/Dead_Cells
+- Wikipedia: Demon's Souls
+  - https://en.wikipedia.org/wiki/Demon's_Souls
+- Wikipedia: Deus Ex
+  - https://en.wikipedia.org/wiki/Deus_Ex
+- Wikipedia: Devil May Cry 3
+  - https://en.wikipedia.org/wiki/Devil_May_Cry_3
+- Wikipedia: Diablo II
+  - https://en.wikipedia.org/wiki/Diablo_II
+- Wikipedia: Digital Devil Story: Megami Tensei
+  - https://en.wikipedia.org/wiki/Digital_Devil_Story%3A_Megami_Tensei
+- Wikipedia: Don't Starve
+  - https://en.wikipedia.org/wiki/Don't_Starve
+- Wikipedia: Doom
+  - https://en.wikipedia.org/wiki/Doom
+- Wikipedia: Dota 2
+  - https://en.wikipedia.org/wiki/Dota_2
+- Wikipedia: Dragon Quest V
+  - https://en.wikipedia.org/wiki/Dragon_Quest_V
+- Wikipedia: EarthBound
+  - https://en.wikipedia.org/wiki/EarthBound
+- Wikipedia: Europa Universalis IV
+  - https://en.wikipedia.org/wiki/Europa_Universalis_IV
+- Wikipedia: Factorio
+  - https://en.wikipedia.org/wiki/Factorio
+- Wikipedia: Fallout: New Vegas
+  - https://en.wikipedia.org/wiki/Fallout%3A_New_Vegas
+- Wikipedia: Final Fantasy VII
+  - https://en.wikipedia.org/wiki/Final_Fantasy_VII
+- Wikipedia: Fire Emblem Awakening
+  - https://en.wikipedia.org/wiki/Fire_Emblem_Awakening
+- Wikipedia: FTL: Faster Than Light
+  - https://en.wikipedia.org/wiki/FTL%3A_Faster_Than_Light
+- Wikipedia: God of War
+  - https://en.wikipedia.org/wiki/God_of_War
+- Wikipedia: Half-Life 2
+  - https://en.wikipedia.org/wiki/Half-Life_2
+- Wikipedia: Halo: Combat Evolved
+  - https://en.wikipedia.org/wiki/Halo%3A_Combat_Evolved
+- Wikipedia: Inside
+  - https://en.wikipedia.org/wiki/Inside
+- Wikipedia: Journey
+  - https://en.wikipedia.org/wiki/Journey
+- Wikipedia: Kingdom Hearts
+  - https://en.wikipedia.org/wiki/Kingdom_Hearts
+- Wikipedia: Limbo
+  - https://en.wikipedia.org/wiki/Limbo
+- Wikipedia: Mass Effect 2
+  - https://en.wikipedia.org/wiki/Mass_Effect_2
+- Wikipedia: Mega Man X
+  - https://en.wikipedia.org/wiki/Mega_Man_X
+- Wikipedia: Metro 2033
+  - https://en.wikipedia.org/wiki/Metro_2033
+- Wikipedia: Minecraft
+  - https://en.wikipedia.org/wiki/Minecraft
+- Wikipedia: Monster Hunter: World
+  - https://en.wikipedia.org/wiki/Monster_Hunter%3A_World
+- Wikipedia: Mother 3
+  - https://en.wikipedia.org/wiki/Mother_3
+- Wikipedia: No Man's Sky
+  - https://en.wikipedia.org/wiki/No_Man's_Sky
+- Wikipedia: Outer Wilds
+  - https://en.wikipedia.org/wiki/Outer_Wilds
+- Wikipedia: Path of Exile
+  - https://en.wikipedia.org/wiki/Path_of_Exile
+- Wikipedia: Portal
+  - https://en.wikipedia.org/wiki/Portal
+- Wikipedia: Portal 2
+  - https://en.wikipedia.org/wiki/Portal_2
+- Wikipedia: Prince of Persia: The Sands of Time
+  - https://en.wikipedia.org/wiki/Prince_of_Persia%3A_The_Sands_of_Time
+- Wikipedia: Quake
+  - https://en.wikipedia.org/wiki/Quake
+- Wikipedia: RimWorld
+  - https://en.wikipedia.org/wiki/RimWorld
+- Wikipedia: RollerCoaster Tycoon 2
+  - https://en.wikipedia.org/wiki/RollerCoaster_Tycoon_2
+- Wikipedia: Rune Factory 4
+  - https://en.wikipedia.org/wiki/Rune_Factory_4
+- Wikipedia: Shin Megami Tensei
+  - https://en.wikipedia.org/wiki/Shin_Megami_Tensei
+- Wikipedia: Sid Meier's Civilization IV
+  - https://en.wikipedia.org/wiki/Sid_Meier's_Civilization_IV
+- Wikipedia: SimCity 2000
+  - https://en.wikipedia.org/wiki/SimCity_2000
+- Wikipedia: Slay the Spire
+  - https://en.wikipedia.org/wiki/Slay_the_Spire
+- Wikipedia: StarCraft
+  - https://en.wikipedia.org/wiki/StarCraft
+- Wikipedia: Stardew Valley
+  - https://en.wikipedia.org/wiki/Stardew_Valley
+- Wikipedia: Story of Seasons
+  - https://en.wikipedia.org/wiki/Story_of_Seasons
+- Wikipedia: Super Metroid
+  - https://en.wikipedia.org/wiki/Super_Metroid
+- Wikipedia: System Shock 2
+  - https://en.wikipedia.org/wiki/System_Shock_2
+- Wikipedia: The Elder Scrolls V: Skyrim
+  - https://en.wikipedia.org/wiki/The_Elder_Scrolls_V%3A_Skyrim
+- Wikipedia: The Legend of Zelda: Breath of the Wild
+  - https://en.wikipedia.org/wiki/The_Legend_of_Zelda%3A_Breath_of_the_Wild
+- Wikipedia: The Legend of Zelda: Ocarina of Time
+  - https://en.wikipedia.org/wiki/The_Legend_of_Zelda%3A_Ocarina_of_Time
+- Wikipedia: The Sims 2
+  - https://en.wikipedia.org/wiki/The_Sims_2
+- Wikipedia: The Sims 4
+  - https://en.wikipedia.org/wiki/The_Sims_4
+- Wikipedia: The Witness
+  - https://en.wikipedia.org/wiki/The_Witness
+- Wikipedia: Total War: Shogun 2
+  - https://en.wikipedia.org/wiki/Total_War%3A_Shogun_2
+- Wikipedia: Undertale
+  - https://en.wikipedia.org/wiki/Undertale
+- Wikipedia: Warcraft III: Reign of Chaos
+  - https://en.wikipedia.org/wiki/Warcraft_III%3A_Reign_of_Chaos
+- Wikipedia: XCOM: Enemy Unknown
+  - https://en.wikipedia.org/wiki/XCOM%3A_Enemy_Unknown
 
 ## 이미지 수집 API
 - https://www.mediawiki.org/wiki/API:Pageimages
 - https://en.wikipedia.org/w/api.php?action=query&prop=pageimages
 - https://en.wikipedia.org/api/rest_v1/page/summary/
+

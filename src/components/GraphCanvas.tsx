@@ -107,6 +107,72 @@ function getNodeRadius(nodeId: string, selectedNodeId: string | null, isMobile: 
   return nodeId === selectedNodeId ? selectedRadius : baseRadius
 }
 
+function getQuadraticPointAt(
+  startX: number,
+  startY: number,
+  controlX: number,
+  controlY: number,
+  endX: number,
+  endY: number,
+  t: number,
+): { x: number; y: number } {
+  const u = 1 - t
+  return {
+    x: u * u * startX + 2 * u * t * controlX + t * t * endX,
+    y: u * u * startY + 2 * u * t * controlY + t * t * endY,
+  }
+}
+
+function getQuadraticArcMidpoint(
+  startX: number,
+  startY: number,
+  controlX: number,
+  controlY: number,
+  endX: number,
+  endY: number,
+): { x: number; y: number } {
+  const samples = 28
+  const points = [
+    { x: startX, y: startY },
+  ]
+  const cumulativeLength = [0]
+
+  let totalLength = 0
+
+  for (let index = 1; index <= samples; index += 1) {
+    const t = index / samples
+    const point = getQuadraticPointAt(startX, startY, controlX, controlY, endX, endY, t)
+    const prev = points[points.length - 1]
+    totalLength += Math.hypot(point.x - prev.x, point.y - prev.y)
+    points.push(point)
+    cumulativeLength.push(totalLength)
+  }
+
+  if (totalLength <= 0) {
+    return getQuadraticPointAt(startX, startY, controlX, controlY, endX, endY, 0.5)
+  }
+
+  const midpointLength = totalLength * 0.5
+  for (let index = 1; index < cumulativeLength.length; index += 1) {
+    const prevLength = cumulativeLength[index - 1]
+    const nextLength = cumulativeLength[index]
+    if (nextLength < midpointLength) {
+      continue
+    }
+
+    const span = nextLength - prevLength || 1
+    const ratio = (midpointLength - prevLength) / span
+    const prevPoint = points[index - 1]
+    const nextPoint = points[index]
+    return {
+      x: prevPoint.x + (nextPoint.x - prevPoint.x) * ratio,
+      y: prevPoint.y + (nextPoint.y - prevPoint.y) * ratio,
+    }
+  }
+
+  return points[points.length - 1]
+}
+
 export default function GraphCanvas({
   nodes,
   edges,
@@ -616,34 +682,36 @@ export default function GraphCanvas({
           const isFocused =
             selectedNodeId !== null && (sourceId === selectedNodeId || targetId === selectedNodeId)
           const curvature = edgeCurvatureById.get(typed.id) ?? 0.08
-          const curveSign = curvature >= 0 ? 1 : -1
 
           const dx = endX - startX
           const dy = endY - startY
-          const distance = Math.hypot(dx, dy) || 1
-          const nx = -dy / distance
-          const ny = dx / distance
+          const distance = Math.hypot(dx, dy)
+          const safeDistance = distance > 0 ? distance : 1
 
-          const curveOffset = (12 + Math.abs(curvature) * 58) / globalScale
-          let labelX = startX + dx * 0.5 + nx * curveOffset * curveSign
-          let labelY = startY + dy * 0.5 + ny * curveOffset * curveSign
+          const midpointX = startX + dx * 0.5
+          const midpointY = startY + dy * 0.5
 
-          const sourceRadius = getNodeRadius(sourceId, selectedNodeId, isMobile)
-          const targetRadius = getNodeRadius(targetId, selectedNodeId, isMobile)
+          // Match force-graph's internal quadratic control-point formula exactly:
+          // cp = midpoint + (l * curvature) * [cos(a - PI/2), sin(a - PI/2)]
+          const angle = Math.atan2(dy, dx)
+          const controlOffset = safeDistance * curvature
+          const controlX = midpointX + controlOffset * Math.cos(angle - Math.PI / 2)
+          const controlY = midpointY + controlOffset * Math.sin(angle - Math.PI / 2)
 
-          for (let i = 0; i < 5; i += 1) {
-            const sourceDistance = Math.hypot(labelX - startX, labelY - startY)
-            const targetDistance = Math.hypot(labelX - endX, labelY - endY)
-            const tooCloseToSource = sourceDistance < sourceRadius + 10 / globalScale
-            const tooCloseToTarget = targetDistance < targetRadius + 10 / globalScale
+          const onCurvePoint =
+            Math.abs(curvature) > 0.0001 && distance > 0
+              ? getQuadraticArcMidpoint(
+                  startX,
+                  startY,
+                  controlX,
+                  controlY,
+                  endX,
+                  endY,
+                )
+              : { x: midpointX, y: midpointY }
 
-            if (!tooCloseToSource && !tooCloseToTarget) {
-              break
-            }
-
-            labelX += nx * (8 / globalScale) * curveSign
-            labelY += ny * (8 / globalScale) * curveSign
-          }
+          const labelX = onCurvePoint.x
+          const labelY = onCurvePoint.y
 
           const fontSize = Math.max(4, Math.min(11, 10 / globalScale))
           const lineHeight = fontSize + 1 / globalScale

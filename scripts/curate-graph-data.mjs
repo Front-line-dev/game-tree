@@ -8,7 +8,7 @@ const repoRoot = path.resolve(__dirname, '..')
 
 const edgesPath = path.join(repoRoot, 'src/data/edges.json')
 
-const bannedReasonRegex = /(확장|진화|정교화|후속작)/
+const bannedReasonRegex = /(확장|진화|정교화|후속작|연대기|출시\s*순|시리즈\s*순)/
 
 function normalizeShortLabel(label) {
   return String(label ?? '')

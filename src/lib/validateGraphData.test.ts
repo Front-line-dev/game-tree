@@ -112,4 +112,19 @@ describe('validateGraphData', () => {
     expect(result.isValid).toBe(false)
     expect(result.errors.join('\n')).toContain('banned reason keyword')
   })
+
+  it('summaryShort에 연대기/순서형 키워드가 있으면 실패한다', () => {
+    const result = validateGraphData({
+      ...baseData,
+      edges: [
+        {
+          ...baseData.edges[0],
+          summaryShort: '시리즈 순서',
+        },
+      ],
+    })
+
+    expect(result.isValid).toBe(false)
+    expect(result.errors.join('\n')).toContain('banned reason keyword')
+  })
 })
