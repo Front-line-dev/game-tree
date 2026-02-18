@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
+import { forceCollide } from 'd3-force-3d'
 import ForceGraph2D, { type ForceGraphMethods } from 'react-force-graph-2d'
 
 import type { GameEdge, GameNode } from '../types/graph'
@@ -6,6 +7,7 @@ import type { GameEdge, GameNode } from '../types/graph'
 interface GraphCanvasProps {
   nodes: GameNode[]
   edges: GameEdge[]
+  isMobile: boolean
   selectedNodeId: string | null
   highlightedNodeIds: Set<string>
   onNodeSelect: (nodeId: string) => void
@@ -24,13 +26,17 @@ type ForceLink = Omit<GameEdge, 'source' | 'target'> & {
   target: string | ForceNode
 }
 
-const NODE_RADIUS = 36
-const NODE_RADIUS_SELECTED = 40
-const BASE_LINK_COLOR = 'rgba(148, 163, 184, 0.78)'
-const FADED_LINK_COLOR = 'rgba(148, 163, 184, 0.26)'
+const BASE_LINK_COLOR = 'rgba(148, 163, 184, 0.82)'
+const FADED_LINK_COLOR = 'rgba(148, 163, 184, 0.24)'
+const BASE_ARROW_COLOR = 'rgba(248, 250, 252, 0.95)'
+const FADED_ARROW_COLOR = 'rgba(148, 163, 184, 0.42)'
 
 function readNodeId(value: string | ForceNode): string {
   return typeof value === 'string' ? value : value.id
+}
+
+function isFallbackImage(imagePath: string): boolean {
+  return imagePath.includes('images/fallback/')
 }
 
 function wrapText(ctx: CanvasRenderingContext2D, text: string, maxWidth: number): string[] {
@@ -55,9 +61,43 @@ function wrapText(ctx: CanvasRenderingContext2D, text: string, maxWidth: number)
   return lines
 }
 
+function drawRoundedRect(
+  ctx: CanvasRenderingContext2D,
+  x: number,
+  y: number,
+  width: number,
+  height: number,
+  radius: number,
+): void {
+  const limit = Math.min(radius, width / 2, height / 2)
+
+  ctx.beginPath()
+  if (typeof ctx.roundRect === 'function') {
+    ctx.roundRect(x, y, width, height, limit)
+    return
+  }
+
+  ctx.moveTo(x + limit, y)
+  ctx.lineTo(x + width - limit, y)
+  ctx.arcTo(x + width, y, x + width, y + limit, limit)
+  ctx.lineTo(x + width, y + height - limit)
+  ctx.arcTo(x + width, y + height, x + width - limit, y + height, limit)
+  ctx.lineTo(x + limit, y + height)
+  ctx.arcTo(x, y + height, x, y + height - limit, limit)
+  ctx.lineTo(x, y + limit)
+  ctx.arcTo(x, y, x + limit, y, limit)
+}
+
+function getNodeRadius(nodeId: string, selectedNodeId: string | null, isMobile: boolean): number {
+  const baseRadius = isMobile ? 40 : 36
+  const selectedRadius = isMobile ? 44 : 40
+  return nodeId === selectedNodeId ? selectedRadius : baseRadius
+}
+
 export default function GraphCanvas({
   nodes,
   edges,
+  isMobile,
   selectedNodeId,
   highlightedNodeIds,
   onNodeSelect,
@@ -66,6 +106,7 @@ export default function GraphCanvas({
   const wrapperRef = useRef<HTMLDivElement | null>(null)
   const graphRef = useRef<ForceGraphMethods<ForceNode, ForceLink> | undefined>(undefined)
   const imageCacheRef = useRef<Map<string, HTMLImageElement>>(new Map())
+  const failedImagePathSetRef = useRef<Set<string>>(new Set())
   const [size, setSize] = useState({ width: 960, height: 680 })
 
   useEffect(() => {
@@ -102,6 +143,61 @@ export default function GraphCanvas({
     [nodes, edges],
   )
 
+  const trySelectNearestNode = (event: MouseEvent): boolean => {
+    if (!isMobile) {
+      return false
+    }
+
+    const graph = graphRef.current
+    if (!graph) {
+      return false
+    }
+
+    const fallbackRect = wrapperRef.current?.getBoundingClientRect()
+    const pointerX =
+      typeof event.offsetX === 'number'
+        ? event.offsetX
+        : typeof fallbackRect?.left === 'number'
+          ? event.clientX - fallbackRect.left
+          : 0
+    const pointerY =
+      typeof event.offsetY === 'number'
+        ? event.offsetY
+        : typeof fallbackRect?.top === 'number'
+          ? event.clientY - fallbackRect.top
+          : 0
+
+    let nearestNodeId: string | null = null
+    let nearestDistance = Number.POSITIVE_INFINITY
+
+    for (const node of graphData.nodes as ForceNode[]) {
+      if (typeof node.x !== 'number' || typeof node.y !== 'number') {
+        continue
+      }
+
+      const nodeScreen = graph.graph2ScreenCoords(node.x, node.y)
+      const distance = Math.hypot(nodeScreen.x - pointerX, nodeScreen.y - pointerY)
+      if (distance < nearestDistance) {
+        nearestDistance = distance
+        nearestNodeId = node.id
+      }
+    }
+
+    if (!nearestNodeId) {
+      return false
+    }
+
+    const selectionDistanceLimit =
+      selectedNodeId === null ? Number.POSITIVE_INFINITY : 72
+
+    if (nearestDistance > selectionDistanceLimit) {
+      return false
+    }
+
+    onNodeSelect(nearestNodeId)
+    return true
+  }
+
   useEffect(() => {
     const graph = graphRef.current
     if (!graph || graphData.nodes.length === 0) {
@@ -115,17 +211,32 @@ export default function GraphCanvas({
       | { distance?: (value: number) => void; strength?: (value: number) => void }
       | undefined
 
-    chargeForce?.strength?.(-230)
-    linkForce?.distance?.(165)
+    const collideRadius = (isMobile ? 40 : 36) + (isMobile ? 24 : 18)
+    const collideForce = forceCollide<ForceNode>(collideRadius)
+      .strength(isMobile ? 1 : 0.9)
+      .iterations(2)
+
+    graph.d3Force(
+      'collide',
+      collideForce as unknown as ((alpha: number) => void) & {
+        initialize?: (nodes: ForceNode[]) => void
+      },
+    )
+
+    chargeForce?.strength?.(isMobile ? -320 : -290)
+    linkForce?.distance?.(isMobile ? 215 : 190)
     linkForce?.strength?.(0.58)
     graph.d3ReheatSimulation()
 
     const timer = window.setTimeout(() => {
-      graph.zoomToFit(420, 100)
+      graph.zoomToFit(420, isMobile ? 56 : 100)
+      if (isMobile) {
+        graph.zoom(Math.max(graph.zoom(), 0.86), 240)
+      }
     }, 120)
 
     return () => window.clearTimeout(timer)
-  }, [graphData.nodes.length, graphData.links.length, size.width, size.height])
+  }, [graphData.nodes.length, graphData.links.length, isMobile, size.width, size.height])
 
   return (
     <div ref={wrapperRef} className="graph-canvas-wrapper">
@@ -135,14 +246,35 @@ export default function GraphCanvas({
         height={size.height}
         graphData={graphData}
         enableNodeDrag={false}
-        minZoom={0.38}
+        minZoom={isMobile ? 0.52 : 0.38}
         maxZoom={7.5}
         backgroundColor="rgba(0,0,0,0)"
-        linkDirectionalArrowLength={9}
-        linkDirectionalArrowRelPos={1}
+        linkDirectionalArrowLength={(link) => {
+          const typed = link as ForceLink
+          const sourceId = readNodeId(typed.source)
+          const targetId = readNodeId(typed.target)
+          const isFocused =
+            selectedNodeId !== null && (sourceId === selectedNodeId || targetId === selectedNodeId)
+          if (isMobile) {
+            return isFocused ? 32 : 28
+          }
+          return isFocused ? 30 : 26
+        }}
+        linkDirectionalArrowRelPos={0.9}
         linkCurvature={0.08}
         nodeRelSize={8}
         cooldownTicks={190}
+        onEngineStop={() => {
+          const graph = graphRef.current
+          if (!graph || selectedNodeId) {
+            return
+          }
+
+          graph.zoomToFit(260, isMobile ? 56 : 92)
+          if (isMobile) {
+            graph.zoom(Math.max(graph.zoom(), 0.9), 220)
+          }
+        }}
         onNodeClick={(node) => {
           const typedNode = node as ForceNode
           onNodeSelect(typedNode.id)
@@ -154,13 +286,29 @@ export default function GraphCanvas({
             }
 
             graph.centerAt(typedNode.x, typedNode.y, 280)
-            graph.zoom(Math.max(graph.zoom(), 1.3), 280)
+            graph.zoom(Math.max(graph.zoom(), isMobile ? 1.05 : 1.3), 280)
           }
         }}
-        onBackgroundClick={onBackgroundClick}
+        onBackgroundClick={(event) => {
+          if (trySelectNearestNode(event)) {
+            return
+          }
+          onBackgroundClick()
+        }}
         nodeLabel={(node) => {
           const typed = node as ForceNode
           return `${typed.displayTitle} (${typed.titleOriginal})`
+        }}
+        nodePointerAreaPaint={(node, color, ctx) => {
+          const typed = node as ForceNode
+          const x = typed.x ?? 0
+          const y = typed.y ?? 0
+          const radius = getNodeRadius(typed.id, selectedNodeId, isMobile)
+
+          ctx.fillStyle = color
+          ctx.beginPath()
+          ctx.arc(x, y, radius, 0, 2 * Math.PI)
+          ctx.fill()
         }}
         nodeCanvasObject={(node, ctx, globalScale) => {
           const typed = node as ForceNode
@@ -168,17 +316,23 @@ export default function GraphCanvas({
           const y = typed.y ?? 0
           const isSelected = typed.id === selectedNodeId
           const isHighlighted = highlightedNodeIds.has(typed.id)
-          const radius = isSelected ? NODE_RADIUS_SELECTED : NODE_RADIUS
+          const radius = getNodeRadius(typed.id, selectedNodeId, isMobile)
+          const imagePath = typed.imagePath
+          const hasImage =
+            !isFallbackImage(imagePath) && !failedImagePathSetRef.current.has(imagePath)
 
-          const cached = imageCacheRef.current.get(typed.imagePath)
-          let image = cached
+          let image = imageCacheRef.current.get(imagePath)
           if (!image) {
             image = new Image()
-            image.src = typed.imagePath
+            image.src = imagePath
             image.onload = () => {
               graphRef.current?.resumeAnimation()
             }
-            imageCacheRef.current.set(typed.imagePath, image)
+            image.onerror = () => {
+              failedImagePathSetRef.current.add(imagePath)
+              graphRef.current?.resumeAnimation()
+            }
+            imageCacheRef.current.set(imagePath, image)
           }
 
           ctx.save()
@@ -187,7 +341,7 @@ export default function GraphCanvas({
           ctx.closePath()
           ctx.clip()
 
-          if (image.complete && image.naturalWidth > 0 && image.naturalHeight > 0) {
+          if (hasImage && image.complete && image.naturalWidth > 0 && image.naturalHeight > 0) {
             const aspect = image.naturalWidth / image.naturalHeight
             const box = radius * 2
 
@@ -198,6 +352,24 @@ export default function GraphCanvas({
               const drawHeight = box / aspect
               ctx.drawImage(image, x - box / 2, y - drawHeight / 2, box, drawHeight)
             }
+          } else if (!hasImage) {
+            const gradient = ctx.createLinearGradient(x - radius, y - radius, x + radius, y + radius)
+            gradient.addColorStop(0, '#0f172a')
+            gradient.addColorStop(1, '#1e293b')
+            ctx.fillStyle = gradient
+            ctx.fillRect(x - radius, y - radius, radius * 2, radius * 2)
+
+            ctx.fillStyle = '#e2e8f0'
+            ctx.textAlign = 'center'
+            ctx.textBaseline = 'middle'
+            ctx.font = `700 ${Math.max(5, Math.min(11, 10 / globalScale))}px "Noto Sans KR", "Pretendard", sans-serif`
+
+            const lines = wrapText(ctx, typed.displayTitle, (radius * 1.55) / globalScale).slice(0, 3)
+            const lineHeight = 11 / globalScale
+            const startY = y - ((lines.length - 1) * lineHeight) / 2
+            lines.forEach((line, index) => {
+              ctx.fillText(line, x, startY + lineHeight * index)
+            })
           } else {
             ctx.fillStyle = '#334155'
             ctx.fillRect(x - radius, y - radius, radius * 2, radius * 2)
@@ -215,12 +387,58 @@ export default function GraphCanvas({
           ctx.lineWidth = isSelected ? 4 : isHighlighted ? 3 : 2
           ctx.stroke()
 
-          const fontSize = Math.max(4, Math.min(11, 10 / globalScale))
+          const fontSize = Math.max(4, Math.min(12, 11 / globalScale))
+          const lineHeight = fontSize + 1 / globalScale
+          const paddingX = 6 / globalScale
+          const paddingY = 3 / globalScale
+          const textMaxWidth = (isMobile ? 98 : 140) / globalScale
+
           ctx.font = `700 ${fontSize}px "Noto Sans KR", "Pretendard", sans-serif`
-          ctx.fillStyle = '#e2e8f0'
-          ctx.textAlign = 'left'
+          const lines = wrapText(ctx, typed.displayTitle, textMaxWidth)
+          const titleLines = lines.slice(0, 2)
+
+          if (lines.length > 2 && titleLines[1]) {
+            let clipped = titleLines[1]
+            while (clipped.length > 1 && ctx.measureText(`${clipped}…`).width > textMaxWidth) {
+              clipped = clipped.slice(0, -1)
+            }
+            titleLines[1] = `${clipped}…`
+          }
+
+          const maxLineWidth = Math.max(...titleLines.map((line) => ctx.measureText(line).width), 18)
+          const chipWidth = maxLineWidth + paddingX * 2
+          const chipHeight = titleLines.length * lineHeight + paddingY * 2
+          const chipX = x - chipWidth / 2
+          const chipY = y - radius - chipHeight - 6 / globalScale
+
+          drawRoundedRect(ctx, chipX, chipY, chipWidth, chipHeight, 7 / globalScale)
+          ctx.fillStyle = isSelected ? 'rgba(249, 115, 22, 0.24)' : 'rgba(2, 6, 23, 0.86)'
+          ctx.fill()
+
+          ctx.strokeStyle = isSelected ? 'rgba(249, 115, 22, 0.9)' : 'rgba(148, 163, 184, 0.42)'
+          ctx.lineWidth = isSelected ? 1.4 / globalScale : 1.1 / globalScale
+          ctx.stroke()
+
+          ctx.fillStyle = '#f8fafc'
+          ctx.textAlign = 'center'
           ctx.textBaseline = 'middle'
-          ctx.fillText(typed.displayTitle, x + radius + 6, y)
+          titleLines.forEach((line, index) => {
+            const lineY = chipY + paddingY + lineHeight * (index + 0.5)
+            ctx.fillText(line, chipX + chipWidth / 2, lineY)
+          })
+        }}
+        linkDirectionalArrowColor={(link) => {
+          const typed = link as ForceLink
+          const sourceId = readNodeId(typed.source)
+          const targetId = readNodeId(typed.target)
+
+          if (!selectedNodeId) {
+            return BASE_ARROW_COLOR
+          }
+
+          return sourceId === selectedNodeId || targetId === selectedNodeId
+            ? BASE_ARROW_COLOR
+            : FADED_ARROW_COLOR
         }}
         linkColor={(link) => {
           const typed = link as ForceLink
@@ -241,10 +459,10 @@ export default function GraphCanvas({
           const targetId = readNodeId(typed.target)
 
           if (!selectedNodeId) {
-            return 2.6
+            return 3
           }
 
-          return sourceId === selectedNodeId || targetId === selectedNodeId ? 4 : 2.6
+          return sourceId === selectedNodeId || targetId === selectedNodeId ? 4.2 : 2.6
         }}
         linkCanvasObjectMode={() => 'after'}
         linkCanvasObject={(link, ctx, globalScale) => {
@@ -272,35 +490,56 @@ export default function GraphCanvas({
           const isFocused =
             selectedNodeId !== null && (sourceId === selectedNodeId || targetId === selectedNodeId)
 
-          const label = isFocused ? typed.summaryFull : typed.summaryShort
-          const midX = startX + (endX - startX) * 0.5
-          const midY = startY + (endY - startY) * 0.5
-          const fontSize = Math.max(4, Math.min(10, 9 / globalScale))
-          const maxWidth = isFocused ? Math.max(120, 260 / globalScale) : Math.max(70, 140 / globalScale)
+          const dx = endX - startX
+          const dy = endY - startY
+          const distance = Math.hypot(dx, dy) || 1
+          const nx = -dy / distance
+          const ny = dx / distance
 
-          ctx.font = `${isFocused ? '700' : '600'} ${fontSize}px "Noto Sans KR", "Pretendard", sans-serif`
-          const lines = wrapText(ctx, label, maxWidth)
-          const lineHeight = fontSize + 2 / globalScale
-          const boxWidth = Math.max(...lines.map((line) => ctx.measureText(line).width), 18)
-          const boxHeight = lines.length * lineHeight
-          const paddingX = 5 / globalScale
+          let labelX = startX + dx * 0.5 + nx * (12 / globalScale)
+          let labelY = startY + dy * 0.5 + ny * (12 / globalScale)
+
+          const sourceRadius = getNodeRadius(sourceId, selectedNodeId, isMobile)
+          const targetRadius = getNodeRadius(targetId, selectedNodeId, isMobile)
+
+          for (let i = 0; i < 5; i += 1) {
+            const sourceDistance = Math.hypot(labelX - startX, labelY - startY)
+            const targetDistance = Math.hypot(labelX - endX, labelY - endY)
+            const tooCloseToSource = sourceDistance < sourceRadius + 10 / globalScale
+            const tooCloseToTarget = targetDistance < targetRadius + 10 / globalScale
+
+            if (!tooCloseToSource && !tooCloseToTarget) {
+              break
+            }
+
+            labelX += nx * (8 / globalScale)
+            labelY += ny * (8 / globalScale)
+          }
+
+          const fontSize = Math.max(4, Math.min(11, 10 / globalScale))
+          const lineHeight = fontSize + 1 / globalScale
+          const paddingX = 6 / globalScale
           const paddingY = 3 / globalScale
+          const maxWidth = (isFocused ? 170 : 120) / globalScale
 
-          ctx.fillStyle = isFocused ? 'rgba(2, 6, 23, 0.9)' : 'rgba(2, 6, 23, 0.64)'
-          ctx.fillRect(
-            midX - boxWidth / 2 - paddingX,
-            midY - boxHeight / 2 - paddingY,
-            boxWidth + paddingX * 2,
-            boxHeight + paddingY * 2,
-          )
+          ctx.font = `700 ${fontSize}px "Noto Sans KR", "Pretendard", sans-serif`
+          const lines = wrapText(ctx, typed.summaryShort, maxWidth)
+          const textWidth = Math.max(...lines.map((line) => ctx.measureText(line).width), 10)
+          const boxWidth = textWidth + paddingX * 2
+          const boxHeight = lines.length * lineHeight + paddingY * 2
+          const boxX = labelX - boxWidth / 2
+          const boxY = labelY - boxHeight / 2
+
+          drawRoundedRect(ctx, boxX, boxY, boxWidth, boxHeight, 6 / globalScale)
+          ctx.fillStyle = isFocused ? 'rgba(2, 6, 23, 0.94)' : 'rgba(2, 6, 23, 0.82)'
+          ctx.fill()
 
           ctx.fillStyle = isFocused ? '#f8fafc' : '#cbd5e1'
           ctx.textAlign = 'center'
           ctx.textBaseline = 'middle'
-
           lines.forEach((line, index) => {
-            const y = midY - boxHeight / 2 + lineHeight * (index + 0.5)
-            ctx.fillText(line, midX, y)
+            const lineY = boxY + paddingY + lineHeight * (index + 0.5)
+            ctx.fillText(line, labelX, lineY)
           })
         }}
       />

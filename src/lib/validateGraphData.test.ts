@@ -32,7 +32,6 @@ const baseData: GraphData = {
       source: 'n1',
       target: 'n2',
       summaryShort: '테스트',
-      summaryFull: '테스트용 풀 설명',
       evidenceTitle: 'test',
       evidenceUrl: 'https://example.com',
       analysisRef: 'docs/research/edge-evidence.md#e1',
@@ -69,22 +68,6 @@ describe('validateGraphData', () => {
     expect(result.errors.join('\n')).toContain('missing target node')
   })
 
-  it('same_series_exception은 edge-review-log 참조가 필요하다', () => {
-    const result = validateGraphData({
-      ...baseData,
-      edges: [
-        {
-          ...baseData.edges[0],
-          reviewMode: 'same_series_exception',
-          analysisRef: 'docs/research/edge-evidence.md#e1',
-        },
-      ],
-    })
-
-    expect(result.isValid).toBe(false)
-    expect(result.errors.join('\n')).toContain('same_series_exception')
-  })
-
   it('analysisRef는 docs/research 경로와 anchor를 가져야 한다', () => {
     const result = validateGraphData({
       ...baseData,
@@ -98,5 +81,35 @@ describe('validateGraphData', () => {
 
     expect(result.isValid).toBe(false)
     expect(result.errors.join('\n')).toContain('analysisRef')
+  })
+
+  it('analysisRef가 edge-review-log를 참조하면 실패한다', () => {
+    const result = validateGraphData({
+      ...baseData,
+      edges: [
+        {
+          ...baseData.edges[0],
+          analysisRef: 'docs/research/edge-review-log.md#e1',
+        },
+      ],
+    })
+
+    expect(result.isValid).toBe(false)
+    expect(result.errors.join('\n')).toContain('must not reference edge-review-log')
+  })
+
+  it('summaryShort에 금지 키워드가 있으면 실패한다', () => {
+    const result = validateGraphData({
+      ...baseData,
+      edges: [
+        {
+          ...baseData.edges[0],
+          summaryShort: '운영 확장',
+        },
+      ],
+    })
+
+    expect(result.isValid).toBe(false)
+    expect(result.errors.join('\n')).toContain('banned reason keyword')
   })
 })

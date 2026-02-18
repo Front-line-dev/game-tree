@@ -25,11 +25,10 @@ export interface GameEdge {
   source: string
   target: string
   summaryShort: string
-  summaryFull: string
   evidenceTitle: string
   evidenceUrl: string
   analysisRef: string
-  reviewMode: 'internal_reviewed' | 'same_series_exception'
+  reviewMode: 'internal_reviewed'
 }
 
 export interface GraphData {

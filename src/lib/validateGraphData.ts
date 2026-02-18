@@ -30,11 +30,10 @@ const edgeSchema = z.object({
   source: z.string().min(1),
   target: z.string().min(1),
   summaryShort: z.string().min(1).max(20),
-  summaryFull: z.string().min(1),
   evidenceTitle: z.string().min(1),
   evidenceUrl: z.url(),
   analysisRef: z.string().min(1),
-  reviewMode: z.enum(['internal_reviewed', 'same_series_exception']),
+  reviewMode: z.literal('internal_reviewed'),
 })
 
 const graphDataSchema = z.object({
@@ -60,6 +59,7 @@ function hasDuplicate(values: string[]): string[] {
 export function validateGraphData(data: GraphData): ValidationResult {
   const errors: string[] = []
   const parseResult = graphDataSchema.safeParse(data)
+  const bannedReasonRegex = /(확장|진화|정교화|후속작)/
 
   if (!parseResult.success) {
     const zodErrors = parseResult.error.issues.map(
@@ -99,13 +99,14 @@ export function validateGraphData(data: GraphData): ValidationResult {
       )
     }
 
-    if (edge.reviewMode === 'same_series_exception') {
-      const expectedRef = `docs/research/edge-review-log.md#${edge.id}`
-      if (edge.analysisRef !== expectedRef) {
-        errors.push(
-          `Edge ${edge.id} with same_series_exception must reference ${expectedRef}`,
-        )
-      }
+    if (edge.analysisRef.includes('edge-review-log.md')) {
+      errors.push(`Edge ${edge.id} analysisRef must not reference edge-review-log.md`)
+    }
+
+    if (bannedReasonRegex.test(edge.summaryShort)) {
+      errors.push(
+        `Edge ${edge.id} summaryShort contains banned reason keyword (확장|진화|정교화|후속작)`,
+      )
     }
   }
 

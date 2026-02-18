@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 
-import { filterGraph } from './filterGraph'
+import { buildVisibleGraph } from './buildVisibleGraph'
 import type { GraphData } from '../types/graph'
 
 const fixture: GraphData = {
@@ -41,50 +41,20 @@ const fixture: GraphData = {
       id: 'e1',
       source: 'a',
       target: 'b',
-      summaryShort: '짧은 요약',
+      summaryShort: '요소',
       evidenceTitle: 'e1',
       evidenceUrl: 'https://example.com/e1',
       analysisRef: 'docs/research/edge-evidence.md#e1',
       reviewMode: 'internal_reviewed',
     },
-    {
-      id: 'e2',
-      source: 'b',
-      target: 'c',
-      summaryShort: '짧은 요약2',
-      evidenceTitle: 'e2',
-      evidenceUrl: 'https://example.com/e2',
-      analysisRef: 'docs/research/edge-evidence.md#e2',
-      reviewMode: 'internal_reviewed',
-    },
   ],
 }
 
-describe('filterGraph', () => {
-  it('검색어만 적용 시 매칭 노드와 인접 엣지를 반환한다', () => {
-    const result = filterGraph(fixture, {
-      query: '알파',
-    })
+describe('buildVisibleGraph', () => {
+  it('유효 엣지 endpoint에 없는 노드는 기본 표시에서 제외한다', () => {
+    const result = buildVisibleGraph(fixture)
 
+    expect(result.edges).toHaveLength(1)
     expect(result.nodes.map((node) => node.id).sort()).toEqual(['a', 'b'])
-    expect(result.edges.map((edge) => edge.id)).toEqual(['e1'])
-  })
-
-  it('검색어가 없으면 전체 데이터를 유지한다', () => {
-    const result = filterGraph(fixture, {
-      query: '',
-    })
-
-    expect(result.nodes).toHaveLength(3)
-    expect(result.edges).toHaveLength(2)
-  })
-
-  it('원문명으로도 검색이 동작한다', () => {
-    const result = filterGraph(fixture, {
-      query: 'gamma',
-    })
-
-    expect(result.nodes.map((node) => node.id).sort()).toEqual(['b', 'c'])
-    expect(result.edges.map((edge) => edge.id)).toEqual(['e2'])
   })
 })

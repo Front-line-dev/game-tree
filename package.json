@@ -10,6 +10,8 @@
     "preview": "vite preview",
     "test": "vitest",
     "test:run": "vitest run",
+    "curate:graph": "node scripts/curate-graph-data.mjs",
+    "rebuild:summaries": "node scripts/rebuild-node-summaries.mjs",
     "sync:images": "node scripts/sync-wikimedia-images.mjs",
     "sync:images:dry": "node scripts/sync-wikimedia-images.mjs --dry-run"
   },
